@@ -1,0 +1,4 @@
+* text=auto !eol
+python/actorkeys/__init__.py -text
+python/actorkeys/tcc.py -text
+python/actorkeys/testing.py -text
