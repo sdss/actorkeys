@@ -1,4 +1,6 @@
 * text=auto !eol
+doc/describe.css -text
+doc/describe.py -text
 python/actorkeys/__init__.py -text
 python/actorkeys/tcc.py -text
 python/actorkeys/testing.py -text

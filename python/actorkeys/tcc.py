@@ -1,9 +1,19 @@
 # Based on the TCC keywords documented at (with guide camera keywords omitted):
 # http://www.apo.nmsu.edu/Telescopes/TCC/MessageKeywords.html
 
-KeysDictionary('tcc',(1,0),
-	Key('AirTemp',Float(units='C')),
-	Key('AxePos',Float(help='Az,Alt,Rot',units='deg',invalid='NaN')*3),
+KeysDictionary('tcc',(2,3),
+	Key('AirTemp',Float(units='C'),help=
+		"""
+		Temperature of the outside air. Used for refraction correction.
+		"""
+	),
+	Key('AxePos',Float(units='deg',invalid='NaN',help="Order is Az,Alt,Rot")*3,help=
+		"""
+		Actual mount position of azimuth, altitude and instrument
+		rotator, as reported by the axes controllers. Not many digits
+		past the decimal but very useful for status displays.
+		"""
+		),
 	Key('AzDTime',Float(units='s')),
 	Key('AltDTime',Float(units='s')),
 	Key('RotDTime',Float(units='s')),
@@ -132,7 +142,12 @@ KeysDictionary('tcc',(1,0),
 	Key('ScaleFacRange',Float()*2),
 	Key('SchMoveTime',Double(invalid='99.9')*10),
 	Key('SecFocus',Float(units='um')),
-	Key('SecTrussTemp',Float(units='C')),
+	Key('SecTrussTemp',Float(units='C'),help=
+		"""
+		Average temperature of the secondary truss elements. Used for
+		automatic focus correction.
+		"""
+	),
 	Key('SlewAdvTime',Float(units='s')),
 	Key('SlewBeg',Double(units='s')),
 	Key('SlewDuration',Float(units='s')),
