@@ -1,7 +1,7 @@
 # Based on the TCC keywords documented at (with guide camera keywords omitted):
 # http://www.apo.nmsu.edu/Telescopes/TCC/MessageKeywords.html
 
-KeysDictionary('tcc',(2,3),
+KeysDictionary('tcc',(3,1),
     Key('airTemp',Float(units='C'),help=
         """
         Temperature of the outside air. Used for refraction correction.
@@ -179,7 +179,7 @@ KeysDictionary('tcc',(2,3),
     Key('userInfo',UInt(),Hex(),UInt(),Int(),UInt()*2),
     Key('userNum',UInt()),
     Key('uT1',Double(units='s')),
-    Key('uTC_TAI',Float(units='s')),
+    Key('utc_TAI',Float(units='s')),
     Key('vmsMsg',String()),
     Key('warnAzStatus'),
     Key('warnAltStatus'),
