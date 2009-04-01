@@ -1,4 +1,10 @@
-KeysDictionary('testing',(1,0),
+KeysDictionary('testing',(1,3),
+	Key('note',String(name='text',invalid='??')),
+	Key('unsigned',UInt(name='value',invalid='??')),
+	Key('no_name',Int(invalid='??')),
+	Key('two',Float(name='value',invalid='??')*2),
+	Key('two_to_four',Int(name='value',invalid='??')*(2,4)),
+	Key('one_or_more',Int(name='value',invalid='??')*(1,)),
     Key('count',UInt(name='val')),
     Key('time',Double(name='time'),String(name='tai'))
 )
