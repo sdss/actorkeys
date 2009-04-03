@@ -1,16 +1,16 @@
-# Based on what the TCC knows about the perms widget
 KeysDictionary("mcp", (1,1),
     Key("needIack", Bool("false", "true"), help="If False, please send an iack"),
     Key("command", String(), help="Command string"),
-    Key("ffLeafStatus", Enum("?", "Open", "Closed", "Invalid")*8, help="State of flat field petals"),
+    Key("ffLeafStatus", Enum("00", "01", "10", "11")*8, help="State of flat field petals 1-8"), #  descr=("?", "Closed", "Open", "Invalid")
     Key("ffLeafCommandedOn", Bool("false", "true"), help="Flat field petals commanded close/open"),
-    Key("ffLeafSelected", Enum("None", "Bottom?", "Top?", "All"), help="Flat field petals enabled"),
-    Key("ffLamp", Bool(0, 1)*4, help="Detected state of flat field lamps"),
+    Key("ffLeafSelected", Enum("00", "01", "10", "11"), help="Flat field petals enabled"), # descr=("None", "Half1", "Half2", "All")
+    Key("ffLamp", Bool("0", "1")*4, help="Detected state of flat field lamps"),
     Key("ffLampCommandedOn", Bool("false", "true"), help="Commanded state of flat-field lamps"),
-    Key("neLamp", Bool(0, 1)*4, help="Detected state of neon lamps"),
+    Key("neLamp", Bool("0", "1")*4, help="Detected state of neon lamps"),
     Key("neLampCommandedOn", Bool("false", "true"), help="Commanded state of neon lamps"),
-    Key("hgCdLamp", Bool(0, 1)*4, help="Detected state of mercury/cadmium lamps"),
+    Key("hgCdLamp", Bool("0", "1")*4, help="Detected state of mercury/cadmium lamps"),
     Key("hgCdLampCommandedOn", Bool("false", "true"), help="Commanded state of mercury/cadmium lamps"),
+    Key("uvLampCommandedOn", Bool("false", "true"), help="Commanded state of UV lamps"),
     Key("whtLampCommandedOn", Bool("false", "true"), help="Commanded state of white lamps"),
     Key("saddleIsMounted", Bool("false", "true")),
     Key("instrumentNum", Int(invalid=-1), help="Instrument ID; 0=no instrument; 14=imager; -1=switches inconsistent or could not get semaphore"),
