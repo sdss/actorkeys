@@ -1,9 +1,9 @@
 KeysDictionary("mcp", (1,1),
     Key("needIack", Bool("false", "true"), help="If False, please send an iack"),
     Key("command", String(), help="Command string"),
-    Key("petalsStatus", Enum("00", "01", "10", "11")*8, help="State of flat field petals 1-8"), #  descr=("?", "Closed", "Open", "Invalid")
+    Key("petalsStatus", Enum("00", "01", "10", "11", descr=("?", "Closed", "Open", "Invalid"))*8, help="State of flat field petals 1-8"),
     Key("petalsCommandedOn", Bool("false", "true"), help="Flat field petals commanded close/open"),
-    Key("petalsSelected", Enum("00", "01", "10", "11"), help="Flat field petals enabled"), # descr=("None", "Half1", "Half2", "All")
+    Key("petalsSelected", Enum("00", "01", "10", "11", descr=("None", "Half1", "Half2", "All")), help="Flat field petals enabled"),
     Key("ffLamp", Bool("0", "1")*4, help="Detected state of flat field lamps"),
     Key("ffLampCommandedOn", Bool("false", "true"), help="Commanded state of flat-field lamps"),
     Key("neLamp", Bool("0", "1")*4, help="Detected state of neon lamps"),
