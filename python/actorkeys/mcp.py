@@ -102,9 +102,9 @@ KeysDictionary("mcp", (1,1),
 
     # miscellaneous PCL
     Key("saddleIsMounted", Bool("false", "true"), help="Imager saddle is mounted"),
-    Key("sp1Slithead", Enum("00", "01", "10", "11", descr=("Open", "Open", "Closed", "Invalid")),
+    Key("sp1Slithead", Bool("0", "1", help="?Door closed?"), Bool("0", "1", help="?Door open?"),
         Bool("0", "1", help="Latch extended"), Bool("0", "1", help="Slithead in place")),
-    Key("sp2Slithead", Enum("00", "01", "10", "11", descr=("Open", "Open", "Closed", "Invalid")),
+    Key("sp2Slithead", Bool("0", "1", help="?Door closed?"), Bool("0", "1", help="?Door open?"),
         Bool("0", "1", help="Latch extended"), Bool("0", "1", help="Slithead in place")),
     Key("tbarCommanded", Bool("false", "true"), doCache=False, help="Imager TBar move requested"),
 )
