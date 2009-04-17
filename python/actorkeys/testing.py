@@ -1,4 +1,4 @@
-KeysDictionary('testing',(1,3),
+KeysDictionary('testing',(1,4),
 	Key('note',String(name='text',invalid='??')),
 	Key('unsigned',UInt(name='value',invalid='??')),
 	Key('no_name',Int(invalid='??')),
@@ -6,5 +6,51 @@ KeysDictionary('testing',(1,3),
 	Key('two_to_four',Int(name='value',invalid='??')*(2,4)),
 	Key('one_or_more',Int(name='value',invalid='??')*(1,)),
     Key('count',UInt(name='val')),
-    Key('time',Double(name='time'),String(name='tai'))
+    Key('time',Double(name='time'),String(name='tai')),
+    Key('helpful',
+        Int(name='theInteger',help="""
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+            aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+            ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit
+            esse cillum dolore eu fugiat nulla pariatur. Excepteur
+            sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt mollit anim id est laborum.
+            """
+        ),
+        Float(name='theFloats',help="""
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+            aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+            ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit
+            esse cillum dolore eu fugiat nulla pariatur. Excepteur
+            sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt mollit anim id est laborum.
+            """
+        )*(1,),
+        help = """
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+        do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+        irure dolor in reprehenderit in voluptate velit esse cillum
+        dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+        cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+        """
+    ),
+    Key('axis',
+        PVT(help="""
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna
+            aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+            ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit
+            esse cillum dolore eu fugiat nulla pariatur. Excepteur
+            sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt mollit anim id est laborum.
+            """
+        ),
+        help="This demonstrates a keyword with a PVT value"
+    )
 )
