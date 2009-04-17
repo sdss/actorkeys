@@ -1,7 +1,7 @@
 # Based on the TCC keywords documented at (with guide camera keywords omitted):
 # http://www.apo.nmsu.edu/Telescopes/TCC/MessageKeywords.html
 
-KeysDictionary("tcc", (3, 1), 
+KeysDictionary("tcc", (3, 2), 
     Key("airTemp", Float(invalidValue="NaN", units="C"), help="Temperature of the outside air. Used for refraction correction."),
     Key("axePos", Float(invalidValue="NaN", units="deg", invalid="NaN", help="Order is Az, Alt, Rot")*3, help=
         """Actual mount position of azimuth, altitude and instrument rotator, as reported by
