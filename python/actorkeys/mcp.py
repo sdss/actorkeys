@@ -1,4 +1,4 @@
-KeysDictionary("mcp", (1,1),
+KeysDictionary("mcp", (1,2),
     # Command-related keywords
     Key("badAxis", String(), doCache=False, help="Unknown telescope axis"),
     Key("badCharacter", Int(), doCache=False, help="ASCII code of invalid character"),
@@ -106,4 +106,7 @@ KeysDictionary("mcp", (1,1),
     Key("mcpVersion", String(), help="Version of MCP code"),
     Key("plcVersion", Int(), help="PLC version, if consistent (see also pclVersions)"),
     Key("plcVersions", Int()*2, help="PLC versions from the Allen-Bradley and data_collection.h"),
+
+    # Actor housekeeping
+    Key("keepAlive", UInt(units="s",help="Elapsed TAI(?) since unix epoch"), help="MCP 1 Hz keep-alive message"),
 )
