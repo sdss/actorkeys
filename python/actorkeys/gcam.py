@@ -1,0 +1,50 @@
+# Based on what the TCC knows about the perms widget
+KeysDictionary('gcam',(1,0),
+    Key("expState",
+        String(help="exposure state; one of: idle, flushing, integrating, paused, reading, processing, aborting, done or aborted"),
+        String(help="start time; ISO format UTC"),
+        Float(help="remaining time for this state (sec; 0 if none, short or unknown)"),
+        Float(help="total time for this state (sec; 0 if none, short or unknown)"),
+    ),
+    Key("fsActRadMult", Float(), help="Actual findStars radius multiplier",
+        doCache=False,)
+    Key("fsActThresh", Float(), help="Actual findStars and centroid threshold (sigma)",
+        doCache=False,)
+    Key("fsDefRadMult", Float(), help="Default findStars radius multiplier",
+        doCache=False,)
+    Key("fsDefThresh", Float(), help="Default findStars and centroid threshold (sigma)",
+        doCache=False,)
+    Key("files",
+        String(help="comand: one of c (centroid), f (findStars) or g (guiding)"),
+        Bool(TrueValue=1, FalseValue=0, help="True if a new file, False if an existing file"),
+        String(help="base directory for these files (relative to image root)"),
+        String(help="name of fully processed image file"),
+        String(help="name of mask file"),
+        doCache=False,
+    ),
+    # can have additional fields which provide supplementary info; how to express that?
+    Key("guideState", String(help="Main state of guide actor; one of: on, starting, stopping, off"),
+    Key("guideMode", String(help="guide mode; one of: field, boresight, manual or...")),
+    # The final two fields are optional; how do I express this?
+    Key("star",
+        String(help="type character: c = centroid, f = findStars, g = guide star"),
+        Int(help="index; identifies the star within a list of stars returned by the command"),
+        Float(help="x, y centroid")*2,
+        Float(help="x, y estimated standard deviation of centroid")*2,
+        Float(help="radius of centroid region"),
+        Float(help="asymmetry: a measure of the asymmetry of the object"),
+        Float(help="FWHM along the major axis"),
+        Float(help="FWHM along the minor axis"),
+        Float(help="angle of ellipse major axis (deg)"),
+        Float(help="chi squared for fit to model star"),
+        Float(help="sum of all umasked pixels within the centroid radius"),
+        Float(help="estimated background level"),
+        Float(help="x, y predicted centroid")*2,
+        help="Data about a star; lengths and positions are in binned pixels and intensities are in ADUs",
+    ),
+    Key("measOffset", Float()*2, help="Measured offset of guide star from its predicted position in az/alt arcseconds; see also actOffset"),
+    Key("actOffset", Float()*2, help="Offset that will be sent to the TCC, in az/alt arcseconds. This is measOffset adjusted as the hub guider sees fit."),
+    Key("noGuideStar", help="Guide loop found no guide stars"),
+    # additional fields OK; how to handle?
+    Key("starQuality", Float(help="overall quality in range 0-1"), help="Guide iteration centroid quality", doCache=False),
+)
