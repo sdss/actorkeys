@@ -7,23 +7,23 @@ KeysDictionary('gcam',(1,0),
         Float(help="total time for this state (sec; 0 if none, short or unknown)"),
     ),
     Key("fsActRadMult", Float(), help="Actual findStars radius multiplier",
-        doCache=False,)
+        doCache=False,),
     Key("fsActThresh", Float(), help="Actual findStars and centroid threshold (sigma)",
-        doCache=False,)
+        doCache=False,),
     Key("fsDefRadMult", Float(), help="Default findStars radius multiplier",
-        doCache=False,)
+        doCache=False,),
     Key("fsDefThresh", Float(), help="Default findStars and centroid threshold (sigma)",
-        doCache=False,)
+        doCache=False,),
     Key("files",
         String(help="comand: one of c (centroid), f (findStars) or g (guiding)"),
-        Bool(TrueValue=1, FalseValue=0, help="True if a new file, False if an existing file"),
+        Bool(0, 1, help="True if a new file, False if an existing file"),
         String(help="base directory for these files (relative to image root)"),
         String(help="name of fully processed image file"),
         String(help="name of mask file"),
         doCache=False,
     ),
     # can have additional fields which provide supplementary info; how to express that?
-    Key("guideState", String(help="Main state of guide actor; one of: on, starting, stopping, off"),
+    Key("guideState", String(help="Main state of guide actor; one of: on, starting, stopping, off")),
     Key("guideMode", String(help="guide mode; one of: field, boresight, manual or...")),
     # The final two fields are optional; how do I express this?
     Key("star",
