@@ -6,4 +6,4 @@ python/actorkeys/boss.py -text
 python/actorkeys/cmds.py -text
 python/actorkeys/tcc.py -text
 python/actorkeys/testing.py -text
-ups/actorcore.table -text
+ups/actorkeys.table -text
