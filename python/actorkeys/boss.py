@@ -1,6 +1,3 @@
-from opscore.protocols.keys import * 
-from opscore.protocols.types import *
-
 KeysDictionary("boss",(1,2),
     # ICC Keywords
     Key('ExposureState',
@@ -1370,3 +1367,4 @@ KeysDictionary("boss",(1,2),
         help = "Translated value of VRD1 from the  SP2 camForth"
     ),
 
+)

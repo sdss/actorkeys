@@ -1,4 +1,4 @@
-KeysDictionary('testing',(1,4),
+KeysDictionary('testing',(1,7),
 	Key('note',String(name='text',invalid='??')),
 	Key('unsigned',UInt(name='value',invalid='??')),
 	Key('no_name',Int(invalid='??')),
@@ -52,5 +52,14 @@ KeysDictionary('testing',(1,4),
             """
         ),
         help="This demonstrates a keyword with a PVT value"
+    ),
+    Key('message2',
+        UInt(name='source',help='Message source'),
+        CompoundValueType(
+            Enum('INFO','WARN','ERROR','FAIL',name='code',help='Status code'),
+            String(name='text',help='Message body'),
+            name = 'message',
+            help = 'A tagged message'
+        )
     )
 )
