@@ -1,1 +1,2 @@
+setupOptional(plc)
 pathPrepend(PYTHONPATH, ${PRODUCT_DIR}/python)
