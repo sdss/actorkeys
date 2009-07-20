@@ -1326,10 +1326,10 @@ KeysDictionary("boss",(1,2),
     ),
 
 
-    Key('SP2RVLG4Bias',
-        Float(units='volts',strFormat='%.3f'),
-        help = "Translated value of VT+ from the  SP2 camForth"
-    ),
+#    Key('SP2RVLG4Bias',
+#        Float(units='volts',strFormat='%.3f'),
+#        help = "Translated value of VT+ from the  SP2 camForth"
+#    ),
 
 
     Key('SP1RVRD3Read',
