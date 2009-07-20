@@ -1,4 +1,4 @@
-KeysDictionary("boss",(1,2),
+KeysDictionary("boss",(1,3),
     # ICC Keywords
     Key('exposureState',
         Enum('IDLE','FLUSHING','INTEGRATING','PAUSED','ReadING'),
