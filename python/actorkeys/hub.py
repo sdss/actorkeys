@@ -1,5 +1,5 @@
 # Based on what the TCC knows about the perms widget
-KeysDictionary('hub',(1,3),
+KeysDictionary('hub',(1,4),
     Key('actors', String()*(0,), help="Current actors"),
     Key('commanders', String()*(0,), help="Current commanders"),
     # do NOT refresh user:
@@ -13,6 +13,7 @@ KeysDictionary('hub',(1,3),
         ? fully qualified domain name (if supplied)
         """,
     ),
-    Key('users', String()*(0,), help="current human (non-hub) commanders"),
     Key('text', String(), help="Craig's random musings"),
+    Key('users', String()*(0,), help="current human (non-hub) commanders"),
+    Key('version', String(), help="Craig's random choice of version string"),
 )
