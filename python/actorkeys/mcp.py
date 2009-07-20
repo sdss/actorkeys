@@ -1,5 +1,5 @@
 # -*- python -*-
-KeysDictionary("mcp", (1,2),
+KeysDictionary("mcp", (1,3),
     # Command-related keywords
     Key("badAxis", String(), doCache=False, help="Unknown telescope axis"),
     Key("badCharacter", Int(), doCache=False, help="ASCII code of invalid character"),
