@@ -1,1368 +1,1368 @@
 KeysDictionary("boss",(1,2),
     # ICC Keywords
-    Key('ExposureState',
-        Enum('IDLE','FLUSHING','INTEGRATING','PAUSED','READING'),
+    Key('exposureState',
+        Enum('IDLE','FLUSHING','INTEGRATING','PAUSED','ReadING'),
         help='The current state of the exposure.'
     ),
-    Key('HardwareStatus',
+    Key('hardwareStatus',
         Bits('sp1cam','sp2cam','sp1mech','sp2mech','sp1daq','sp2daq'),
         help='Connection status of each current piece of hardware.'
     ),
     # specMech Keywords
-    Key('ShutterStatus',
+    Key('shutterStatus',
         Bits('sp1Shutter','sp2Shutter'),
         help = "Status of the shutters, 0 closed, 1 open."
     ),
-    Key('ScreenStatus',
-        Bits('sp1Left','sp1Right','sp2Left','sp2Right'),
-        help = "Status of the hartman screens, 0 out, 1 in."
+    Key('screenStatus',
+        Bits('sp1Left:2','sp1Right:2','sp2Left:2','sp2Right:2'),
+        help = "Status of the hartman screens, the left bit represents the closed sensor and the right bit the open sensor."
         ),
-    Key('MotorPosition',
+    Key('motorPosition',
         Int()*6,
         help = "The position of the motors in ticks of both spectographs."
         ),
-    Key('MotorStatus',
+    Key('motorStatus',
         Bits('OnTarget','LimitSwitch','MotorOff','SlewMode',':1','Slave','FindEdge','Stopped')*6,
         help = "Status of the motors. Six to represent sp1MotorA-sp2MotorC."
         ),
-    Key('SpecMechVersion',
+    Key('specMechVersion',
         String()*2,
         help = "Version string of sp1mech and sp2mech."
         ),
     # DAQ Keywords
     # Cam Micro Keywords
-    Key('CamForthVersion',
+    Key('camForthVersion',
         String()*2,
         help = "Version strings for the cam micros."
         ),
     
-    Key('SP1BVPcDREAD',
+    Key('SP1BVPcDRead',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VP3+ from the  SP1 camForth"
     ),
 
 
-    Key('SP1BVPcDNOM',
+    Key('SP1BVPcDNom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VP3+ from the  SP1 camForth"
     ),
 
 
-    Key('SP1BVPcDBIAS',
+    Key('SP1BVPcDBias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VP3+ from the  SP1 camForth"
     ),
 
 
-    Key('SP2BVPcDREAD',
+    Key('SP2BVPcDRead',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VP3+ from the  SP2 camForth"
     ),
 
 
-    Key('SP2BVPcDNOM',
+    Key('SP2BVPcDNom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VP3+ from the  SP2 camForth"
     ),
 
 
-    Key('SP2BVPcDBIAS',
+    Key('SP2BVPcDBias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VP3+ from the  SP2 camForth"
     ),
 
 
-    Key('SP1BVSc2READ',
+    Key('SP1BVSc2Read',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VS+ from the  SP1 camForth"
     ),
 
 
-    Key('SP1BVSc2NOM',
+    Key('SP1BVSc2Nom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VS+ from the  SP1 camForth"
     ),
 
 
-    Key('SP1BVSc2BIAS',
+    Key('SP1BVSc2Bias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VS+ from the  SP1 camForth"
     ),
 
 
-    Key('SP2BVSc2READ',
+    Key('SP2BVSc2Read',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VS+ from the  SP2 camForth"
     ),
 
 
-    Key('SP2BVSc2NOM',
+    Key('SP2BVSc2Nom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VS+ from the  SP2 camForth"
     ),
 
 
-    Key('SP2BVSc2BIAS',
+    Key('SP2BVSc2Bias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VS+ from the  SP2 camForth"
     ),
 
 
-    Key('SP1BINegTrim3READ',
+    Key('SP1BINegTrim3Read',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of I-TRIM1 from the  SP1 camForth"
     ),
 
 
-    Key('SP1BINegTrim3NOM',
+    Key('SP1BINegTrim3Nom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of I-TRIM1 from the  SP1 camForth"
     ),
 
 
-    Key('SP1BINegTrim3BIAS',
+    Key('SP1BINegTrim3Bias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of I-TRIM1 from the  SP1 camForth"
     ),
 
 
-    Key('SP2BINegTrim3READ',
+    Key('SP2BINegTrim3Read',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of I-TRIM1 from the  SP2 camForth"
     ),
 
 
-    Key('SP2BINegTrim3NOM',
+    Key('SP2BINegTrim3Nom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of I-TRIM1 from the  SP2 camForth"
     ),
 
 
-    Key('SP2BINegTrim3BIAS',
+    Key('SP2BINegTrim3Bias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of I-TRIM1 from the  SP2 camForth"
     ),
 
 
-    Key('SP1BVRoffREAD',
+    Key('SP1BVRoffRead',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VSW- from the  SP1 camForth"
     ),
 
 
-    Key('SP1BVRoffNOM',
+    Key('SP1BVRoffNom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VSW- from the  SP1 camForth"
     ),
 
 
-    Key('SP1BVRoffBIAS',
+    Key('SP1BVRoffBias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VSW- from the  SP1 camForth"
     ),
 
 
-    Key('SP2BVRoffREAD',
+    Key('SP2BVRoffRead',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VSW- from the  SP2 camForth"
     ),
 
 
-    Key('SP2BVRoffNOM',
+    Key('SP2BVRoffNom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VSW- from the  SP2 camForth"
     ),
 
 
-    Key('SP2BVRoffBIAS',
+    Key('SP2BVRoffBias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VSW- from the  SP2 camForth"
     ),
 
 
-    Key('SP1BVPbDREAD',
+    Key('SP1BVPbDRead',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VP3- from the  SP1 camForth"
     ),
 
 
-    Key('SP1BVPbDNOM',
+    Key('SP1BVPbDNom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VP3- from the  SP1 camForth"
     ),
 
 
-    Key('SP1BVPbDBIAS',
+    Key('SP1BVPbDBias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VP3- from the  SP1 camForth"
     ),
 
 
-    Key('SP2BVPbDREAD',
+    Key('SP2BVPbDRead',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VP3- from the  SP2 camForth"
     ),
 
 
-    Key('SP2BVPbDNOM',
+    Key('SP2BVPbDNom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VP3- from the  SP2 camForth"
     ),
 
 
-    Key('SP2BVPbDBIAS',
+    Key('SP2BVPbDBias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VP3- from the  SP2 camForth"
     ),
 
 
-    Key('SP1BINegTrim4READ',
+    Key('SP1BINegTrim4Read',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of I-TRIM2 from the  SP1 camForth"
     ),
 
 
-    Key('SP1BINegTrim4NOM',
+    Key('SP1BINegTrim4Nom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of I-TRIM2 from the  SP1 camForth"
     ),
 
 
-    Key('SP1BINegTrim4BIAS',
+    Key('SP1BINegTrim4Bias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of I-TRIM2 from the  SP1 camForth"
     ),
 
 
-    Key('SP2BINegTrim4READ',
+    Key('SP2BINegTrim4Read',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of I-TRIM2 from the  SP2 camForth"
     ),
 
 
-    Key('SP2BINegTrim4NOM',
+    Key('SP2BINegTrim4Nom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of I-TRIM2 from the  SP2 camForth"
     ),
 
 
-    Key('SP2BINegTrim4BIAS',
+    Key('SP2BINegTrim4Bias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of I-TRIM2 from the  SP2 camForth"
     ),
 
 
-    Key('SP1BIPosTrim4READ',
+    Key('SP1BIPosTrim4Read',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of I+TRIM2 from the  SP1 camForth"
     ),
 
 
-    Key('SP1BIPosTrim4NOM',
+    Key('SP1BIPosTrim4Nom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of I+TRIM2 from the  SP1 camForth"
     ),
 
 
-    Key('SP1BIPosTrim4BIAS',
+    Key('SP1BIPosTrim4Bias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of I+TRIM2 from the  SP1 camForth"
     ),
 
 
-    Key('SP2BIPosTrim4READ',
+    Key('SP2BIPosTrim4Read',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of I+TRIM2 from the  SP2 camForth"
     ),
 
 
-    Key('SP2BIPosTrim4NOM',
+    Key('SP2BIPosTrim4Nom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of I+TRIM2 from the  SP2 camForth"
     ),
 
 
-    Key('SP2BIPosTrim4BIAS',
+    Key('SP2BIPosTrim4Bias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of I+TRIM2 from the  SP2 camForth"
     ),
 
 
-    Key('SP1BIPosTrim3READ',
+    Key('SP1BIPosTrim3Read',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of I+TRIM1 from the  SP1 camForth"
     ),
 
 
-    Key('SP1BIPosTrim3NOM',
+    Key('SP1BIPosTrim3Nom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of I+TRIM1 from the  SP1 camForth"
     ),
 
 
-    Key('SP1BIPosTrim3BIAS',
+    Key('SP1BIPosTrim3Bias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of I+TRIM1 from the  SP1 camForth"
     ),
 
 
-    Key('SP2BIPosTrim3READ',
+    Key('SP2BIPosTrim3Read',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of I+TRIM1 from the  SP2 camForth"
     ),
 
 
-    Key('SP2BIPosTrim3NOM',
+    Key('SP2BIPosTrim3Nom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of I+TRIM1 from the  SP2 camForth"
     ),
 
 
-    Key('SP2BIPosTrim3BIAS',
+    Key('SP2BIPosTrim3Bias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of I+TRIM1 from the  SP2 camForth"
     ),
 
 
-    Key('SP1BVDD3READ',
+    Key('SP1BVDD3Read',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VDD1 from the  SP1 camForth"
     ),
 
 
-    Key('SP1BVDD3NOM',
+    Key('SP1BVDD3Nom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VDD1 from the  SP1 camForth"
     ),
 
 
-    Key('SP1BVDD3BIAS',
+    Key('SP1BVDD3Bias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VDD1 from the  SP1 camForth"
     ),
 
 
-    Key('SP2BVDD3READ',
+    Key('SP2BVDD3Read',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VDD1 from the  SP2 camForth"
     ),
 
 
-    Key('SP2BVDD3NOM',
+    Key('SP2BVDD3Nom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VDD1 from the  SP2 camForth"
     ),
 
 
-    Key('SP2BVDD3BIAS',
+    Key('SP2BVDD3Bias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VDD1 from the  SP2 camForth"
     ),
 
 
-    Key('SP1BVLG34READ',
+    Key('SP1BVLG34Read',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VLG from the  SP1 camForth"
     ),
 
 
-    Key('SP1BVLG34NOM',
+    Key('SP1BVLG34Nom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VLG from the  SP1 camForth"
     ),
 
 
-    Key('SP1BVLG34BIAS',
+    Key('SP1BVLG34Bias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VLG from the  SP1 camForth"
     ),
 
 
-    Key('SP2BVLG34READ',
+    Key('SP2BVLG34Read',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VLG from the  SP2 camForth"
     ),
 
 
-    Key('SP2BVLG34NOM',
+    Key('SP2BVLG34Nom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VLG from the  SP2 camForth"
     ),
 
 
-    Key('SP2BVLG34BIAS',
+    Key('SP2BVLG34Bias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VLG from the  SP2 camForth"
     ),
 
 
-    Key('SP1BVSb2READ',
+    Key('SP1BVSb2Read',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VS- from the  SP1 camForth"
     ),
 
 
-    Key('SP1BVSb2NOM',
+    Key('SP1BVSb2Nom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VS- from the  SP1 camForth"
     ),
 
 
-    Key('SP1BVSb2BIAS',
+    Key('SP1BVSb2Bias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VS- from the  SP1 camForth"
     ),
 
 
-    Key('SP2BVSb2READ',
+    Key('SP2BVSb2Read',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VS- from the  SP2 camForth"
     ),
 
 
-    Key('SP2BVSb2NOM',
+    Key('SP2BVSb2Nom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VS- from the  SP2 camForth"
     ),
 
 
-    Key('SP2BVSb2BIAS',
+    Key('SP2BVSb2Bias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VS- from the  SP2 camForth"
     ),
 
 
-    Key('SP1BVDD4READ',
+    Key('SP1BVDD4Read',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VDD2 from the  SP1 camForth"
     ),
 
 
-    Key('SP1BVDD4NOM',
+    Key('SP1BVDD4Nom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VDD2 from the  SP1 camForth"
     ),
 
 
-    Key('SP1BVDD4BIAS',
+    Key('SP1BVDD4Bias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VDD2 from the  SP1 camForth"
     ),
 
 
-    Key('SP2BVDD4READ',
+    Key('SP2BVDD4Read',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VDD2 from the  SP2 camForth"
     ),
 
 
-    Key('SP2BVDD4NOM',
+    Key('SP2BVDD4Nom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VDD2 from the  SP2 camForth"
     ),
 
 
-    Key('SP2BVDD4BIAS',
+    Key('SP2BVDD4Bias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VDD2 from the  SP2 camForth"
     ),
 
 
-    Key('SP1BVRD4READ',
+    Key('SP1BVRD4Read',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VRD2 from the  SP1 camForth"
     ),
 
 
-    Key('SP1BVRD4NOM',
+    Key('SP1BVRD4Nom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VRD2 from the  SP1 camForth"
     ),
 
 
-    Key('SP1BVRD4BIAS',
+    Key('SP1BVRD4Bias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VRD2 from the  SP1 camForth"
     ),
 
 
-    Key('SP2BVRD4READ',
+    Key('SP2BVRD4Read',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VRD2 from the  SP2 camForth"
     ),
 
 
-    Key('SP2BVRD4NOM',
+    Key('SP2BVRD4Nom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VRD2 from the  SP2 camForth"
     ),
 
 
-    Key('SP2BVRD4BIAS',
+    Key('SP2BVRD4Bias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VRD2 from the  SP2 camForth"
     ),
 
 
-    Key('SP1BHeaterVREAD',
+    Key('SP1BHeaterVRead',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of HEATERV from the  SP1 camForth"
     ),
 
 
-    Key('SP1BHeaterVNOM',
+    Key('SP1BHeaterVNom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of HEATERV from the  SP1 camForth"
     ),
 
 
-    Key('SP1BHeaterVBIAS',
+    Key('SP1BHeaterVBias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of HEATERV from the  SP1 camForth"
     ),
 
 
-    Key('SP2BHeaterVREAD',
+    Key('SP2BHeaterVRead',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of HEATERV from the  SP2 camForth"
     ),
 
 
-    Key('SP2BHeaterVNOM',
+    Key('SP2BHeaterVNom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of HEATERV from the  SP2 camForth"
     ),
 
 
-    Key('SP2BHeaterVBIAS',
+    Key('SP2BHeaterVBias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of HEATERV from the  SP2 camForth"
     ),
 
 
-    Key('SP1BVPcCREAD',
+    Key('SP1BVPcCRead',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VP12+ from the  SP1 camForth"
     ),
 
 
-    Key('SP1BVPcCNOM',
+    Key('SP1BVPcCNom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VP12+ from the  SP1 camForth"
     ),
 
 
-    Key('SP1BVPcCBIAS',
+    Key('SP1BVPcCBias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VP12+ from the  SP1 camForth"
     ),
 
 
-    Key('SP2BVPcCREAD',
+    Key('SP2BVPcCRead',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VP12+ from the  SP2 camForth"
     ),
 
 
-    Key('SP2BVPcCNOM',
+    Key('SP2BVPcCNom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VP12+ from the  SP2 camForth"
     ),
 
 
-    Key('SP2BVPcCBIAS',
+    Key('SP2BVPcCBias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VP12+ from the  SP2 camForth"
     ),
 
 
-    Key('SP1BVPbCREAD',
+    Key('SP1BVPbCRead',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VP12- from the  SP1 camForth"
     ),
 
 
-    Key('SP1BVPbCNOM',
+    Key('SP1BVPbCNom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VP12- from the  SP1 camForth"
     ),
 
 
-    Key('SP1BVPbCBIAS',
+    Key('SP1BVPbCBias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VP12- from the  SP1 camForth"
     ),
 
 
-    Key('SP2BVPbCREAD',
+    Key('SP2BVPbCRead',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VP12- from the  SP2 camForth"
     ),
 
 
-    Key('SP2BVPbCNOM',
+    Key('SP2BVPbCNom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VP12- from the  SP2 camForth"
     ),
 
 
-    Key('SP2BVPbCBIAS',
+    Key('SP2BVPbCBias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VP12- from the  SP2 camForth"
     ),
 
 
-    Key('SP1BVRD3READ',
+    Key('SP1BVRD3Read',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VRD1 from the  SP1 camForth"
     ),
 
 
-    Key('SP1BVRD3NOM',
+    Key('SP1BVRD3Nom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VRD1 from the  SP1 camForth"
     ),
 
 
-    Key('SP1BVRD3BIAS',
+    Key('SP1BVRD3Bias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VRD1 from the  SP1 camForth"
     ),
 
 
-    Key('SP2BVRD3READ',
+    Key('SP2BVRD3Read',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VRD1 from the  SP2 camForth"
     ),
 
 
-    Key('SP2BVRD3NOM',
+    Key('SP2BVRD3Nom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VRD1 from the  SP2 camForth"
     ),
 
 
-    Key('SP2BVRD3BIAS',
+    Key('SP2BVRD3Bias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VRD1 from the  SP2 camForth"
     ),
 
 
-    Key('SP1RVERASEREAD',
+    Key('SP1RVERASERead',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VP3+ from the  SP1 camForth"
     ),
 
 
-    Key('SP1RVERASENOM',
+    Key('SP1RVERASENom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VP3+ from the  SP1 camForth"
     ),
 
 
-    Key('SP1RVERASEBIAS',
+    Key('SP1RVERASEBias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VP3+ from the  SP1 camForth"
     ),
 
 
-    Key('SP2RVERASEREAD',
+    Key('SP2RVERASERead',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VP3+ from the  SP2 camForth"
     ),
 
 
-    Key('SP2RVERASENOM',
+    Key('SP2RVERASENom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VP3+ from the  SP2 camForth"
     ),
 
 
-    Key('SP2RVERASEBIAS',
+    Key('SP2RVERASEBias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VP3+ from the  SP2 camForth"
     ),
 
 
-    Key('SP1RVSc2READ',
+    Key('SP1RVSc2Read',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VS+ from the  SP1 camForth"
     ),
 
 
-    Key('SP1RVSc2NOM',
+    Key('SP1RVSc2Nom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VS+ from the  SP1 camForth"
     ),
 
 
-    Key('SP1RVSc2BIAS',
+    Key('SP1RVSc2Bias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VS+ from the  SP1 camForth"
     ),
 
 
-    Key('SP2RVSc2READ',
+    Key('SP2RVSc2Read',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VS+ from the  SP2 camForth"
     ),
 
 
-    Key('SP2RVSc2NOM',
+    Key('SP2RVSc2Nom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VS+ from the  SP2 camForth"
     ),
 
 
-    Key('SP2RVSc2BIAS',
+    Key('SP2RVSc2Bias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VS+ from the  SP2 camForth"
     ),
 
 
-    Key('SP1RINegTrim3READ',
+    Key('SP1RINegTrim3Read',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of I-TRIM1 from the  SP1 camForth"
     ),
 
 
-    Key('SP1RINegTrim3NOM',
+    Key('SP1RINegTrim3Nom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of I-TRIM1 from the  SP1 camForth"
     ),
 
 
-    Key('SP1RINegTrim3BIAS',
+    Key('SP1RINegTrim3Bias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of I-TRIM1 from the  SP1 camForth"
     ),
 
 
-    Key('SP2RINegTrim3READ',
+    Key('SP2RINegTrim3Read',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of I-TRIM1 from the  SP2 camForth"
     ),
 
 
-    Key('SP2RINegTrim3NOM',
+    Key('SP2RINegTrim3Nom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of I-TRIM1 from the  SP2 camForth"
     ),
 
 
-    Key('SP2RINegTrim3BIAS',
+    Key('SP2RINegTrim3Bias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of I-TRIM1 from the  SP2 camForth"
     ),
 
 
-    Key('SP1RVRonREAD',
+    Key('SP1RVRonRead',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VSW- from the  SP1 camForth"
     ),
 
 
-    Key('SP1RVRonNOM',
+    Key('SP1RVRonNom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VSW- from the  SP1 camForth"
     ),
 
 
-    Key('SP1RVRonBIAS',
+    Key('SP1RVRonBias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VSW- from the  SP1 camForth"
     ),
 
 
-    Key('SP2RVRonREAD',
+    Key('SP2RVRonRead',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VSW- from the  SP2 camForth"
     ),
 
 
-    Key('SP2RVRonNOM',
+    Key('SP2RVRonNom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VSW- from the  SP2 camForth"
     ),
 
 
-    Key('SP2RVRonBIAS',
+    Key('SP2RVRonBias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VSW- from the  SP2 camForth"
     ),
 
 
-    Key('SP1RVPURGREAD',
+    Key('SP1RVPURGRead',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VP3- from the  SP1 camForth"
     ),
 
 
-    Key('SP1RVPURGNOM',
+    Key('SP1RVPURGNom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VP3- from the  SP1 camForth"
     ),
 
 
-    Key('SP1RVPURGBIAS',
+    Key('SP1RVPURGBias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VP3- from the  SP1 camForth"
     ),
 
 
-    Key('SP2RVPURGREAD',
+    Key('SP2RVPURGRead',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VP3- from the  SP2 camForth"
     ),
 
 
-    Key('SP2RVPURGNOM',
+    Key('SP2RVPURGNom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VP3- from the  SP2 camForth"
     ),
 
 
-    Key('SP2RVPURGBIAS',
+    Key('SP2RVPURGBias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VP3- from the  SP2 camForth"
     ),
 
 
-    Key('SP1RINegTrim4READ',
+    Key('SP1RINegTrim4Read',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of I-TRIM2 from the  SP1 camForth"
     ),
 
 
-    Key('SP1RINegTrim4NOM',
+    Key('SP1RINegTrim4Nom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of I-TRIM2 from the  SP1 camForth"
     ),
 
 
-    Key('SP1RINegTrim4BIAS',
+    Key('SP1RINegTrim4Bias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of I-TRIM2 from the  SP1 camForth"
     ),
 
 
-    Key('SP2RINegTrim4READ',
+    Key('SP2RINegTrim4Read',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of I-TRIM2 from the  SP2 camForth"
     ),
 
 
-    Key('SP2RINegTrim4NOM',
+    Key('SP2RINegTrim4Nom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of I-TRIM2 from the  SP2 camForth"
     ),
 
 
-    Key('SP2RINegTrim4BIAS',
+    Key('SP2RINegTrim4Bias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of I-TRIM2 from the  SP2 camForth"
     ),
 
 
-    Key('SP1RVSR2READ',
+    Key('SP1RVSR2Read',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VS- from the  SP1 camForth"
     ),
 
 
-    Key('SP1RVSR2NOM',
+    Key('SP1RVSR2Nom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VS- from the  SP1 camForth"
     ),
 
 
-    Key('SP1RVSR2BIAS',
+    Key('SP1RVSR2Bias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VS- from the  SP1 camForth"
     ),
 
 
-    Key('SP2RVSR2READ',
+    Key('SP2RVSR2Read',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VS- from the  SP2 camForth"
     ),
 
 
-    Key('SP2RVSR2NOM',
+    Key('SP2RVSR2Nom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VS- from the  SP2 camForth"
     ),
 
 
-    Key('SP2RVSR2BIAS',
+    Key('SP2RVSR2Bias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VS- from the  SP2 camForth"
     ),
 
 
-    Key('SP1RIPosTrim4READ',
+    Key('SP1RIPosTrim4Read',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of I+TRIM2 from the  SP1 camForth"
     ),
 
 
-    Key('SP1RIPosTrim4NOM',
+    Key('SP1RIPosTrim4Nom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of I+TRIM2 from the  SP1 camForth"
     ),
 
 
-    Key('SP1RIPosTrim4BIAS',
+    Key('SP1RIPosTrim4Bias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of I+TRIM2 from the  SP1 camForth"
     ),
 
 
-    Key('SP2RIPosTrim4READ',
+    Key('SP2RIPosTrim4Read',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of I+TRIM2 from the  SP2 camForth"
     ),
 
 
-    Key('SP2RIPosTrim4NOM',
+    Key('SP2RIPosTrim4Nom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of I+TRIM2 from the  SP2 camForth"
     ),
 
 
-    Key('SP2RIPosTrim4BIAS',
+    Key('SP2RIPosTrim4Bias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of I+TRIM2 from the  SP2 camForth"
     ),
 
 
-    Key('SP1RIPosTrim3READ',
+    Key('SP1RIPosTrim3Read',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of I+TRIM1 from the  SP1 camForth"
     ),
 
 
-    Key('SP1RIPosTrim3NOM',
+    Key('SP1RIPosTrim3Nom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of I+TRIM1 from the  SP1 camForth"
     ),
 
 
-    Key('SP1RIPosTrim3BIAS',
+    Key('SP1RIPosTrim3Bias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of I+TRIM1 from the  SP1 camForth"
     ),
 
 
-    Key('SP2RIPosTrim3READ',
+    Key('SP2RIPosTrim3Read',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of I+TRIM1 from the  SP2 camForth"
     ),
 
 
-    Key('SP2RIPosTrim3NOM',
+    Key('SP2RIPosTrim3Nom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of I+TRIM1 from the  SP2 camForth"
     ),
 
 
-    Key('SP2RIPosTrim3BIAS',
+    Key('SP2RIPosTrim3Bias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of I+TRIM1 from the  SP2 camForth"
     ),
 
 
-    Key('SP1RVDD3READ',
+    Key('SP1RVDD3Read',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VDD1 from the  SP1 camForth"
     ),
 
 
-    Key('SP1RVDD3NOM',
+    Key('SP1RVDD3Nom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VDD1 from the  SP1 camForth"
     ),
 
 
-    Key('SP1RVDD3BIAS',
+    Key('SP1RVDD3Bias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VDD1 from the  SP1 camForth"
     ),
 
 
-    Key('SP2RVDD3READ',
+    Key('SP2RVDD3Read',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VDD1 from the  SP2 camForth"
     ),
 
 
-    Key('SP2RVDD3NOM',
+    Key('SP2RVDD3Nom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VDD1 from the  SP2 camForth"
     ),
 
 
-    Key('SP2RVDD3BIAS',
+    Key('SP2RVDD3Bias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VDD1 from the  SP2 camForth"
     ),
 
 
-    Key('SP1RVLG3READ',
+    Key('SP1RVLG3Read',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VT- from the  SP1 camForth"
     ),
 
 
-    Key('SP1RVLG3NOM',
+    Key('SP1RVLG3Nom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VT- from the  SP1 camForth"
     ),
 
 
-    Key('SP1RVLG3BIAS',
+    Key('SP1RVLG3Bias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VT- from the  SP1 camForth"
     ),
 
 
-    Key('SP2RVLG3READ',
+    Key('SP2RVLG3Read',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VT- from the  SP2 camForth"
     ),
 
 
-    Key('SP2RVLG3NOM',
+    Key('SP2RVLG3Nom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VT- from the  SP2 camForth"
     ),
 
 
-    Key('SP2RVLG3BIAS',
+    Key('SP2RVLG3Bias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VT- from the  SP2 camForth"
     ),
 
 
-    Key('SP1RVLG2READ',
+    Key('SP1RVLG2Read',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VLG from the  SP1 camForth"
     ),
 
 
-    Key('SP1RVLG2NOM',
+    Key('SP1RVLG2Nom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VLG from the  SP1 camForth"
     ),
 
 
-    Key('SP1RVLG2BIAS',
+    Key('SP1RVLG2Bias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VLG from the  SP1 camForth"
     ),
 
 
-    Key('SP2RVLG2READ',
+    Key('SP2RVLG2Read',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VLG from the  SP2 camForth"
     ),
 
 
-    Key('SP2RVLG2NOM',
+    Key('SP2RVLG2Nom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VLG from the  SP2 camForth"
     ),
 
 
-    Key('SP2RVLG2BIAS',
+    Key('SP2RVLG2Bias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VLG from the  SP2 camForth"
     ),
 
 
-    Key('SP1RVPcCREAD',
+    Key('SP1RVPcCRead',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VP12- from the  SP1 camForth"
     ),
 
 
-    Key('SP1RVPcCNOM',
+    Key('SP1RVPcCNom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VP12- from the  SP1 camForth"
     ),
 
 
-    Key('SP1RVPcCBIAS',
+    Key('SP1RVPcCBias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VP12- from the  SP1 camForth"
     ),
 
 
-    Key('SP2RVPcCREAD',
+    Key('SP2RVPcCRead',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VP12- from the  SP2 camForth"
     ),
 
 
-    Key('SP2RVPcCNOM',
+    Key('SP2RVPcCNom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VP12- from the  SP2 camForth"
     ),
 
 
-    Key('SP2RVPcCBIAS',
+    Key('SP2RVPcCBias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VP12- from the  SP2 camForth"
     ),
 
 
-    Key('SP1RVSUBSREAD',
+    Key('SP1RVSUBSRead',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VR from the  SP1 camForth"
     ),
 
 
-    Key('SP1RVSUBSNOM',
+    Key('SP1RVSUBSNom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VR from the  SP1 camForth"
     ),
 
 
-    Key('SP1RVSUBSBIAS',
+    Key('SP1RVSUBSBias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VR from the  SP1 camForth"
     ),
 
 
-    Key('SP2RVSUBSREAD',
+    Key('SP2RVSUBSRead',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VR from the  SP2 camForth"
     ),
 
 
-    Key('SP2RVSUBSNOM',
+    Key('SP2RVSUBSNom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VR from the  SP2 camForth"
     ),
 
 
-    Key('SP2RVSUBSBIAS',
+    Key('SP2RVSUBSBias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VR from the  SP2 camForth"
     ),
 
 
-    Key('SP1RVDD4READ',
+    Key('SP1RVDD4Read',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VDD2 from the  SP1 camForth"
     ),
 
 
-    Key('SP1RVDD4NOM',
+    Key('SP1RVDD4Nom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VDD2 from the  SP1 camForth"
     ),
 
 
-    Key('SP1RVDD4BIAS',
+    Key('SP1RVDD4Bias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VDD2 from the  SP1 camForth"
     ),
 
 
-    Key('SP2RVDD4READ',
+    Key('SP2RVDD4Read',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VDD2 from the  SP2 camForth"
     ),
 
 
-    Key('SP2RVDD4NOM',
+    Key('SP2RVDD4Nom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VDD2 from the  SP2 camForth"
     ),
 
 
-    Key('SP2RVDD4BIAS',
+    Key('SP2RVDD4Bias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VDD2 from the  SP2 camForth"
     ),
 
 
-    Key('SP1RVRD4READ',
+    Key('SP1RVRD4Read',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VRD2 from the  SP1 camForth"
     ),
 
 
-    Key('SP1RVRD4NOM',
+    Key('SP1RVRD4Nom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VRD2 from the  SP1 camForth"
     ),
 
 
-    Key('SP1RVRD4BIAS',
+    Key('SP1RVRD4Bias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VRD2 from the  SP1 camForth"
     ),
 
 
-    Key('SP2RVRD4READ',
+    Key('SP2RVRD4Read',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VRD2 from the  SP2 camForth"
     ),
 
 
-    Key('SP2RVRD4NOM',
+    Key('SP2RVRD4Nom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VRD2 from the  SP2 camForth"
     ),
 
 
-    Key('SP2RVRD4BIAS',
+    Key('SP2RVRD4Bias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VRD2 from the  SP2 camForth"
     ),
 
 
-    Key('SP1RHeaterVREAD',
+    Key('SP1RHeaterVRead',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of HEATERV from the  SP1 camForth"
     ),
 
 
-    Key('SP1RHeaterVNOM',
+    Key('SP1RHeaterVNom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of HEATERV from the  SP1 camForth"
     ),
 
 
-    Key('SP1RHeaterVBIAS',
+    Key('SP1RHeaterVBias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of HEATERV from the  SP1 camForth"
     ),
 
 
-    Key('SP2RHeaterVREAD',
+    Key('SP2RHeaterVRead',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of HEATERV from the  SP2 camForth"
     ),
 
 
-    Key('SP2RHeaterVNOM',
+    Key('SP2RHeaterVNom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of HEATERV from the  SP2 camForth"
     ),
 
 
-    Key('SP2RHeaterVBIAS',
+    Key('SP2RHeaterVBias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of HEATERV from the  SP2 camForth"
     ),
 
 
-    Key('SP1RVPRCREAD',
+    Key('SP1RVPRCRead',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VP12+ from the  SP1 camForth"
     ),
 
 
-    Key('SP1RVPRCNOM',
+    Key('SP1RVPRCNom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VP12+ from the  SP1 camForth"
     ),
 
 
-    Key('SP1RVPRCBIAS',
+    Key('SP1RVPRCBias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VP12+ from the  SP1 camForth"
     ),
 
 
-    Key('SP2RVPRCREAD',
+    Key('SP2RVPRCRead',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VP12+ from the  SP2 camForth"
     ),
 
 
-    Key('SP2RVPRCNOM',
+    Key('SP2RVPRCNom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VP12+ from the  SP2 camForth"
     ),
 
 
-    Key('SP2RVPRCBIAS',
+    Key('SP2RVPRCBias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VP12+ from the  SP2 camForth"
     ),
 
 
-    Key('SP1RVLG4READ',
+    Key('SP1RVLG4Read',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VT+ from the  SP1 camForth"
     ),
 
 
-    Key('SP1RVLG4NOM',
+    Key('SP1RVLG4Nom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VT+ from the  SP1 camForth"
     ),
 
 
-    Key('SP1RVLG4BIAS',
+    Key('SP1RVLG4Bias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VT+ from the  SP1 camForth"
     ),
 
 
-    Key('SP2RVLG4READ',
+    Key('SP2RVLG4Read',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VT+ from the  SP2 camForth"
     ),
 
 
-    Key('SP2RVLG4NOM',
+    Key('SP2RVLG4Bias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VT+ from the  SP2 camForth"
     ),
 
 
-    Key('SP2RVLG4BIAS',
+    Key('SP2RVLG4Bias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VT+ from the  SP2 camForth"
     ),
 
 
-    Key('SP1RVRD3READ',
+    Key('SP1RVRD3Read',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VRD1 from the  SP1 camForth"
     ),
 
 
-    Key('SP1RVRD3NOM',
+    Key('SP1RVRD3Nom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VRD1 from the  SP1 camForth"
     ),
 
 
-    Key('SP1RVRD3BIAS',
+    Key('SP1RVRD3Bias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VRD1 from the  SP1 camForth"
     ),
 
 
-    Key('SP2RVRD3READ',
+    Key('SP2RVRD3Read',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VRD1 from the  SP2 camForth"
     ),
 
 
-    Key('SP2RVRD3NOM',
+    Key('SP2RVRD3Nom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VRD1 from the  SP2 camForth"
     ),
 
 
-    Key('SP2RVRD3BIAS',
+    Key('SP2RVRD3Bias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VRD1 from the  SP2 camForth"
     ),
