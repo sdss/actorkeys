@@ -4,6 +4,7 @@ doc/describe.py -text
 python/actorkeys/Makefile -text
 python/actorkeys/__init__.py -text
 python/actorkeys/boss.py -text
+python/actorkeys/bossdev.py -text
 python/actorkeys/cmds.py -text
 python/actorkeys/mcp.py -text
 python/actorkeys/mcp.py.skl -text
