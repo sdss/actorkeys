@@ -12,7 +12,7 @@ def _getStdDictionaryNames():
     allModNames = sorted(os.path.basename(path[0:-3]) for path in allModPaths)
     retList = []
     for modName in allModNames:
-        if "_" in modName:
+        if modName.startswith("_"):
             continue
         if " " in modName:
             continue
