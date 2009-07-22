@@ -1,7 +1,8 @@
 KeysDictionary("boss",(1,3),
     # ICC Keywords
     Key('exposureState',
-        Enum('IDLE','FLUSHING','INTEGRATING','PAUSED','ReadING'),
+        Enum('IDLE','FLUSHING','INTEGRATING','PAUSED','READING'),
+        Int()*2,
         help='The current state of the exposure.'
     ),
     Key('hardwareStatus',
@@ -31,11 +32,163 @@ KeysDictionary("boss",(1,3),
         ),
     # DAQ Keywords
     # Cam Micro Keywords
+    # camStatus
+    Key('SP1LN2Fill',
+        Enum('ON','OFF'),
+    ),
+    Key('SP1CameraMonitor',
+        Enum('ON','OFF')
+    ),
+    Key('SP1Cam00',
+        Int()
+    ),
+    Key('SP1Cam01',
+        Int()
+    ),
+    Key('SP1Cam02',
+        Int()
+    ),
+    Key('SP1Cam03',
+        Int()
+    ),
+    Key('SP1SerialSpeed',
+        String()
+    ),
+    Key('SP1Pixels',
+        Int()
+    ),
+    Key('SP1BinnedPixels',
+        Int()
+    ),
+    Key('SP1BlueParallelDir',
+        Enum('FWD','REV','UNKOWN')
+    ),
+    Key('SP1BlueParallelState',
+        Enum('CLOCK','STOPPED','UNKOWN')
+    ),
+    Key('SP1RedParallelDir',
+        Enum('FWD','REV','UNKOWN')
+    ),
+    Key('SP1RedParallelState',
+        Enum('CLOCK','STOPPED','UNKOWN')
+    ),
+    Key('SP1DataMode',
+        Enum('FRAME','CONTINUOUS')
+    ),
+    Key('SP1Lines',
+        Int()
+    ),
+    Key('SP1BinnedLines',
+        Int()
+    ),
+    Key('SP1DataState',
+        Enum('IDLE','READING','DRIFTSCANNING','CLOCKING')
+    ),
+    Key('SP1Linestart',
+        Enum('ENABLED','DISABLED')
+    ),
+    Key('SP1LinestartPeriod',
+        String()
+    ),
+    Key('SP1DacsSet',
+        Enum('OK','ERROR')
+    ),
+    Key('SP1ExecBoot',
+        Enum('UNACKNOWLEDGED','ACKNOWLEDGED')
+    ),
+    Key('SP1PhaseBoot',
+        Enum('UNACKNOWLEDGED','ACKNOWLEDGED')
+    ),
+    Key('SP1USR1',
+        Int()
+    ),
+    Key('SP1USR2',
+        Int()
+    ),
+    Key('SP1USR3',
+        Int()
+    ),
+    Key('SP2LN2Fill',
+        Enum('ON','OFF'),
+    ),
+    Key('SP2CameraMonitor',
+        Enum('ON','OFF')
+    ),
+    Key('SP2Cam00',
+        Int()
+    ),
+    Key('SP2Cam01',
+        Int()
+    ),
+    Key('SP2Cam02',
+        Int()
+    ),
+    Key('SP2Cam03',
+        Int()
+    ),
+    Key('SP2SerialSpeed',
+        String()
+    ),
+    Key('SP2Pixels',
+        Int()
+    ),
+    Key('SP2BinnedPixels',
+        Int()
+    ),
+    Key('SP2BlueParallelDir',
+        Enum('FWD','REV','UNKOWN')
+    ),
+    Key('SP2BlueParallelState',
+        Enum('CLOCK','STOPPED','UNKOWN')
+    ),
+    Key('SP2RedParallelDir',
+        Enum('FWD','REV','UNKOWN')
+    ),
+    Key('SP2RedParallelState',
+        Enum('CLOCK','STOPPED','UNKOWN')
+    ),
+    Key('SP2DataMode',
+        Enum('FRAME','CONTINUOUS')
+    ),
+    Key('SP2Lines',
+        Int()
+    ),
+    Key('SP2BinnedLines',
+        Int()
+    ),
+    Key('SP2DataState',
+        Enum('IDLE','READING','DRIFTSCANNING','CLOCKING')
+    ),
+    Key('SP2Linestart',
+        Enum('ENABLED','DISABLED')
+    ),
+    Key('SP2LinestartPeriod',
+        String()
+    ),
+    Key('SP2DacsSet',
+        Enum('OK','ERROR')
+    ),
+    Key('SP2ExecBoot',
+        Enum('UNACKNOWLEDGED','ACKNOWLEDGED')
+    ),
+    Key('SP2PhaseBoot',
+        Enum('UNACKNOWLEDGED','ACKNOWLEDGED')
+    ),
+    Key('SP2USR1',
+        Int()
+    ),
+    Key('SP2USR2',
+        Int()
+    ),
+    Key('SP2USR3',
+        Int()
+    ),
+    # Version String
     Key('camForthVersion',
         String()*2,
         help = "Version strings for the cam micros."
         ),
-    
+    # SHOW_VOLTS
     Key('SP1BVPcDRead',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VP3+ from the  SP1 camForth"
