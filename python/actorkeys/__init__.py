@@ -8,18 +8,17 @@ import glob
 
 def _getStdDictionaryNames():
     currPath = os.path.dirname(__file__)
-    nonStdDicts = ("__init__.py", "testing.py")
-    allModules = glob.glob(os.path.join(currPath, "*.py"))
+    allModPaths = glob.glob(os.path.join(currPath, "*.py"))
+    allModNames = sorted(os.path.basename(path[0:-3]) for path in allModPaths)
     retList = []
-    for modPath in allModules:
-        modName = os.path.basename(modPath)
+    for modName in allModNames:
         if "_" in modName:
             continue
         if " " in modName:
             continue
         if modName.startswith("test"):
             continue
-        retList.append(modName[0:-3])
+        retList.append(modName)
     return retList
 
 keyDictionaries = _getStdDictionaryNames()
