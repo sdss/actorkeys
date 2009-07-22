@@ -7,4 +7,4 @@ Please add your dictionary to the keyDictionaries list if you want it
 automatically loaded by e.g. the critical errors actor
 """
 
-keyDictionaries = ("boss", "cmds", "gcam", "hub", "mcp", "msg", "perms", "tcc")
+keyDictionaries = ("boss", "bossdev", "cmds", "gcam", "hub", "mcp", "msg", "perms", "tcc")
