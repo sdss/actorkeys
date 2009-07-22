@@ -1366,5 +1366,1331 @@ KeysDictionary("boss",(1,3),
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of VRD1 from the  SP2 camForth"
     ),
+    Key('SP1BVPcDCheck',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VP3+ from the  SP1 camForth"
+    ),
+    Key('SP1BVPcDErr',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VP3+ from the  SP1 camForth"
+    ),
 
+
+    Key('SP1BVPcDTolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VP3+ from the  SP1 camForth"
+    ),
+
+
+    Key('SP2BVPcDCheck',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VP3+ from the  SP2 camForth"
+    ),
+
+    Key('SP2BVPcDErr',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VP3+ from the  SP2 camForth"
+    ),
+
+
+    Key('SP2BVPcDTolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VP3+ from the  SP2 camForth"
+    ),
+
+
+    Key('SP1BVSc2Check',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VS+ from the  SP1 camForth"
+    ),
+
+
+    Key('SP1BVSc2Err',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VS+ from the  SP1 camForth"
+    ),
+
+
+    Key('SP1BVSc2Tolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VS+ from the  SP1 camForth"
+    ),
+
+
+    Key('SP2BVSc2Check',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VS+ from the  SP2 camForth"
+    ),
+
+
+    Key('SP2BVSc2Err',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VS+ from the  SP2 camForth"
+    ),
+
+
+    Key('SP2BVSc2Tolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VS+ from the  SP2 camForth"
+    ),
+
+
+    Key('SP1BINegTrim3Check',
+        Int(strFormat='%.3f'),
+        help = "Translated value of I-TRIM1 from the  SP1 camForth"
+    ),
+
+
+    Key('SP1BINegTrim3Err',
+        Int(strFormat='%.3f'),
+        help = "Translated value of I-TRIM1 from the  SP1 camForth"
+    ),
+
+
+    Key('SP1BINegTrim3Tolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of I-TRIM1 from the  SP1 camForth"
+    ),
+
+
+    Key('SP2BINegTrim3Check',
+        Int(strFormat='%.3f'),
+        help = "Translated value of I-TRIM1 from the  SP2 camForth"
+    ),
+
+
+    Key('SP2BINegTrim3Err',
+        Int(strFormat='%.3f'),
+        help = "Translated value of I-TRIM1 from the  SP2 camForth"
+    ),
+
+
+    Key('SP2BINegTrim3Tolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of I-TRIM1 from the  SP2 camForth"
+    ),
+
+
+    Key('SP1BVRoffCheck',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VSW- from the  SP1 camForth"
+    ),
+
+
+    Key('SP1BVRoffErr',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VSW- from the  SP1 camForth"
+    ),
+
+
+    Key('SP1BVRoffTolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VSW- from the  SP1 camForth"
+    ),
+
+
+    Key('SP2BVRoffCheck',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VSW- from the  SP2 camForth"
+    ),
+
+
+    Key('SP2BVRoffErr',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VSW- from the  SP2 camForth"
+    ),
+
+
+    Key('SP2BVRoffTolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VSW- from the  SP2 camForth"
+    ),
+
+
+    Key('SP1BVPbDCheck',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VP3- from the  SP1 camForth"
+    ),
+
+
+    Key('SP1BVPbDErr',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VP3- from the  SP1 camForth"
+    ),
+
+
+    Key('SP1BVPbDTolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VP3- from the  SP1 camForth"
+    ),
+
+
+    Key('SP2BVPbDCheck',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VP3- from the  SP2 camForth"
+    ),
+
+
+    Key('SP2BVPbDErr',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VP3- from the  SP2 camForth"
+    ),
+
+
+    Key('SP2BVPbDTolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VP3- from the  SP2 camForth"
+    ),
+
+
+    Key('SP1BINegTrim4Check',
+        Int(strFormat='%.3f'),
+        help = "Translated value of I-TRIM2 from the  SP1 camForth"
+    ),
+
+
+    Key('SP1BINegTrim4Err',
+        Int(strFormat='%.3f'),
+        help = "Translated value of I-TRIM2 from the  SP1 camForth"
+    ),
+
+
+    Key('SP1BINegTrim4Tolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of I-TRIM2 from the  SP1 camForth"
+    ),
+
+
+    Key('SP2BINegTrim4Check',
+        Int(strFormat='%.3f'),
+        help = "Translated value of I-TRIM2 from the  SP2 camForth"
+    ),
+
+
+    Key('SP2BINegTrim4Err',
+        Int(strFormat='%.3f'),
+        help = "Translated value of I-TRIM2 from the  SP2 camForth"
+    ),
+
+
+    Key('SP2BINegTrim4Tolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of I-TRIM2 from the  SP2 camForth"
+    ),
+
+
+    Key('SP1BIPosTrim4Check',
+        Int(strFormat='%.3f'),
+        help = "Translated value of I+TRIM2 from the  SP1 camForth"
+    ),
+
+
+    Key('SP1BIPosTrim4Err',
+        Int(strFormat='%.3f'),
+        help = "Translated value of I+TRIM2 from the  SP1 camForth"
+    ),
+
+
+    Key('SP1BIPosTrim4Tolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of I+TRIM2 from the  SP1 camForth"
+    ),
+
+
+    Key('SP2BIPosTrim4Check',
+        Int(strFormat='%.3f'),
+        help = "Translated value of I+TRIM2 from the  SP2 camForth"
+    ),
+
+
+    Key('SP2BIPosTrim4Err',
+        Int(strFormat='%.3f'),
+        help = "Translated value of I+TRIM2 from the  SP2 camForth"
+    ),
+
+
+    Key('SP2BIPosTrim4Tolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of I+TRIM2 from the  SP2 camForth"
+    ),
+
+
+    Key('SP1BIPosTrim3Check',
+        Int(strFormat='%.3f'),
+        help = "Translated value of I+TRIM1 from the  SP1 camForth"
+    ),
+
+
+    Key('SP1BIPosTrim3Err',
+        Int(strFormat='%.3f'),
+        help = "Translated value of I+TRIM1 from the  SP1 camForth"
+    ),
+
+
+    Key('SP1BIPosTrim3Tolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of I+TRIM1 from the  SP1 camForth"
+    ),
+
+
+    Key('SP2BIPosTrim3Check',
+        Int(strFormat='%.3f'),
+        help = "Translated value of I+TRIM1 from the  SP2 camForth"
+    ),
+
+
+    Key('SP2BIPosTrim3Err',
+        Int(strFormat='%.3f'),
+        help = "Translated value of I+TRIM1 from the  SP2 camForth"
+    ),
+
+
+    Key('SP2BIPosTrim3Tolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of I+TRIM1 from the  SP2 camForth"
+    ),
+
+
+    Key('SP1BVDD3Check',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VDD1 from the  SP1 camForth"
+    ),
+
+
+    Key('SP1BVDD3Err',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VDD1 from the  SP1 camForth"
+    ),
+
+
+    Key('SP1BVDD3Tolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VDD1 from the  SP1 camForth"
+    ),
+
+
+    Key('SP2BVDD3Check',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VDD1 from the  SP2 camForth"
+    ),
+
+
+    Key('SP2BVDD3Err',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VDD1 from the  SP2 camForth"
+    ),
+
+
+    Key('SP2BVDD3Tolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VDD1 from the  SP2 camForth"
+    ),
+
+
+    Key('SP1BVLG34Check',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VLG from the  SP1 camForth"
+    ),
+
+
+    Key('SP1BVLG34Err',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VLG from the  SP1 camForth"
+    ),
+
+
+    Key('SP1BVLG34Tolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VLG from the  SP1 camForth"
+    ),
+
+
+    Key('SP2BVLG34Check',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VLG from the  SP2 camForth"
+    ),
+
+
+    Key('SP2BVLG34Err',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VLG from the  SP2 camForth"
+    ),
+
+
+    Key('SP2BVLG34Tolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VLG from the  SP2 camForth"
+    ),
+
+
+    Key('SP1BVSb2Check',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VS- from the  SP1 camForth"
+    ),
+
+
+    Key('SP1BVSb2Err',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VS- from the  SP1 camForth"
+    ),
+
+
+    Key('SP1BVSb2Tolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VS- from the  SP1 camForth"
+    ),
+
+
+    Key('SP2BVSb2Check',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VS- from the  SP2 camForth"
+    ),
+
+
+    Key('SP2BVSb2Err',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VS- from the  SP2 camForth"
+    ),
+
+
+    Key('SP2BVSb2Tolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VS- from the  SP2 camForth"
+    ),
+
+
+    Key('SP1BVDD4Check',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VDD2 from the  SP1 camForth"
+    ),
+
+
+    Key('SP1BVDD4Err',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VDD2 from the  SP1 camForth"
+    ),
+
+
+    Key('SP1BVDD4Tolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VDD2 from the  SP1 camForth"
+    ),
+
+
+    Key('SP2BVDD4Check',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VDD2 from the  SP2 camForth"
+    ),
+
+
+    Key('SP2BVDD4Err',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VDD2 from the  SP2 camForth"
+    ),
+
+
+    Key('SP2BVDD4Tolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VDD2 from the  SP2 camForth"
+    ),
+
+
+    Key('SP1BVRD4Check',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VRD2 from the  SP1 camForth"
+    ),
+
+
+    Key('SP1BVRD4Err',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VRD2 from the  SP1 camForth"
+    ),
+
+
+    Key('SP1BVRD4Tolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VRD2 from the  SP1 camForth"
+    ),
+
+
+    Key('SP2BVRD4Check',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VRD2 from the  SP2 camForth"
+    ),
+
+
+    Key('SP2BVRD4Err',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VRD2 from the  SP2 camForth"
+    ),
+
+
+    Key('SP2BVRD4Tolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VRD2 from the  SP2 camForth"
+    ),
+
+
+    Key('SP1BHeaterVCheck',
+        Int(strFormat='%.3f'),
+        help = "Translated value of HEATERV from the  SP1 camForth"
+    ),
+
+
+    Key('SP1BHeaterVErr',
+        Int(strFormat='%.3f'),
+        help = "Translated value of HEATERV from the  SP1 camForth"
+    ),
+
+
+    Key('SP1BHeaterVTolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of HEATERV from the  SP1 camForth"
+    ),
+
+
+    Key('SP2BHeaterVCheck',
+        Int(strFormat='%.3f'),
+        help = "Translated value of HEATERV from the  SP2 camForth"
+    ),
+
+
+    Key('SP2BHeaterVErr',
+        Int(strFormat='%.3f'),
+        help = "Translated value of HEATERV from the  SP2 camForth"
+    ),
+
+
+    Key('SP2BHeaterVTolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of HEATERV from the  SP2 camForth"
+    ),
+
+
+    Key('SP1BVPcCCheck',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VP12+ from the  SP1 camForth"
+    ),
+
+
+    Key('SP1BVPcCErr',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VP12+ from the  SP1 camForth"
+    ),
+
+
+    Key('SP1BVPcCTolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VP12+ from the  SP1 camForth"
+    ),
+
+
+    Key('SP2BVPcCCheck',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VP12+ from the  SP2 camForth"
+    ),
+
+
+    Key('SP2BVPcCErr',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VP12+ from the  SP2 camForth"
+    ),
+
+
+    Key('SP2BVPcCTolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VP12+ from the  SP2 camForth"
+    ),
+
+
+    Key('SP1BVPbCCheck',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VP12- from the  SP1 camForth"
+    ),
+
+
+    Key('SP1BVPbCErr',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VP12- from the  SP1 camForth"
+    ),
+
+
+    Key('SP1BVPbCTolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VP12- from the  SP1 camForth"
+    ),
+
+
+    Key('SP2BVPbCCheck',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VP12- from the  SP2 camForth"
+    ),
+
+
+    Key('SP2BVPbCErr',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VP12- from the  SP2 camForth"
+    ),
+
+
+    Key('SP2BVPbCTolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VP12- from the  SP2 camForth"
+    ),
+
+
+    Key('SP1BVRD3Check',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VRD1 from the  SP1 camForth"
+    ),
+
+
+    Key('SP1BVRD3Err',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VRD1 from the  SP1 camForth"
+    ),
+
+
+    Key('SP1BVRD3Tolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VRD1 from the  SP1 camForth"
+    ),
+
+
+    Key('SP2BVRD3Check',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VRD1 from the  SP2 camForth"
+    ),
+
+
+    Key('SP2BVRD3Err',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VRD1 from the  SP2 camForth"
+    ),
+
+
+    Key('SP2BVRD3Tolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VRD1 from the  SP2 camForth"
+    ),
+
+
+    Key('SP1RVERASECheck',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VP3+ from the  SP1 camForth"
+    ),
+
+
+    Key('SP1RVERASEErr',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VP3+ from the  SP1 camForth"
+    ),
+
+
+    Key('SP1RVERASETolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VP3+ from the  SP1 camForth"
+    ),
+
+
+    Key('SP2RVERASECheck',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VP3+ from the  SP2 camForth"
+    ),
+
+
+    Key('SP2RVERASEErr',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VP3+ from the  SP2 camForth"
+    ),
+
+
+    Key('SP2RVERASETolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VP3+ from the  SP2 camForth"
+    ),
+
+
+    Key('SP1RVSc2Check',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VS+ from the  SP1 camForth"
+    ),
+
+
+    Key('SP1RVSc2Err',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VS+ from the  SP1 camForth"
+    ),
+
+
+    Key('SP1RVSc2Tolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VS+ from the  SP1 camForth"
+    ),
+
+
+    Key('SP2RVSc2Check',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VS+ from the  SP2 camForth"
+    ),
+
+
+    Key('SP2RVSc2Err',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VS+ from the  SP2 camForth"
+    ),
+
+
+    Key('SP2RVSc2Tolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VS+ from the  SP2 camForth"
+    ),
+
+
+    Key('SP1RINegTrim3Check',
+        Int(strFormat='%.3f'),
+        help = "Translated value of I-TRIM1 from the  SP1 camForth"
+    ),
+
+
+    Key('SP1RINegTrim3Err',
+        Int(strFormat='%.3f'),
+        help = "Translated value of I-TRIM1 from the  SP1 camForth"
+    ),
+
+
+    Key('SP1RINegTrim3Tolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of I-TRIM1 from the  SP1 camForth"
+    ),
+
+
+    Key('SP2RINegTrim3Check',
+        Int(strFormat='%.3f'),
+        help = "Translated value of I-TRIM1 from the  SP2 camForth"
+    ),
+
+
+    Key('SP2RINegTrim3Err',
+        Int(strFormat='%.3f'),
+        help = "Translated value of I-TRIM1 from the  SP2 camForth"
+    ),
+
+
+    Key('SP2RINegTrim3Tolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of I-TRIM1 from the  SP2 camForth"
+    ),
+
+
+    Key('SP1RVRonCheck',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VSW- from the  SP1 camForth"
+    ),
+
+
+    Key('SP1RVRonErr',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VSW- from the  SP1 camForth"
+    ),
+
+
+    Key('SP1RVRonTolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VSW- from the  SP1 camForth"
+    ),
+
+
+    Key('SP2RVRonCheck',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VSW- from the  SP2 camForth"
+    ),
+
+
+    Key('SP2RVRonErr',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VSW- from the  SP2 camForth"
+    ),
+
+
+    Key('SP2RVRonTolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VSW- from the  SP2 camForth"
+    ),
+
+
+    Key('SP1RVPURGCheck',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VP3- from the  SP1 camForth"
+    ),
+
+
+    Key('SP1RVPURGErr',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VP3- from the  SP1 camForth"
+    ),
+
+
+    Key('SP1RVPURGTolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VP3- from the  SP1 camForth"
+    ),
+
+
+    Key('SP2RVPURGCheck',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VP3- from the  SP2 camForth"
+    ),
+
+
+    Key('SP2RVPURGErr',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VP3- from the  SP2 camForth"
+    ),
+
+
+    Key('SP2RVPURGTolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VP3- from the  SP2 camForth"
+    ),
+
+
+    Key('SP1RINegTrim4Check',
+        Int(strFormat='%.3f'),
+        help = "Translated value of I-TRIM2 from the  SP1 camForth"
+    ),
+
+
+    Key('SP1RINegTrim4Err',
+        Int(strFormat='%.3f'),
+        help = "Translated value of I-TRIM2 from the  SP1 camForth"
+    ),
+
+
+    Key('SP1RINegTrim4Tolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of I-TRIM2 from the  SP1 camForth"
+    ),
+
+
+    Key('SP2RINegTrim4Check',
+        Int(strFormat='%.3f'),
+        help = "Translated value of I-TRIM2 from the  SP2 camForth"
+    ),
+
+
+    Key('SP2RINegTrim4Err',
+        Int(strFormat='%.3f'),
+        help = "Translated value of I-TRIM2 from the  SP2 camForth"
+    ),
+
+
+    Key('SP2RINegTrim4Tolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of I-TRIM2 from the  SP2 camForth"
+    ),
+
+
+    Key('SP1RVSR2Check',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VS- from the  SP1 camForth"
+    ),
+
+
+    Key('SP1RVSR2Err',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VS- from the  SP1 camForth"
+    ),
+
+
+    Key('SP1RVSR2Tolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VS- from the  SP1 camForth"
+    ),
+
+
+    Key('SP2RVSR2Check',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VS- from the  SP2 camForth"
+    ),
+
+
+    Key('SP2RVSR2Err',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VS- from the  SP2 camForth"
+    ),
+
+
+    Key('SP2RVSR2Tolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VS- from the  SP2 camForth"
+    ),
+
+
+    Key('SP1RIPosTrim4Check',
+        Int(strFormat='%.3f'),
+        help = "Translated value of I+TRIM2 from the  SP1 camForth"
+    ),
+
+
+    Key('SP1RIPosTrim4Err',
+        Int(strFormat='%.3f'),
+        help = "Translated value of I+TRIM2 from the  SP1 camForth"
+    ),
+
+
+    Key('SP1RIPosTrim4Tolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of I+TRIM2 from the  SP1 camForth"
+    ),
+
+
+    Key('SP2RIPosTrim4Check',
+        Int(strFormat='%.3f'),
+        help = "Translated value of I+TRIM2 from the  SP2 camForth"
+    ),
+
+
+    Key('SP2RIPosTrim4Err',
+        Int(strFormat='%.3f'),
+        help = "Translated value of I+TRIM2 from the  SP2 camForth"
+    ),
+
+
+    Key('SP2RIPosTrim4Tolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of I+TRIM2 from the  SP2 camForth"
+    ),
+
+
+    Key('SP1RIPosTrim3Check',
+        Int(strFormat='%.3f'),
+        help = "Translated value of I+TRIM1 from the  SP1 camForth"
+    ),
+
+
+    Key('SP1RIPosTrim3Err',
+        Int(strFormat='%.3f'),
+        help = "Translated value of I+TRIM1 from the  SP1 camForth"
+    ),
+
+
+    Key('SP1RIPosTrim3Tolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of I+TRIM1 from the  SP1 camForth"
+    ),
+
+
+    Key('SP2RIPosTrim3Check',
+        Int(strFormat='%.3f'),
+        help = "Translated value of I+TRIM1 from the  SP2 camForth"
+    ),
+
+
+    Key('SP2RIPosTrim3Err',
+        Int(strFormat='%.3f'),
+        help = "Translated value of I+TRIM1 from the  SP2 camForth"
+    ),
+
+
+    Key('SP2RIPosTrim3Tolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of I+TRIM1 from the  SP2 camForth"
+    ),
+
+
+    Key('SP1RVDD3Check',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VDD1 from the  SP1 camForth"
+    ),
+
+
+    Key('SP1RVDD3Err',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VDD1 from the  SP1 camForth"
+    ),
+
+
+    Key('SP1RVDD3Tolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VDD1 from the  SP1 camForth"
+    ),
+
+
+    Key('SP2RVDD3Check',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VDD1 from the  SP2 camForth"
+    ),
+
+
+    Key('SP2RVDD3Err',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VDD1 from the  SP2 camForth"
+    ),
+
+
+    Key('SP2RVDD3Tolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VDD1 from the  SP2 camForth"
+    ),
+
+
+    Key('SP1RVLG3Check',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VT- from the  SP1 camForth"
+    ),
+
+
+    Key('SP1RVLG3Err',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VT- from the  SP1 camForth"
+    ),
+
+
+    Key('SP1RVLG3Tolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VT- from the  SP1 camForth"
+    ),
+
+
+    Key('SP2RVLG3Check',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VT- from the  SP2 camForth"
+    ),
+
+
+    Key('SP2RVLG3Err',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VT- from the  SP2 camForth"
+    ),
+
+
+    Key('SP2RVLG3Tolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VT- from the  SP2 camForth"
+    ),
+
+
+    Key('SP1RVLG2Check',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VLG from the  SP1 camForth"
+    ),
+
+
+    Key('SP1RVLG2Err',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VLG from the  SP1 camForth"
+    ),
+
+
+    Key('SP1RVLG2Tolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VLG from the  SP1 camForth"
+    ),
+
+
+    Key('SP2RVLG2Check',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VLG from the  SP2 camForth"
+    ),
+
+
+    Key('SP2RVLG2Err',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VLG from the  SP2 camForth"
+    ),
+
+
+    Key('SP2RVLG2Tolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VLG from the  SP2 camForth"
+    ),
+
+
+    Key('SP1RVPcCCheck',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VP12- from the  SP1 camForth"
+    ),
+
+
+    Key('SP1RVPcCErr',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VP12- from the  SP1 camForth"
+    ),
+
+
+    Key('SP1RVPcCTolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VP12- from the  SP1 camForth"
+    ),
+
+
+    Key('SP2RVPcCCheck',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VP12- from the  SP2 camForth"
+    ),
+
+
+    Key('SP2RVPcCErr',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VP12- from the  SP2 camForth"
+    ),
+
+
+    Key('SP2RVPcCTolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VP12- from the  SP2 camForth"
+    ),
+
+
+    Key('SP1RVSUBSCheck',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VR from the  SP1 camForth"
+    ),
+
+
+    Key('SP1RVSUBSErr',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VR from the  SP1 camForth"
+    ),
+
+
+    Key('SP1RVSUBSTolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VR from the  SP1 camForth"
+    ),
+
+
+    Key('SP2RVSUBSCheck',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VR from the  SP2 camForth"
+    ),
+
+
+    Key('SP2RVSUBSErr',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VR from the  SP2 camForth"
+    ),
+
+
+    Key('SP2RVSUBSTolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VR from the  SP2 camForth"
+    ),
+
+
+    Key('SP1RVDD4Check',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VDD2 from the  SP1 camForth"
+    ),
+
+
+    Key('SP1RVDD4Err',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VDD2 from the  SP1 camForth"
+    ),
+
+
+    Key('SP1RVDD4Tolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VDD2 from the  SP1 camForth"
+    ),
+
+
+    Key('SP2RVDD4Check',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VDD2 from the  SP2 camForth"
+    ),
+
+
+    Key('SP2RVDD4Err',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VDD2 from the  SP2 camForth"
+    ),
+
+
+    Key('SP2RVDD4Tolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VDD2 from the  SP2 camForth"
+    ),
+
+
+    Key('SP1RVRD4Check',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VRD2 from the  SP1 camForth"
+    ),
+
+
+    Key('SP1RVRD4Err',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VRD2 from the  SP1 camForth"
+    ),
+
+
+    Key('SP1RVRD4Tolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VRD2 from the  SP1 camForth"
+    ),
+
+
+    Key('SP2RVRD4Check',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VRD2 from the  SP2 camForth"
+    ),
+
+
+    Key('SP2RVRD4Err',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VRD2 from the  SP2 camForth"
+    ),
+
+
+    Key('SP2RVRD4Tolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VRD2 from the  SP2 camForth"
+    ),
+
+
+    Key('SP1RHeaterVCheck',
+        Int(strFormat='%.3f'),
+        help = "Translated value of HEATERV from the  SP1 camForth"
+    ),
+
+
+    Key('SP1RHeaterVErr',
+        Int(strFormat='%.3f'),
+        help = "Translated value of HEATERV from the  SP1 camForth"
+    ),
+
+
+    Key('SP1RHeaterVTolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of HEATERV from the  SP1 camForth"
+    ),
+
+
+    Key('SP2RHeaterVCheck',
+        Int(strFormat='%.3f'),
+        help = "Translated value of HEATERV from the  SP2 camForth"
+    ),
+
+
+    Key('SP2RHeaterVErr',
+        Int(strFormat='%.3f'),
+        help = "Translated value of HEATERV from the  SP2 camForth"
+    ),
+
+
+    Key('SP2RHeaterVTolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of HEATERV from the  SP2 camForth"
+    ),
+
+
+    Key('SP1RVPRCCheck',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VP12+ from the  SP1 camForth"
+    ),
+
+
+    Key('SP1RVPRCErr',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VP12+ from the  SP1 camForth"
+    ),
+
+
+    Key('SP1RVPRCTolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VP12+ from the  SP1 camForth"
+    ),
+
+
+    Key('SP2RVPRCCheck',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VP12+ from the  SP2 camForth"
+    ),
+
+
+    Key('SP2RVPRCErr',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VP12+ from the  SP2 camForth"
+    ),
+
+
+    Key('SP2RVPRCTolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VP12+ from the  SP2 camForth"
+    ),
+
+
+    Key('SP1RVLG4Check',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VT+ from the  SP1 camForth"
+    ),
+
+
+    Key('SP1RVLG4Err',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VT+ from the  SP1 camForth"
+    ),
+
+
+    Key('SP1RVLG4Tolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VT+ from the  SP1 camForth"
+    ),
+
+
+    Key('SP2RVLG4Check',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VT+ from the  SP2 camForth"
+    ),
+
+
+    Key('SP2RVLG4Err',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VT+ from the  SP2 camForth"
+    ),
+
+
+    Key('SP2RVLG4Tolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VT+ from the  SP2 camForth"
+    ),
+
+
+    Key('SP1RVRD3Check',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VRD1 from the  SP1 camForth"
+    ),
+
+
+    Key('SP1RVRD3Err',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VRD1 from the  SP1 camForth"
+    ),
+
+
+    Key('SP1RVRD3Tolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VRD1 from the  SP1 camForth"
+    ),
+
+
+    Key('SP2RVRD3Check',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VRD1 from the  SP2 camForth"
+    ),
+
+
+    Key('SP2RVRD3Err',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VRD1 from the  SP2 camForth"
+    ),
+
+
+    Key('SP2RVRD3Tolerance',
+        Int(strFormat='%.3f'),
+        help = "Translated value of VRD1 from the  SP2 camForth"
+    )
 )
