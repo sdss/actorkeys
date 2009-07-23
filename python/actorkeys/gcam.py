@@ -14,9 +14,12 @@ KeysDictionary('gcam',(0, 1),
         doCache = False,
     ),
     # can have additional fields which provide supplementary info; how to express that?
-    Key("guideState", String(help="Main state of guide actor; one of: on, starting, stopping, off")),
-    Key("guideMode", String(help="guide mode; one of: auto, manual or...")),
-    # The final two fields are optional; how do I express this?
+    Key("guideState", 
+        Enum("off", "starting", "on", "stopping", help="state of guider"),
+        Enum(False, True, help="correct pointing and rotation?"),
+        Enum(False, True, help="correct scale?"),
+        Enum(False, True, help="correct offset?"),
+    )
     Key("guideProbe",
         String(help="type character: c = centroid, f = findStars, g = guide star"),
         Int(help="index; identifies the star within a list of stars returned by the command"),
