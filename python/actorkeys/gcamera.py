@@ -11,4 +11,3 @@ KeysDictionary('gcamera', (0, 1),
     Key("filename", 
        String(help='last read file')),
     )
-           
