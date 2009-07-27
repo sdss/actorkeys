@@ -1,5 +1,4 @@
-KeysDictionary("boss",(1,3),
-               *(
+KeysDictionary("boss",(1,3),*(
     # ICC Keywords
     Key('exposureState',
         Enum('IDLE','FLUSHING','INTEGRATING','PAUSED','READING'),
@@ -2847,5 +2846,4 @@ KeysDictionary("boss",(1,3),
         Int(strFormat='%.3f'),
         help = "Translated value of VRD1 from the  SP2 camForth"
     )
-)
-)
+))

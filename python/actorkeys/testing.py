@@ -1,3 +1,6 @@
+#from opscore.protocols.keys import *
+#from opscore.protocols.types import *
+
 KeysDictionary('testing',(1,7),
 	Key('note',String(name='text',invalid='??')),
 	Key('unsigned',UInt(name='value',invalid='??')),
@@ -18,6 +21,9 @@ KeysDictionary('testing',(1,7),
             officia deserunt mollit anim id est laborum.
             """
         ),
+        ByName('tai'),
+        #ByName('theInteger'),
+        #ByName('unknown'),
         Float(name='theFloats',help="""
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
             aliqua. Ut enim ad minim veniam, quis nostrud exercitation
