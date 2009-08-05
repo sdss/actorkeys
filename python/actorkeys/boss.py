@@ -35,7 +35,7 @@ KeysDictionary("boss",(1,3),*(
     Key('camCheck',
         String()*(0,),
         help = "A list of strings of keywords that are out of spec."
-    )
+    ),
     # camStatus
     Key('SP1LN2Fill',
         Enum('ON','OFF'),
