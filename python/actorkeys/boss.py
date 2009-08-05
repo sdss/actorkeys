@@ -1,7 +1,7 @@
 KeysDictionary("boss",(1,3),*(
     # ICC Keywords
     Key('exposureState',
-        Enum('IDLE','FLUSHING','INTEGRATING','PAUSED','READING'),
+        Enum('IDLE','FLUSHING','INTEGRATING','PAUSED','READING'),Int()*2,
         help='The current state of the exposure.'
     ),
     Key('hardwareStatus',
