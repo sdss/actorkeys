@@ -1,4 +1,4 @@
-KeysDictionary('gcam', (0, 1),
+KeysDictionary('guider', (0, 1),
     # parameters
     Key("cartridgeLoaded",
         Int(name="cartridgeID", invalid=-1),
