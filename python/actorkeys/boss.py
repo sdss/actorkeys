@@ -8,6 +8,10 @@ KeysDictionary("boss",(1,3),*(
         Bits('sp1cam','sp2cam','sp1mech','sp2mech','sp1daq','sp2daq'),
         help='Connection status of each current piece of hardware.'
     ),
+    Key('camCheck',
+        Str()*(0,),
+        help='Return a list of problems that the user should know about.'
+    ),
     # specMech Keywords
     Key('shutterStatus',
         Bits('sp1Shutter','sp2Shutter'),
