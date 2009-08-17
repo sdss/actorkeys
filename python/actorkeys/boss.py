@@ -1,4 +1,4 @@
-KeysDictionary("boss",(1,3),*(
+KeysDictionary("boss",(2,1),*(
     # ICC Keywords
     Key('exposureState',
         Enum('IDLE','FLUSHING','INTEGRATING','PAUSED','READING'),Int()*2,
@@ -10,11 +10,11 @@ KeysDictionary("boss",(1,3),*(
     ),
     # specMech Keywords
     Key('shutterStatus',
-        Bits('sp1Shutter','sp2Shutter'),
-        help = "Status of the shutters, 0 closed, 1 open."
+        Bits('ClosedSwitch', 'OpenSwitch')*2,
+        help = "Status of the two shutter switches"
     ),
     Key('screenStatus',
-        Bits('sp1Left:2','sp1Right:2','sp2Left:2','sp2Right:2'),
+        Bits('LeftClosedSensor', 'LeftOpenSensor', 'RightClosedSensor', 'RightOpenSensor')*2,
         help = "Status of the hartman screens, the left bit represents the closed sensor and the right bit the open sensor."
         ),
     Key('motorPosition',
@@ -34,6 +34,10 @@ KeysDictionary("boss",(1,3),*(
     Key('camCheck',
         String()*(0,),
         help = "A list of strings of keywords that are out of spec."
+        ),
+    Key('aliveAt',
+        Int(),
+        help = "Unix seconds at which point the ICC was declared alive"
     ),
     # camStatus
     Key('SP1LN2Fill',
