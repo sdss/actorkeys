@@ -68,16 +68,16 @@ KeysDictionary("boss",(2,1),*(
         Int()
     ),
     Key('SP1BlueParallelDir',
-        Enum('FWD','REV','UNKOWN')
+        Enum('FWD','REV','UNKNOWN')
     ),
     Key('SP1BlueParallelState',
-        Enum('CLOCK','STOPPED','UNKOWN')
+        Enum('CLOCK','STOPPED','UNKNOWN')
     ),
     Key('SP1RedParallelDir',
-        Enum('FWD','REV','UNKOWN')
+        Enum('FWD','REV','UNKNOWN')
     ),
     Key('SP1RedParallelState',
-        Enum('CLOCK','STOPPED','UNKOWN')
+        Enum('CLOCK','STOPPED','UNKNOWN')
     ),
     Key('SP1DataMode',
         Enum('FRAME','CONTINUOUS')
@@ -143,16 +143,16 @@ KeysDictionary("boss",(2,1),*(
         Int()
     ),
     Key('SP2BlueParallelDir',
-        Enum('FWD','REV','UNKOWN')
+        Enum('FWD','REV','UNKNOWN')
     ),
     Key('SP2BlueParallelState',
-        Enum('CLOCK','STOPPED','UNKOWN')
+        Enum('CLOCK','STOPPED','UNKNOWN')
     ),
     Key('SP2RedParallelDir',
-        Enum('FWD','REV','UNKOWN')
+        Enum('FWD','REV','UNKNOWN')
     ),
     Key('SP2RedParallelState',
-        Enum('CLOCK','STOPPED','UNKOWN')
+        Enum('CLOCK','STOPPED','UNKNOWN')
     ),
     Key('SP2DataMode',
         Enum('FRAME','CONTINUOUS')
@@ -201,6 +201,7 @@ KeysDictionary("boss",(2,1),*(
         help = "Version strings for the cam micros."
         ),
     # VOLTS
+    
     
     Key('SP1B3HeaterVBias',
         Float(units='volts',strFormat='%.3f'),
@@ -2050,53 +2051,53 @@ KeysDictionary("boss",(2,1),*(
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of B2_VT+ on SP2 B2"
     ),
-    Key('SP1B2VRonBias',
+    Key('SP1BVRonBias',
         Float(units='volts',strFormat='%.3f'),
-        help = "Translated value of B2_VR on SP1 B2"
+        help = "Translated value of B2_VR on SP1 B"
     ),
-    Key('SP1B2VRonNom',
+    Key('SP1BVRonNom',
         Float(units='volts',strFormat='%.3f'),
-        help = "Translated value of B2_VR on SP1 B2"
+        help = "Translated value of B2_VR on SP1 B"
     ),
-    Key('SP1B2VRonRead',
+    Key('SP1BVRonRead',
         Float(units='volts',strFormat='%.3f'),
-        help = "Translated value of B2_VR on SP1 B2"
+        help = "Translated value of B2_VR on SP1 B"
     ),
-    Key('SP2B2VRonBias',
+    Key('SP2BVRonBias',
         Float(units='volts',strFormat='%.3f'),
-        help = "Translated value of B2_VR on SP2 B2"
+        help = "Translated value of B2_VR on SP2 B"
     ),
-    Key('SP2B2VRonNom',
+    Key('SP2BVRonNom',
         Float(units='volts',strFormat='%.3f'),
-        help = "Translated value of B2_VR on SP2 B2"
+        help = "Translated value of B2_VR on SP2 B"
     ),
-    Key('SP2B2VRonRead',
+    Key('SP2BVRonRead',
         Float(units='volts',strFormat='%.3f'),
-        help = "Translated value of B2_VR on SP2 B2"
+        help = "Translated value of B2_VR on SP2 B"
     ),
-    Key('SP1R1VSubsBias',
+    Key('SP1RVSubsBias',
         Float(units='volts',strFormat='%.3f'),
-        help = "Translated value of R1_VR on SP1 R1"
+        help = "Translated value of R1_VR on SP1 R"
     ),
-    Key('SP1R1VSubsNom',
+    Key('SP1RVSubsNom',
         Float(units='volts',strFormat='%.3f'),
-        help = "Translated value of R1_VR on SP1 R1"
+        help = "Translated value of R1_VR on SP1 R"
     ),
-    Key('SP1R1VSubsRead',
+    Key('SP1RVSubsRead',
         Float(units='volts',strFormat='%.3f'),
-        help = "Translated value of R1_VR on SP1 R1"
+        help = "Translated value of R1_VR on SP1 R"
     ),
-    Key('SP2R1VSubsBias',
+    Key('SP2RVSubsBias',
         Float(units='volts',strFormat='%.3f'),
-        help = "Translated value of R1_VR on SP2 R1"
+        help = "Translated value of R1_VR on SP2 R"
     ),
-    Key('SP2R1VSubsNom',
+    Key('SP2RVSubsNom',
         Float(units='volts',strFormat='%.3f'),
-        help = "Translated value of R1_VR on SP2 R1"
+        help = "Translated value of R1_VR on SP2 R"
     ),
-    Key('SP2R1VSubsRead',
+    Key('SP2RVSubsRead',
         Float(units='volts',strFormat='%.3f'),
-        help = "Translated value of R1_VR on SP2 R1"
+        help = "Translated value of R1_VR on SP2 R"
     ),
     Key('SP1R0LN2TempBias',
         Float(units='volts',strFormat='%.3f'),
