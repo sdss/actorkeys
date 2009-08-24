@@ -118,6 +118,7 @@ KeysDictionary("mcp", (1,3),
     # Allen-Bradley words
     Key('ab_status', Int()*4, help='Allen Bradley status, azstate, altstate, rotstate'),
     Key('lavaLamp', Int(), help='Is the Lava Lamp on?'),
+    Key('imCamCheck', String()*(0,), help="Imager errors reported by iop"),
     #
     # The machine-generated bitfield definitions are inserted here:
     #
