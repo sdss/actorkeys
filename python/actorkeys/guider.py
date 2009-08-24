@@ -75,6 +75,6 @@ KeysDictionary('guider', (0, 1),
         Float(name="plugPlateScale", units="mm/deg", help="Plug plate scale"),
         Float(name="gcameraMagnification", help="Guide camera scale relative to the plug plate"),
         Float(name="gcameraPixelSize", units="microns/pixel", help="Guide camera pixel size"),
-        Float(name="dSecondary_dmm,", units="mm/mm", help="Motion of secondary to move focus at plugplate"),
+        Float(name="dSecondary_dmm", units="mm/mm", help="Motion of secondary to move focus at plugplate"),
         help="plate scales relevant to guiding"),
 )
