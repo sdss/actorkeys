@@ -1,5 +1,5 @@
 # -*- python -*-
-KeysDictionary("mcp", (1,3),
+KeysDictionary("mcp", (2,1),
     # Command-related keywords
     Key("badAxis", String(), doCache=False, help="Unknown telescope axis"),
     Key("badCharacter", Int(), doCache=False, help="ASCII code of invalid character"),
@@ -24,7 +24,7 @@ KeysDictionary("mcp", (1,3),
     # Flat field screens
     Key("ffsCloseFailed", Bool("false", "true"), doCache=False),
     Key("ffsCommanded", Bool("false", "true"), doCache=False),
-    Key("ffsCommandedOn", Bool("false", "true"), help="Flat field petals commanded close/open"),
+    Key("ffsCommandedOpen", Bool("false", "true"), help="Flat field petals commanded close/open"),
     Key("ffsMoved", Bool("false", "true"), doCache=False),
     Key("ffsOpenFailed", Bool("false", "true"), doCache=False),
     Key("ffsSelected", Enum("00", "01", "10", "11", descr=("None", "Half1", "Half2", "All")),
