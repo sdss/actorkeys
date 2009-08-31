@@ -1,7 +1,7 @@
 #from opscore.protocols.keys import *
 #from opscore.protocols.types import *
 
-KeysDictionary('testing',(1,7),
+KeysDictionary('testing',(1,8),
 	Key('note',String(name='text',invalid='??')),
 	Key('unsigned',UInt(name='value',invalid='??')),
 	Key('no_name',Int(invalid='??')),
