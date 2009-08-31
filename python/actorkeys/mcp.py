@@ -19,7 +19,7 @@ KeysDictionary("mcp", (2,1),
     Key("haveSemaphore", Bool("false", "true"), help="Do you have the semaphore?"),
     Key("needIack", Bool("false", "true"), help="If False, please send an iack"),
     Key("needSemaphore", help="Command rejected because you don't have the semaphore"),
-    Key("semaphoreOwner", String(), help="Name of user (self-reported) who owns the semaphore"),
+    Key("semaphoreOwner", String()*(0,), help="Name of user (self-reported) who owns the semaphore"),
     
     # Flat field screens
     Key("ffsCloseFailed", Bool("false", "true"), doCache=False),

@@ -19,7 +19,7 @@ KeysDictionary("mcp", (2,1),
     Key("haveSemaphore", Bool("false", "true"), help="Do you have the semaphore?"),
     Key("needIack", Bool("false", "true"), help="If False, please send an iack"),
     Key("needSemaphore", help="Command rejected because you don't have the semaphore"),
-    Key("semaphoreOwner", String(), help="Name of user (self-reported) who owns the semaphore"),
+    Key("semaphoreOwner", String()*(0,), help="Name of user (self-reported) who owns the semaphore"),
     
     # Flat field screens
     Key("ffsCloseFailed", Bool("false", "true"), doCache=False),
@@ -118,6 +118,9 @@ KeysDictionary("mcp", (2,1),
     # Allen-Bradley words
     Key('ab_status', Int()*4, help='Allen Bradley status, azstate, altstate, rotstate'),
     Key('lavaLamp', Int(), help='Is the Lava Lamp on?'),
+
+    # Information from the imager, passed via the mcp
+    Key('imCamCheck', String()*(0,), help="Imager errors reported by iop"),
     #
     # The machine-generated bitfield definitions are inserted here:
     #

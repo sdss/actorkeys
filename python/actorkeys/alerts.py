@@ -18,4 +18,6 @@ KeysDictionary("alerts", (1,3),
         help="Information about one active alert",
         doCache=False,
     ),
+    # misc
+    Key("text", String(), help="text for humans"),
 )
