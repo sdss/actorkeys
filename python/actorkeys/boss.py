@@ -7,12 +7,12 @@ KeysDictionary("boss",(2,1),*(
         help='The current state of the exposure.'
     ),
     Key('BeginExposure',
-        Int(),
+        UInt(),
         Float(units="mjd",strFormat="%.2f"),
         help = "Time that an exposure began."
     ),
     Key('EndExposure',
-        Int(),
+        UInt(),
         Float(units = "mjd", strFormat = "%.2f"),
         help = "Time that an exposure ended."
     ),
