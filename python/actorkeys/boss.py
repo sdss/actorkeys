@@ -6,6 +6,16 @@ KeysDictionary("boss",(2,1),*(
         Enum('IDLE','FLUSHING','INTEGRATING','PAUSED','READING'),Int()*2,
         help='The current state of the exposure.'
     ),
+    Key('BeginExposure',
+        Int(),
+        Float(units="mjd",strFormat="%.2f"),
+        help = "Time that an exposure began."
+    ),
+    Key('EndExposure',
+        Int(),
+        Float(units = "mjd", strFormat = "%.2f"),
+        help = "Time that an exposure ended."
+    ),
     Key('hardwareStatus',
         Bits('sp1cam','sp2cam','sp1mech','sp2mech','sp1daq','sp2daq'),
         help='Connection status of each current piece of hardware.'
