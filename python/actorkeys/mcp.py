@@ -1,5 +1,5 @@
 # -*- python -*-
-KeysDictionary("mcp", (2,1),
+KeysDictionary("mcp", (2,2),
     # Command-related keywords
     Key("badAxis", String(), doCache=False, help="Unknown telescope axis"),
     Key("badCharacter", Int(), doCache=False, help="ASCII code of invalid character"),
@@ -17,7 +17,7 @@ KeysDictionary("mcp", (2,1),
 
     # Iack and semaphore
     Key("haveSemaphore", Bool("false", "true"), help="Do you have the semaphore?"),
-    Key("needIack", Bool("false", "true"), help="If False, please send an iack"),
+    Key("needIack", Bool("false", "true"), help="If true, you must send an iack before commanding the mcp"),
     Key("needSemaphore", help="Command rejected because you don't have the semaphore"),
     Key("semaphoreOwner", String()*(0,), help="Name of user (self-reported) who owns the semaphore"),
     
