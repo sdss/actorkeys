@@ -16,6 +16,10 @@ KeysDictionary("boss",(2,1),*(
         Float(units = "mjd", strFormat = "%.2f"),
         help = "Time that an exposure ended."
     ),
+    Key('daqVersion',
+           String(),
+           help='DAQ Interface python code version.'
+    ),
     Key('hardwareStatus',
         Bits('sp1cam','sp2cam','sp1mech','sp2mech','sp1daq','sp2daq'),
         help='Connection status of each current piece of hardware.'
