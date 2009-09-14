@@ -1,4 +1,4 @@
-KeysDictionary('guider', (0, 1),
+KeysDictionary('guider', (0, 2),
     # parameters
     Key("cartridgeLoaded",
         Int(name="cartridgeID", invalid=-1),
@@ -9,9 +9,9 @@ KeysDictionary('guider', (0, 1),
     ),
     Key("expTime", Float(), help="exposure time"),
     Key("guideEnable",
-        Enum(False, True, name="axis", help="move azimuth, altitude and rotation to correct pointing"),
-        Enum(False, True, name="focus", help="move the secondary mirror to correct focus"),
-        Enum(False, True, name="scale", help="move the primary and secondary mirrors to correct plate scale"),
+        Bool(False, True, name="axis", help="move azimuth, altitude and rotation to correct pointing"),
+        Bool(False, True, name="focus", help="move the secondary mirror to correct focus"),
+        Bool(False, True, name="scale", help="move the primary and secondary mirrors to correct plate scale"),
         help="Which guiding corrections are enabled",
     ),
     # there will be parameters for the PID loop
