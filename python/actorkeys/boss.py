@@ -1,9 +1,9 @@
-KeysDictionary("boss",(2,1),*(
+KeysDictionary("boss",(2,2),*(
     # misc
     Key("text", String(), help="text for humans"),
     # ICC Keywords
     Key('exposureState',
-        Enum('IDLE','FLUSHING','INTEGRATING','PAUSED','READING'),Int()*2,
+        Enum('IDLE','FLUSHING','INTEGRATING','PAUSED','PREREADING','READING','ABORTED'),Int()*2,
         help='The current state of the exposure.'
     ),
     Key('BeginExposure',
