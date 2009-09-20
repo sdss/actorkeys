@@ -1,5 +1,4 @@
-# Based on what the TCC knows about the perms widget
-KeysDictionary('hub',(1,5),
+KeysDictionary('hub',(1,6),
     Key('actors', String()*(0,), help="Current actors"),
     Key('commanders', String()*(0,), help="Current commanders"),
     Key('user', String()*(5,6), help=
@@ -16,4 +15,5 @@ KeysDictionary('hub',(1,5),
     Key('text', String(), help="Craig's random musings", doCache=False),
     Key('users', String()*(0,), help="current human (non-hub) commanders"),
     Key('version', String(), help="Craig's random choice of version string"),
+    Key('httpRoot', String()*2, help="hostname and root directory for images"),
 )
