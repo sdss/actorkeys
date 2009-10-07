@@ -1,10 +1,12 @@
-KeysDictionary("boss",(2,2),*(
+KeysDictionary("boss",(2,3),*(
     # misc
     Key("text", String(), help="text for humans"),
     # ICC Keywords
     Key('exposureState',
-        Enum('IDLE','FLUSHING','INTEGRATING','PAUSED','PREREADING','READING','ABORTED'),Int()*2,
-        help='The current state of the exposure.'
+        Enum('IDLE','FLUSHING','INTEGRATING','PAUSED','PREREADING','READING','ABORTED', name="state"),
+        Float(name="totalTime", help="esimated total time for this state; 0 if too short to bother with a countdown timer", units="sec"),
+        Float(name="elapsedTime", help="elapsed time for this state; 0 if too short to bother with a countdown timer", units="sec"),
+        help='The current state of the exposure and associated timings.'
     ),
     Key('BeginExposure',
         UInt(),
@@ -26,11 +28,11 @@ KeysDictionary("boss",(2,2),*(
     ),
     # specMech Keywords
     Key('shutterStatus',
-        Bits('ClosedSwitch', 'OpenSwitch')*2,
+        Bits('OpenSwitch', 'ClosedSwitch')*2,
         help = "Status of the two shutter switches"
     ),
     Key('screenStatus',
-        Bits('LeftClosedSensor', 'LeftOpenSensor', 'RightClosedSensor', 'RightOpenSensor')*2,
+        Bits('RightOpenSensor', 'RightClosedSensor', 'LeftOpenSensor', 'LeftClosedSensor')*2,
         help = "Status of the hartman screens, the left bit represents the closed sensor and the right bit the open sensor."
         ),
     Key('motorPosition',
@@ -38,7 +40,7 @@ KeysDictionary("boss",(2,2),*(
         help = "The position of the motors in ticks of both spectographs."
         ),
     Key('motorStatus',
-        Bits('OnTarget','LimitSwitch','MotorOff','SlewMode',':1','Slave','FindEdge','Stopped')*6,
+        Bits('Stopped', 'FindEdge', 'Slave', ':1', 'SlewMode', 'MotorOff', 'LimitSwitch', 'OnTarget', )*6,
         help = "Status of the motors. Six to represent sp1MotorA-sp2MotorC."
         ),
     Key('specMechVersion',
