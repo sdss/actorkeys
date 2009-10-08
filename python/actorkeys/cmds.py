@@ -6,7 +6,7 @@ KeysDictionary('cmds',(1,1),
     Key('CmdrMID',UInt(),help='Hub internal'),
     Key('CmdrCID',String(),help='Deprecated hub internal'),
     Key('CmdActor',String(),help="Name of actor handling command"),
-    Key('CmdText',String(),help="The command text")
+    Key('CmdText',String(),help="The command text"),
 
     Key('CmdQueued',
         UInt(name='hubID', help='Internal command sequence number. Unique within a run of the hub'),

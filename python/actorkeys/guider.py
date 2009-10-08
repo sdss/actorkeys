@@ -1,4 +1,4 @@
-KeysDictionary('guider', (0, 2),
+KeysDictionary('guider', (0, 3),
     # parameters
     Key("cartridgeLoaded",
         Int(name="cartridgeID", invalid=-1, help="Cartridge number"),
