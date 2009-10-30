@@ -1,4 +1,4 @@
-KeysDictionary('guider', (0, 3),
+KeysDictionary('guider', (0, 4),
     # parameters
     Key("cartridgeLoaded",
         Int(name="cartridgeID", invalid=-1, help="Cartridge number"),
@@ -16,11 +16,18 @@ KeysDictionary('guider', (0, 3),
     ),
     # there will be parameters for the PID loop
     # status
+    #
+    # files has been superseded by file, and should be removed at the next major revision.
     Key("files",
         String(help="type; one of: guide, flat, dark..."),
         String(help="base directory for these files (relative to image root)"),
         String(help="name of fully processed image file"),
         String(help="name of mask file"),
+        doCache = False,
+    ),
+    Key("file",
+        String(help="base directory for these files (relative to image root)"),
+        String(help="name of fully processed image file"),
         doCache = False,
     ),
     Key("guideProbe",
