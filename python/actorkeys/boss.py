@@ -1037,27 +1037,27 @@ KeysDictionary("boss",(2,3),*(
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of R0_VSW- on SP2 R0"
     ),
-    Key('SP1R0VSR1Bias',
+    Key('SP1R0VSb1Bias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of R0_VS- on SP1 R0"
     ),
-    Key('SP1R0VSR1Nom',
+    Key('SP1R0VSb1Nom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of R0_VS- on SP1 R0"
     ),
-    Key('SP1R0VSR1Read',
+    Key('SP1R0VSb1Read',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of R0_VS- on SP1 R0"
     ),
-    Key('SP2R0VSR1Bias',
+    Key('SP2R0VSb1Bias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of R0_VS- on SP2 R0"
     ),
-    Key('SP2R0VSR1Nom',
+    Key('SP2R0VSb1Nom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of R0_VS- on SP2 R0"
     ),
-    Key('SP2R0VSR1Read',
+    Key('SP2R0VSb1Read',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of R0_VS- on SP2 R0"
     ),
@@ -1205,27 +1205,27 @@ KeysDictionary("boss",(2,3),*(
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of B2_VS- on SP2 B2"
     ),
-    Key('SP1R0VPRBBias',
+    Key('SP1R0VPbBBias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of R0_VP3+ on SP1 R0"
     ),
-    Key('SP1R0VPRBNom',
+    Key('SP1R0VPbBNom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of R0_VP3+ on SP1 R0"
     ),
-    Key('SP1R0VPRBRead',
+    Key('SP1R0VPbBRead',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of R0_VP3+ on SP1 R0"
     ),
-    Key('SP2R0VPRBBias',
+    Key('SP2R0VPbBBias',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of R0_VP3+ on SP2 R0"
     ),
-    Key('SP2R0VPRBNom',
+    Key('SP2R0VPbBNom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of R0_VP3+ on SP2 R0"
     ),
-    Key('SP2R0VPRBRead',
+    Key('SP2R0VPbBRead',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of R0_VP3+ on SP2 R0"
     ),
