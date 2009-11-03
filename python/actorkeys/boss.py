@@ -1,4 +1,4 @@
-KeysDictionary("boss",(2,3),*(
+KeysDictionary("boss",(2,4),*(
     # misc
     Key("text", String(), help="text for humans"),
     # ICC Keywords
