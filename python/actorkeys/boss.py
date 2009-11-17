@@ -1,6 +1,8 @@
 KeysDictionary("boss",(2,4),*(
     # misc
     Key("text", String(), help="text for humans"),
+    Key("bossVersion", String(), help="version string derived from svn info."),
+    
     # ICC Keywords
     Key('exposureState',
         Enum('IDLE','FLUSHING','INTEGRATING','PAUSED','PREREADING','READING','ABORTED', name="state"),
