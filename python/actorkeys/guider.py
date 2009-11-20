@@ -1,4 +1,5 @@
-KeysDictionary('guider', (0, 4),
+KeysDictionary('guider', (0, 5),
+    Key("guiderVersion", String(), help="svn/eups version"),
     # parameters
     Key("cartridgeLoaded",
         Int(name="cartridgeID", invalid=-1, help="Cartridge number"),
