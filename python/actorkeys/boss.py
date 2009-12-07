@@ -1,7 +1,7 @@
-KeysDictionary("boss",(2,4),*(
+KeysDictionary("boss",(2,6),*(
     # misc
     Key("text", String(), help="text for humans"),
-    Key("bossVersion", String(), help="version string derived from svn info."),
+    Key("version", String(), help="version string derived from svn info."),
     
     # ICC Keywords
     Key('exposureState',
@@ -28,6 +28,7 @@ KeysDictionary("boss",(2,4),*(
         Bits('sp1cam','sp2cam','sp1mech','sp2mech','sp1daq','sp2daq'),
         help='Connection status of each current piece of hardware.'
     ),
+
     # specMech Keywords
     Key('shutterStatus',
         Bits('OpenSwitch', 'ClosedSwitch')*2,
@@ -49,6 +50,43 @@ KeysDictionary("boss",(2,4),*(
         String()*2,
         help = "Version string of sp1mech and sp2mech."
         ),
+    Key('slitIDs', 
+        Int(name='sp1SlitID', help='slit ID reported by sp1 (normalized)'),
+        Int(name='sp2SlitID', help='slit ID reported by sp2'),
+        help='slitIDs reported at the two slitheads. Should match each other and the mcp cartridge ID'),
+    Key('sp1LastShutterTime', 
+        Float(name='openTime', help='last measured open transit time', units='sec'),
+        Float(name='closeTime', help='last measured open transit time', units='sec'),
+        help='last measured open and close transit times for sp1 shutter'),
+    Key('sp2LastShutterTime', 
+        Float(name='openTime', help='last measured open transit time', units='sec'),
+        Float(name='closeTime', help='last measured open transit time', units='sec'),
+        help='last measured open and close transit times for sp2 shutter'),
+    Key('sp1Humidity', 
+        Float(name='hartmann', help='humidity at hartmann doors', units='percent'),
+        Float(name='centralOptics', help='humidity at central optics', units='percent'),
+        help='humidity inside sp1'),
+    Key('sp2Humidity', 
+        Float(name='hartmann', help='humidity at hartmann doors', units='percent'),
+        Float(name='centralOptics', help='humidity at central optics', units='percent'),
+        help='humidity inside sp2'),
+    Key('sp1Temp', 
+        Float(name='median', help='median of temp measurements', units='degreesC'),
+        Float(name='hartmannTop', help='temp at top of hartmann doors', units='degreesC'),
+        Float(name='redCamTop', help='temp at top of red camera', units='degreesC'),
+        Float(name='blueCamTop', help='temp at top of blue camera', units='degreesC'),
+        Float(name='redCamBottom', help='temp at bottom of red camera', units='degreesC'),
+        Float(name='blueCamBottom', help='temp at bottom of blue camera', units='degreesC'),
+        help='temperatures inside sp1'),
+    Key('sp2Temp', 
+        Float(name='median', help='median of temp measurements', units='degreesC'),
+        Float(name='hartmannTop', help='temp at top of hartmann doors', units='degreesC'),
+        Float(name='redCamTop', help='temp at top of red camera', units='degreesC'),
+        Float(name='blueCamTop', help='temp at top of blue camera', units='degreesC'),
+        Float(name='redCamBottom', help='temp at bottom of red camera', units='degreesC'),
+        Float(name='blueCamBottom', help='temp at bottom of blue camera', units='degreesC'),
+        help='temperatures inside sp2'),
+  
     # DAQ Keywords
     # Cam Micro Keywords
     Key('camCheck',
