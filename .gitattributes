@@ -4,7 +4,6 @@ doc/describe.py -text
 python/actorkeys/Makefile -text
 python/actorkeys/__init__.py -text
 python/actorkeys/apo.py -text
-python/actorkeys/apo.pyc -text
 python/actorkeys/boss.py -text
 python/actorkeys/cmds.py -text
 python/actorkeys/gcamera.py -text
