@@ -1,4 +1,4 @@
-KeysDictionary('apo', (0,1),
+KeysDictionary('apo', (0,2),
     Key('pressure',
         Float(units='inches Hg', strFmt='%.3f', reprFmt='%.3f'),
 		help='Barometric pressure'
