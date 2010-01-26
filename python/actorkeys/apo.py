@@ -4,7 +4,7 @@ KeysDictionary('apo', (0,1),
 		help='Barometric pressure'
     ),
     Key('windd',
-        Float(units='degrees', strFmt='%.1f', reprFmt='%.f'),
+        Float(units='degrees', strFmt='%.1f', reprFmt='%.1f'),
 		help='Average wind direction'
     ),
     Key('winds',
@@ -12,7 +12,7 @@ KeysDictionary('apo', (0,1),
 		help='Average wind speed'
     ),
     Key('gustd',
-        Float(units='degrees', strFmt='%.1f', reprFmt='%.f'),
+        Float(units='degrees', strFmt='%.1f', reprFmt='%.1f'),
 		help='Average gust direction'
     ),
     Key('gusts',
@@ -52,7 +52,7 @@ KeysDictionary('apo', (0,1),
 		help='35m enclosure dust density, 1.0 micron'
     ),
     Key('windd25m',
-        Float(units='degrees', strFmt='%.1f', reprFmt='%.f'),
+        Float(units='degrees', strFmt='%.1f', reprFmt='%.1f'),
 		help='25m wind direction'
     ),
     Key('winds25m',
