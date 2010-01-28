@@ -1,7 +1,7 @@
 # Based on the TCC keywords documented at (with guide camera keywords omitted):
 # http://www.apo.nmsu.edu/Telescopes/TCC/MessageKeywords.html
 
-KeysDictionary("tcc", (3, 5),
+KeysDictionary("tcc", (3, 6),
     Key("airTemp", Float(invalidValue="NaN", units="C"), help="Temperature of the outside air. Used for refraction correction."),
     Key("axePos", Float(invalidValue="NaN", units="deg", invalid="NaN", help="Order is Az, Alt, Rot")*3, help=
         """Actual mount position of azimuth, altitude and instrument rotator, as reported by
@@ -67,14 +67,16 @@ KeysDictionary("tcc", (3, 5),
     Key("flushedFromBox", String(), doCache=False),
     Key("gBinFactor", Int(invalid="NaN"), Int(invalid="NaN")),
     Key("gBoxSize", Float(invalid="NaN"), Float(invalid="NaN")),
-    Key("gCView", String()),
     Key("gCamBusy"),
     Key("gCamCmd", String()),
     Key("gCamID", Int(invalid="NaN"), Int(invalid="NaN")),
     Key("gCamInfo", String(), Float(invalid="NaN"), Float(invalid="NaN"), Int(invalid="NaN")),
     Key("gCamReply", String()),
     Key("gcFilt", Int(invalid="NaN"), String(), Float(invalid="NaN"), Float(invalid="NaN"), Float(invalid="NaN"), Float(invalid="NaN")),
+    Key("gcFocus", Float(invalidValue="NaN", units="um")),
     Key("gcNFilt", Int(invalid="NaN")),
+    Key("gcPist", Float(invalidValue="NaN", units="um")),
+    Key("gcView", String()),
     Key("gFitChiSq", Float(invalid="NaN")),
     Key("gImCtr", Float(invalid="NaN"), Float(invalid="NaN")),
     Key("gImLim", Float(invalid="NaN"), Float(invalid="NaN"), Float(invalid="NaN"), Float(invalid="NaN")),
