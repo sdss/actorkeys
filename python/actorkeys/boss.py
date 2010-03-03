@@ -94,14 +94,14 @@ KeysDictionary("boss",(2,8),*(
         Int(name='syncErrorCnt', help="the number of lines with line synchronization errors"),
         Int(name='pixelErrorCnt', help="the number of lines with pixel count errors"),
         Int(name='frameErrorCnt', help="the number of lines with insufficient or extra pixels"),
-        help='Errors noted by the DAQ during sp1 readout.')
+        help='Errors noted by the DAQ during sp1 readout.'),
     Key('sp2ReadoutErrors',
         Int(name='exposureID', help="the exposure ID for the errors"),
         Int(name='errorCnt', help="the total number of errors for the exposure"),
         Int(name='syncErrorCnt', help="the number of lines with line synchronization errors"),
         Int(name='pixelErrorCnt', help="the number of lines with pixel count errors"),
         Int(name='frameErrorCnt', help="the number of lines with insufficient or extra pixels"),
-        help='Errors noted by the DAQ during sp2 readout.')
+        help='Errors noted by the DAQ during sp2 readout.'),
 
     # Cam Micro Keywords
     Key('camCheck',
