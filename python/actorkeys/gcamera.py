@@ -1,6 +1,6 @@
 KeysDictionary('gcamera', (0, 2),
     Key("text", String(help="text for humans")),
-    Key("version", help="EUPS/SVN version"),
+    Key("version", String(help="EUPS/SVN version")),
     Key("simulating", 
        Bool('Off', 'On', help="Are we reading simulated/historical data, or taking new images?"),
        String(help="directory from which simulations are reading data."),
