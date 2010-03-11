@@ -1,4 +1,4 @@
-KeysDictionary('hub',(1,6),
+KeysDictionary('hub',(1,7),
     Key('actors', String()*(0,), help="Current actors"),
     Key('commanders', String()*(0,), help="Current commanders"),
     Key('user', String()*(5,6), help=
@@ -11,6 +11,7 @@ KeysDictionary('hub',(1,6),
         ? fully qualified domain name (if supplied)
         """,
         doCache=False,
+        refreshCmd="status",
     ),
     Key('text', String(), help="Craig's random musings", doCache=False),
     Key('users', String()*(0,), help="current human (non-hub) commanders"),
