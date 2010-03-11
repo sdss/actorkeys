@@ -1,4 +1,4 @@
-KeysDictionary("boss",(2,8),*(
+KeysDictionary("boss",(2,9),*(
     # misc
     Key("text", String(), help="text for humans"),
     Key("version", String(), help="version string derived from svn info."),
@@ -252,7 +252,7 @@ KeysDictionary("boss",(2,8),*(
         Enum('UNACKNOWLEDGED','ACKNOWLEDGED')
     ),
     Key('SP2PhaseBoot',
-        Enum('UNACKNOWLEDGED','ACKNOWLEDGED')
+        Enum('UNACKNOWLEDGED','ACKNOWLEDGED','BUSY')
     ),
     Key('SP2USR1',
         Int()
