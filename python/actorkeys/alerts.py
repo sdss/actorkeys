@@ -1,4 +1,5 @@
-KeysDictionary("alerts", (1,5),
+KeysDictionary("alerts", (1,6),
+    Key("version", String(help="EUPS/SVN version")),
     Key("activeAlerts",
         String(name="alertID", help="alert ID: actor.keyword")*(0,None),
         help="A list of the ID of every active alert",
