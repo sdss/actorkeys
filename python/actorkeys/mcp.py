@@ -1,5 +1,5 @@
 # -*- python -*-
-KeysDictionary("mcp", (2,2),
+KeysDictionary("mcp", (2,3),
     # Command-related keywords
     Key("badAxis", String(), doCache=False, help="Unknown telescope axis"),
     Key("badCharacter", Int(), doCache=False, help="ASCII code of invalid character"),
@@ -52,7 +52,7 @@ KeysDictionary("mcp", (2,2),
     Key("altWindscreenTouched", Enum("00", "01", "10", "11", descr=("None", "Down", "Up", "Both"))),
     Key("azWindscreenTouched", Enum("00", "01", "10", "11", descr=("None", "CW", "CCW", "Both"))),
     Key("instrumentNum", Int(invalid="-1"),
-        help="Instrument ID; 0=no instrument; 14=imager; -1=switches inconsistent or could not get semaphore"),
+        help="Instrument ID; 0=no instrument; 18=engineering camera; 19=imager; -1=switches inconsistent or could not get semaphore"),
     Key("instrumentNumConsistent", Bool("false", "true"),
         help="Do the three instrument ID switches agree? If not, instrumentNumValues is also output."),
     Key("instrumentNumValues", Int()*3, help="Reading from each instrument ID switch"),
