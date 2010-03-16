@@ -1,4 +1,4 @@
-KeysDictionary('gcamera', (0, 2),
+KeysDictionary('gcamera', (0, 3),
     Key("text", String(help="text for humans")),
     Key("version", String(help="EUPS/SVN version")),
     Key("simulating", 

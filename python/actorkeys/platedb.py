@@ -1,4 +1,4 @@
-KeysDictionary("platedb", (1,3),
+KeysDictionary("platedb", (1,4),
     Key("version", String(help="EUPS/SVN version")),
     Key("activePlugging",
         Int(name="cartridge", help="The cartridge in use", invalid=-1),
