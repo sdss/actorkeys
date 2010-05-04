@@ -1,5 +1,4 @@
-KeysDictionary('apo', (0,3),
-    Key('version', String(), help='svn version'),
+KeysDictionary('apo', (0,2),
     Key('pressure',
         Float(units='inches Hg', strFmt='%.3f', reprFmt='%.3f'),
 		help='Barometric pressure'
@@ -20,11 +19,11 @@ KeysDictionary('apo', (0,3),
         Float(units='mph', strFmt='%.1f', reprFmt='%.1f'),
 		help='Average gust speed'
     ),
-    Key('temp',
+    Key('airtemp',
         Float(units='C', strFmt='%.1f', reprFmt='%.1f'),
 		help='Site air temperature'
     ),
-    Key('dpTemp',
+    Key('dewpoint',
         Float(units='C', strFmt='%.1f', reprFmt='%.1f'),
 		help='Site dewpoint temperature'
     ),
