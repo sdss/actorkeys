@@ -28,7 +28,6 @@ KeysDictionary('apo', (0,2),
 		help='Site dewpoint temperature'
     ),
     Key('dpErr',
-        String(strFmt='%s', reprFmt='%s'),
 		help='Site hygrothermometer sensor error status'
     ),
     Key('humidity',
