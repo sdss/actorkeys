@@ -1,4 +1,5 @@
-KeysDictionary('apo', (0,2),
+KeysDictionary('apo', (0,3),
+    Key('version', String(), help='svn version'),
     Key('pressure',
         Float(units='inches Hg', strFmt='%.3f', reprFmt='%.3f'),
 		help='Barometric pressure'

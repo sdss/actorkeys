@@ -1,15 +1,18 @@
-KeysDictionary("boss",(2,9),*(
+KeysDictionary("boss",(2,11),*(
     # misc
     Key("text", String(), help="text for humans"),
     Key("version", String(), help="version string derived from svn info."),
     
     # ICC Keywords
     Key('exposureState',
-        Enum('IDLE','FLUSHING','INTEGRATING','PAUSED','PREREADING','READING','ABORTED', name="state"),
+        Enum('IDLE','FLUSHING','INTEGRATING','PAUSED','PREREADING','READING','LEGIBLE','ABORTED', name="state"),
         Float(name="totalTime", help="esimated total time for this state; 0 if too short to bother with a countdown timer", units="sec"),
         Float(name="elapsedTime", help="elapsed time for this state; 0 if too short to bother with a countdown timer", units="sec"),
         help='The current state of the exposure and associated timings.'
     ),
+    Key('exposureId',
+        UInt(),
+        help="last exposure number"),
     Key('BeginExposure',
         UInt(),
         Float(units="mjd",strFormat="%.2f"),
