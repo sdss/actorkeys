@@ -1,4 +1,4 @@
-KeysDictionary("sop", (1,3),
+KeysDictionary("sop", (1,4),
                # misc
                Key("version", String(help="EUPS/SVN version")),
                Key("text", String(), help="text for humans"),
@@ -14,16 +14,22 @@ KeysDictionary("sop", (1,3),
                    CompoundValueType(String(), Bool("False", "True")),
                    CompoundValueType(String(), Bool("False", "True")),
                    help="Which subsystems's failures are being ignored"),
+
+               # Note that for lists of values Thing()*(n,m), the archiver stores 
+               # m items if m is specified, but only n items if not (e.g. with "*(1,)").
+               # I'm declaring that six stages is a resonable maximum. For gotoField,
+               # I can see it spreading out to slew, hartmann, arc, flat, guider, science.
+               #
                Key("commandState",
                    String("commandName", help="the name of the sop command"),
                    Enum('idle','active','done','failed',
                         help="state of the entire command"),
                    Enum('idle','inactive','pending','active','done','failed',
                         help="""state of all the individual stages of this command, as 
-                                identified by the commandStages keyword.""")*(1,)),
+                                identified by the commandStages keyword.""")*(1,6)),
                Key("commandStages",
                    String("commandName", help="the name of the sop command"),
-                   String("stageName", help="the name of a stage of this sop command")*(1,)),
+                   String("stageName", help="the name of a stage of this sop command")*(1,6)),
                Key("stageState",
                    String("subStageName", 
                           help="""dotted name of a substage. The name will always 
