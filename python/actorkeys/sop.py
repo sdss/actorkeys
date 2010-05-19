@@ -1,4 +1,4 @@
-KeysDictionary("sop", (1,4),
+KeysDictionary("sop", (1,5),
                # misc
                Key("version", String(help="EUPS/SVN version")),
                Key("text", String(), help="text for humans"),
@@ -26,10 +26,12 @@ KeysDictionary("sop", (1,4),
                         help="state of the entire command"),
                    Enum('idle','inactive','pending','active','done','failed',
                         help="""state of all the individual stages of this command, as 
-                                identified by the commandStages keyword.""")*(1,6)),
+                                identified by the commandStages keyword.""")*(1,6),
+                   doCache=False),
                Key("commandStages",
                    String("commandName", help="the name of the sop command"),
-                   String("stageName", help="the name of a stage of this sop command")*(1,6)),
+                   String("stageName", help="the name of a stage of this sop command")*(1,6),
+                   doCache=False),
                Key("stageState",
                    String("subStageName", 
                           help="""dotted name of a substage. The name will always 
@@ -40,6 +42,6 @@ KeysDictionary("sop", (1,4),
                    Float("startTime", units="sec", 
                          help="start of the substage, in MJD TAI seconds"),
                    Float("duration", units="sec", 
-                         help="expected duration for the substage. If short or unknown, 0.0")),
-                   
+                         help="expected duration for the substage. If short or unknown, 0.0"),
+                   doCache=False),                   
                )
