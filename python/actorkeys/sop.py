@@ -11,7 +11,7 @@
 #
 #    return stateKey, stagesKey
 
-KeysDictionary("sop", (1,7),
+KeysDictionary("sop", (1,8),
                # misc
                Key("version", String(help="EUPS/SVN version")),
                Key("text", String(), help="text for humans"),
@@ -46,14 +46,9 @@ KeysDictionary("sop", (1,7),
                                 identified by the commandStages keyword.""")*4,
                    String("text", help="perhaps useful text to be displayed")),
                Key("gotoFieldStages",
-                   String("slew"),
-                   String("hartmann"),
-                   String("calibs"),
-                   String("guider"),
+                   String(),*4,
                    help="the names of the gotoField stages"),
 
-               Key("gotoField_nArc", Int(help="number of arcs completed"), Int(help="number of arcs requested")),
-               Key("gotoField_nFlat", Int(help="number of flats completed"), Int(help="number of flats requested")),
                Key("gotoField_arcTime", Float(help="arc exposure time")),
                Key("gotoField_flatTime", Float(help="flat exposure time")),
                Key("gotoField_guiderExpTime", Float(help="guider exposure time")),
