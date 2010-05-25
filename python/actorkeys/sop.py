@@ -11,7 +11,7 @@
 #
 #    return stateKey, stagesKey
 
-KeysDictionary("sop", (1,8),
+KeysDictionary("sop", (1,9),
                # misc
                Key("version", String(help="EUPS/SVN version")),
                Key("text", String(), help="text for humans"),
@@ -49,9 +49,18 @@ KeysDictionary("sop", (1,8),
                    String(),*4,
                    help="the names of the gotoField stages"),
 
-               Key("gotoField_arcTime", Float(help="arc exposure time")),
-               Key("gotoField_flatTime", Float(help="flat exposure time")),
-               Key("gotoField_guiderExpTime", Float(help="guider exposure time")),
-               Key("gotoField_guiderFlatTime", Float(help="guider flat exposure time")),
+               Key("gotoField_arcTime", Float(help="arc exposure time"), Float(help="default value")),
+               Key("gotoField_flatTime", Float(help="flat exposure time"), Float(help="default value")),
+               Key("gotoField_guiderExpTime", Float(help="guider exposure time"), Float(help="default value")),
+               Key("gotoField_guiderFlatTime", Float(help="guider flat exposure time"), Float(help="default value")),
                
+               Key("doCalibs_nBias", Int(help="index of the active bias"), Int(help="number of biases requested")),
+               Key("doCalibs_nDark", Int(help="index of the active dark"), Int(help="number of darkes requested")),
+               Key("doCalibs_nFlat", Int(help="index of the active flat"), Int(help="number of flates requested")),
+               Key("doCalibs_nArc", Int(help="index of the active arc"), Int(help="number of arces requested")),
+
+               Key("doCalibs_darkTime", Float(help="flat exposure time"), Float(help="default value")),
+               Key("doCalibs_arcTime", Float(help="arc exposure time"), Float(help="default value")),
+               Key("doCalibs_flatTime", Float(help="flat exposure time"), Float(help="default value")),
+               Key("doCalibs_guiderFlatTime", Float(help="guider flat exposure time"), Float(help="default value")),
                )
