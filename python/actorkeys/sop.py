@@ -11,7 +11,7 @@
 #
 #    return stateKey, stagesKey
 
-KeysDictionary("sop", (1,9),
+KeysDictionary("sop", (1,10),
                # misc
                Key("version", String(help="EUPS/SVN version")),
                Key("text", String(), help="text for humans"),
@@ -41,12 +41,12 @@ KeysDictionary("sop", (1,9),
                Key("gotoFieldState",
                    Enum('idle',                'running','done','failed','aborted',
                         help="state of the entire command"),
+                   String("text", help="perhaps useful text to be displayed"),
                    Enum('idle','off','pending','running','done','failed','aborted',
                         help="""state of all the individual stages of this command, as 
-                                identified by the commandStages keyword.""")*4,
-                   String("text", help="perhaps useful text to be displayed")),
+                                identified by the commandStages keyword.""")*4),
                Key("gotoFieldStages",
-                   String(),*4,
+                   String()*4,
                    help="the names of the gotoField stages"),
 
                Key("gotoField_arcTime", Float(help="arc exposure time"), Float(help="default value")),
@@ -54,9 +54,20 @@ KeysDictionary("sop", (1,9),
                Key("gotoField_guiderExpTime", Float(help="guider exposure time"), Float(help="default value")),
                Key("gotoField_guiderFlatTime", Float(help="guider flat exposure time"), Float(help="default value")),
                
+               Key("doCalibsState",
+                   Enum('idle',                'running','done','failed','aborted',
+                        help="state of the entire command"),
+                   String("text", help="perhaps useful text to be displayed"),
+                   Enum('idle','off','pending','running','done','failed','aborted',
+                        help="""state of all the individual stages of this command, as 
+                                identified by the commandStages keyword.""")),
+               Key("doCalibsStages",
+                   String(),
+                   help="the names of the doCalibs stages"),
+
                Key("doCalibs_nBias", Int(help="index of the active bias"), Int(help="number of biases requested")),
-               Key("doCalibs_nDark", Int(help="index of the active dark"), Int(help="number of darkes requested")),
-               Key("doCalibs_nFlat", Int(help="index of the active flat"), Int(help="number of flates requested")),
+               Key("doCalibs_nDark", Int(help="index of the active dark"), Int(help="number of darks requested")),
+               Key("doCalibs_nFlat", Int(help="index of the active flat"), Int(help="number of flats requested")),
                Key("doCalibs_nArc", Int(help="index of the active arc"), Int(help="number of arces requested")),
 
                Key("doCalibs_darkTime", Float(help="flat exposure time"), Float(help="default value")),
