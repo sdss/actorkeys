@@ -1,17 +1,4 @@
-#def makeCommandKeys(name, stages):
-#    stateKey = Key("%sState" % (name),
-#                   Enum('idle',                'running','done','failed','aborted',
-#                        help="state of the entire command"),
-#                   Enum('idle','off','pending','running','done','failed','aborted',
-#                        help="""state of all the individual stages of this command, as 
-#                                identified by the commandStages keyword.""")*(len(stages)))
-#    stagesKey = Key("%sStages" % (name),
-#                    String("commandName", help="the name of the sop command"),
-#                    [String(s) for s in stages])
-#
-#    return stateKey, stagesKey
-
-KeysDictionary("sop", (1,10),
+KeysDictionary("sop", (1,11),
                # misc
                Key("version", String(help="EUPS/SVN version")),
                Key("text", String(), help="text for humans"),
@@ -38,40 +25,48 @@ KeysDictionary("sop", (1,10),
                    String("text", help="perhaps useful text to be displayed"),
                    doCache=False),                   
 
+               Key("gotoFieldStages", String()*(1,6), help="names of the gotoField stages"),
                Key("gotoFieldState",
                    Enum('idle',                'running','done','failed','aborted',
                         help="state of the entire command"),
                    String("text", help="perhaps useful text to be displayed"),
                    Enum('idle','off','pending','running','done','failed','aborted',
-                        help="""state of all the individual stages of this command, as 
-                                identified by the commandStages keyword.""")*4),
-               Key("gotoFieldStages",
-                   String()*4,
-                   help="the names of the gotoField stages"),
+                        help="state of all the individual stages of this command, " + \
+                             "as identified by the commandStages keyword.")*(1,6)),
 
-               Key("gotoField_arcTime", Float(help="arc exposure time"), Float(help="default value")),
-               Key("gotoField_flatTime", Float(help="flat exposure time"), Float(help="default value")),
-               Key("gotoField_guiderExpTime", Float(help="guider exposure time"), Float(help="default value")),
-               Key("gotoField_guiderFlatTime", Float(help="guider flat exposure time"), Float(help="default value")),
+               Key("gotoField_arcTime", Float(help="arc exposure time", units="sec"), Float(help="default value", units="sec")),
+               Key("gotoField_flatTime", Float(help="flat exposure time", units="sec"), Float(help="default value", units="sec")),
+               Key("gotoField_guiderExpTime", Float(help="guider exposure time", units="sec"), Float(help="default value", units="sec")),
+               Key("gotoField_guiderFlatTime", Float(help="guider flat exposure time", units="sec"), Float(help="default value", units="sec")),
                
+               Key("doCalibsStages", String(), help="name of the doCalibs stage"),
                Key("doCalibsState",
                    Enum('idle',                'running','done','failed','aborted',
                         help="state of the entire command"),
                    String("text", help="perhaps useful text to be displayed"),
                    Enum('idle','off','pending','running','done','failed','aborted',
-                        help="""state of all the individual stages of this command, as 
-                                identified by the commandStages keyword.""")),
-               Key("doCalibsStages",
-                   String(),
-                   help="the names of the doCalibs stages"),
+                        help="state of all the individual stages of this command, " + \
+                             "as identified by the commandStages keyword.")),
 
                Key("doCalibs_nBias", Int(help="index of the active bias"), Int(help="number of biases requested")),
                Key("doCalibs_nDark", Int(help="index of the active dark"), Int(help="number of darks requested")),
                Key("doCalibs_nFlat", Int(help="index of the active flat"), Int(help="number of flats requested")),
                Key("doCalibs_nArc", Int(help="index of the active arc"), Int(help="number of arces requested")),
 
-               Key("doCalibs_darkTime", Float(help="flat exposure time"), Float(help="default value")),
-               Key("doCalibs_arcTime", Float(help="arc exposure time"), Float(help="default value")),
-               Key("doCalibs_flatTime", Float(help="flat exposure time"), Float(help="default value")),
-               Key("doCalibs_guiderFlatTime", Float(help="guider flat exposure time"), Float(help="default value")),
+               Key("doCalibs_darkTime", Float(help="flat exposure time", units="sec"), Float(help="default value", units="sec")),
+               Key("doCalibs_arcTime", Float(help="arc exposure time", units="sec"), Float(help="default value", units="sec")),
+               Key("doCalibs_flatTime", Float(help="flat exposure time", units="sec"), Float(help="default value", units="sec")),
+               Key("doCalibs_guiderFlatTime", Float(help="guider flat exposure time", units="sec"), Float(help="default value", units="sec")),
+
+               Key("doScienceStages", String(), help="name of the doScience stage"),
+               Key("doScienceState",
+                   Enum('idle',                'running','done','failed','aborted',
+                        help="state of the entire command"),
+                   String("text", help="perhaps useful text to be displayed"),
+                   Enum('idle','off','pending','running','done','failed','aborted',
+                        help="state of all the individual stages of this command, " + \
+                             "as identified by the commandStages keyword.")),
+
+               Key("doScience_nExp", Int(help="index of the active exposure"), Int(help="number of exposures completed")),
+               Key("doScience_expTime", Float(help="exposure time", units="sec"), Float(help="default", units="sec")),
                )
