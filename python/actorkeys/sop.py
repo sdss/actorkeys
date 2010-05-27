@@ -39,14 +39,14 @@ KeysDictionary("sop", (1,11),
                Key("gotoField_guiderExpTime", Float(help="guider exposure time", units="sec"), Float(help="default value", units="sec")),
                Key("gotoField_guiderFlatTime", Float(help="guider flat exposure time", units="sec"), Float(help="default value", units="sec")),
                
-               Key("doCalibsStages", String(), help="name of the doCalibs stage"),
+               Key("doCalibsStages", String()*(1,6), help="names of the doCalibs stages"),
                Key("doCalibsState",
                    Enum('idle',                'running','done','failed','aborted',
                         help="state of the entire command"),
                    String("text", help="perhaps useful text to be displayed"),
                    Enum('idle','off','pending','running','done','failed','aborted',
                         help="state of all the individual stages of this command, " + \
-                             "as identified by the commandStages keyword.")),
+                             "as identified by the commandStages keyword.")*(1,6)),
 
                Key("doCalibs_nBias", Int(help="index of the active bias"), Int(help="number of biases requested")),
                Key("doCalibs_nDark", Int(help="index of the active dark"), Int(help="number of darks requested")),
@@ -58,14 +58,14 @@ KeysDictionary("sop", (1,11),
                Key("doCalibs_flatTime", Float(help="flat exposure time", units="sec"), Float(help="default value", units="sec")),
                Key("doCalibs_guiderFlatTime", Float(help="guider flat exposure time", units="sec"), Float(help="default value", units="sec")),
 
-               Key("doScienceStages", String(), help="name of the doScience stage"),
+               Key("doScienceStages", String()*(1,6), help="names of the doScience stages"),
                Key("doScienceState",
                    Enum('idle',                'running','done','failed','aborted',
                         help="state of the entire command"),
                    String("text", help="perhaps useful text to be displayed"),
                    Enum('idle','off','pending','running','done','failed','aborted',
                         help="state of all the individual stages of this command, " + \
-                             "as identified by the commandStages keyword.")),
+                             "as identified by the commandStages keyword.")*(1,6)),
 
                Key("doScience_nExp", Int(help="index of the active exposure"), Int(help="number of exposures completed")),
                Key("doScience_expTime", Float(help="exposure time", units="sec"), Float(help="default", units="sec")),
