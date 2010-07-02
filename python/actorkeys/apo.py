@@ -1,4 +1,4 @@
-KeysDictionary('apo', (0,3),
+KeysDictionary('apo', (0,4),
     Key("version", 
         String(help="EUPS/SVN version")),
     Key('pressure',
@@ -30,7 +30,8 @@ KeysDictionary('apo', (0,3),
 		help='Site dewpoint temperature'
     ),
     Key('dpErr',
-		help='Site hygrothermometer sensor error status'
+        String(),
+        help='Site hygrothermometer sensor error status'
     ),
     Key('humidity',
         Float(units='%', strFmt='%.1f', reprFmt='%.1f'),
