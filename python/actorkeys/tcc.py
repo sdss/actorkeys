@@ -1,7 +1,7 @@
 # Based on the TCC keywords documented at (with guide camera keywords omitted):
 # http://www.apo.nmsu.edu/Telescopes/TCC/MessageKeywords.html
 
-KeysDictionary("tcc", (3, 6),
+KeysDictionary("tcc", (3, 7),
     Key("airTemp", Float(invalidValue="NaN", units="C"), help="Temperature of the outside air. Used for refraction correction."),
     Key("axePos", Float(invalidValue="NaN", units="deg", invalid="NaN", help="Order is Az, Alt, Rot")*3, help=
         """Actual mount position of azimuth, altitude and instrument rotator, as reported by
@@ -132,11 +132,13 @@ KeysDictionary("tcc", (3, 6),
     Key("noVMSMsg"),
     Key("notEnoughData"),
     Key("objArcOff", PVT(), PVT()),
+    Key("objDist", Float(invalidValue="NaN", units="au")),
     Key("objInstAng", PVT()),
     Key("objMag", Float(invalidValue="NaN", units="mag")),
     Key("objName", String()),
     Key("objNetPos", PVT(), PVT()),
     Key("objOff", PVT(), PVT()),
+    Key("objObs", PVT(), PVT()),
     Key("objPM", Float(invalidValue="NaN", units="as/century")*2, Float(invalidValue="NaN", units="as"),
         Float(invalidValue="NaN", units="km/s")),
     Key("objPos", PVT(), PVT()),
@@ -218,6 +220,7 @@ KeysDictionary("tcc", (3, 6),
     Key("userNum", UInt(invalidValue="NaN")),
     Key("ut1", Double(invalid="NaN", units="s")),
     Key("utc_TAI", Float(invalidValue="NaN", units="s")),
+    Key("version", String()),
     Key("vmsMsg", String(), doCache=False),
     Key("warnAltStatus"),
     Key("warnAzStatus"),
