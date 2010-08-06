@@ -6,6 +6,7 @@ python/actorkeys/__init__.py -text
 python/actorkeys/apo.py -text
 python/actorkeys/boss.py -text
 python/actorkeys/cmds.py -text
+python/actorkeys/ecamera.py -text
 python/actorkeys/gcamera.py -text
 python/actorkeys/mcp.py -text
 python/actorkeys/mcp.py.skl -text
