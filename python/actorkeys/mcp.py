@@ -1,5 +1,5 @@
 # -*- python -*-
-KeysDictionary("mcp", (2,3),
+KeysDictionary("mcp", (2,4),
     # Command-related keywords
     Key("badAxis", String(), doCache=False, help="Unknown telescope axis"),
     Key("badCharacter", Int(), doCache=False, help="ASCII code of invalid character"),
@@ -103,6 +103,25 @@ KeysDictionary("mcp", (2,3),
     Key("minEncoderMismatch", Int()*3, help="Limit below which readings from paired encoders are considered equal (az, alt, rot)"),
     Key("msOnMaxCorrection", Int()*3, help="Maximum fiducial error which will be corrected (az, alt, rot)"),
 
+    Key("azFiducialCrossing", Int(help="fiducial index"),
+        Float(units="deg", help="fiducial position"),
+        Int(units="ticks", help="error in expected position", invalid=99999),
+        Int(units="ticks", help="error in reported position")),
+    Key("altFiducialCrossing", Int(help="fiducial index"),
+        Float(units="deg", help="fiducial position"),
+        Int(units="ticks", help="error since last crossing", invalid=99999),
+        Int(units="ticks", help="error in reported position")),
+    Key("rotFiducialCrossing", Int(help="fiducial index"),
+        Float(units="deg", help="fiducial position"),
+        Int(units="ticks", help="error since last crossing", invalid=99999),
+        Int(units="ticks", help="error in reported position")), 
+    Key("azBadFiducial", Int(help="fiducial index"),
+        Float(units="deg", help="fiducial position")),
+    Key("altBadFiducial", Int(help="fiducial index"),
+        Float(units="deg", help="fiducial position")),
+    Key("rotBadFiducial", Int(help="fiducial index"),
+        Float(units="deg", help="fiducial position")),
+       
     # Versions
     Key("goodFiducialVersions", Bool("false", "true"), help="The fiducial table version numbers are consistent"),
     Key("azFiducialVersion", String(), help="Version of fiducial table"),
