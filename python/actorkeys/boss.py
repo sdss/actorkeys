@@ -279,22 +279,15 @@ KeysDictionary("boss",(2,12),*(
     # VOLTS
     
     # Machine generated keys:
-        
-    Key('SP1B3HeaterVBias',
-        Float(units='volts',strFormat='%.3f'),
-        help = "Translated value of B3_HEATERV on SP1 B3"
-        ),
-    Key('SP1B3HeaterVNom', 
+        	
+    
+    Key('SP1B3HeaterVNom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of B3_HEATERV on SP1 B3"
         ),
     Key('SP1B3HeaterVRead',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of B3_HEATERV on SP1 B3"
-        ),
-    Key('SP2B3HeaterVBias',
-        Float(units='volts',strFormat='%.3f'),
-        help = "Translated value of B3_HEATERV on SP2 B3"
         ),
     Key('SP2B3HeaterVNom',
         Float(units='volts',strFormat='%.3f'),
@@ -352,10 +345,6 @@ KeysDictionary("boss",(2,12),*(
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of R1_VS+ on SP2 R1"
         ),
-    Key('SP1B2LN2TempBias',
-        Float(units='deg K',strFormat='%.3f'),
-        help = "Translated value of B2_LN2TEMP on SP1 B2"
-        ),
     Key('SP1B2LN2TempNom',
         Float(units='deg K',strFormat='%.3f'),
         help = "Translated value of B2_LN2TEMP on SP1 B2"
@@ -363,10 +352,6 @@ KeysDictionary("boss",(2,12),*(
     Key('SP1B2LN2TempRead',
         Float(units='deg K',strFormat='%.3f'),
         help = "Translated value of B2_LN2TEMP on SP1 B2"
-        ),
-    Key('SP2B2LN2TempBias',
-        Float(units='deg K',strFormat='%.3f'),
-        help = "Translated value of B2_LN2TEMP on SP2 B2"
         ),
     Key('SP2B2LN2TempNom',
         Float(units='deg K',strFormat='%.3f'),
@@ -400,10 +385,6 @@ KeysDictionary("boss",(2,12),*(
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of R0_TZERO on SP2 R0"
         ),
-    Key('SP1R1HeaterVBias',
-        Float(units='volts',strFormat='%.3f'),
-        help = "Translated value of R1_HEATERV on SP1 R1"
-        ),
     Key('SP1R1HeaterVNom',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of R1_HEATERV on SP1 R1"
@@ -411,10 +392,6 @@ KeysDictionary("boss",(2,12),*(
     Key('SP1R1HeaterVRead',
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of R1_HEATERV on SP1 R1"
-        ),
-    Key('SP2R1HeaterVBias',
-        Float(units='volts',strFormat='%.3f'),
-        help = "Translated value of R1_HEATERV on SP2 R1"
         ),
     Key('SP2R1HeaterVNom',
         Float(units='volts',strFormat='%.3f'),
@@ -856,10 +833,6 @@ KeysDictionary("boss",(2,12),*(
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of R0_VT+ on SP2 R0"
         ),
-    Key('SP1B2CCDTempBias',
-        Float(units='deg C',strFormat='%.3f'),
-        help = "Translated value of B2_CCDTEMP on SP1 B2"
-        ),
     Key('SP1B2CCDTempNom',
         Float(units='deg C',strFormat='%.3f'),
         help = "Translated value of B2_CCDTEMP on SP1 B2"
@@ -867,10 +840,6 @@ KeysDictionary("boss",(2,12),*(
     Key('SP1B2CCDTempRead',
         Float(units='deg C',strFormat='%.3f'),
         help = "Translated value of B2_CCDTEMP on SP1 B2"
-        ),
-    Key('SP2B2CCDTempBias',
-        Float(units='deg C',strFormat='%.3f'),
-        help = "Translated value of B2_CCDTEMP on SP2 B2"
         ),
     Key('SP2B2CCDTempNom',
         Float(units='deg C',strFormat='%.3f'),
@@ -1552,10 +1521,6 @@ KeysDictionary("boss",(2,12),*(
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of R0_TSET on SP2 R0"
         ),
-    Key('SP1R0CCDTempBias',
-        Float(units='deg C',strFormat='%.3f'),
-        help = "Translated value of R0_CCDTEMP on SP1 R0"
-        ),
     Key('SP1R0CCDTempNom',
         Float(units='deg C',strFormat='%.3f'),
         help = "Translated value of R0_CCDTEMP on SP1 R0"
@@ -1563,10 +1528,6 @@ KeysDictionary("boss",(2,12),*(
     Key('SP1R0CCDTempRead',
         Float(units='deg C',strFormat='%.3f'),
         help = "Translated value of R0_CCDTEMP on SP1 R0"
-        ),
-    Key('SP2R0CCDTempBias',
-        Float(units='deg C',strFormat='%.3f'),
-        help = "Translated value of R0_CCDTEMP on SP2 R0"
         ),
     Key('SP2R0CCDTempNom',
         Float(units='deg C',strFormat='%.3f'),
@@ -2104,10 +2065,6 @@ KeysDictionary("boss",(2,12),*(
         Float(units='volts',strFormat='%.3f'),
         help = "Translated value of R1_VR on SP2 R1"
         ),
-    Key('SP1R0LN2TempBias',
-        Float(units='deg K',strFormat='%.3f'),
-        help = "Translated value of R0_LN2TEMP on SP1 R0"
-        ),
     Key('SP1R0LN2TempNom',
         Float(units='deg K',strFormat='%.3f'),
         help = "Translated value of R0_LN2TEMP on SP1 R0"
@@ -2115,10 +2072,6 @@ KeysDictionary("boss",(2,12),*(
     Key('SP1R0LN2TempRead',
         Float(units='deg K',strFormat='%.3f'),
         help = "Translated value of R0_LN2TEMP on SP1 R0"
-        ),
-    Key('SP2R0LN2TempBias',
-        Float(units='deg K',strFormat='%.3f'),
-        help = "Translated value of R0_LN2TEMP on SP2 R0"
         ),
     Key('SP2R0LN2TempNom',
         Float(units='deg K',strFormat='%.3f'),
