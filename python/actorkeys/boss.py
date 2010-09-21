@@ -53,6 +53,10 @@ KeysDictionary("boss",(2,12),*(
         String()*2,
         help = "Version string of sp1mech and sp2mech."
         ),
+    Key('specMechProtocol',
+    	String()*2,
+    	help = "Protocol string of sp1mech and sp2mech"
+    	),
     Key('slitIDs', 
         Int(name='sp1SlitID', help='slit ID reported by sp1 (normalized)'),
         Int(name='sp2SlitID', help='slit ID reported by sp2'),
