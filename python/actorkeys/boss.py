@@ -31,6 +31,10 @@ KeysDictionary("boss",(2,12),*(
         Bits('sp1cam','sp2cam','sp1mech','sp2mech','sp1daq','sp2daq'),
         help='Connection status of each current piece of hardware.'
     ),
+    Key('lastFlush',
+        UInt(units = 'sec'),
+        help = "Time of last flush."
+    ),
 
     # specMech Keywords
     Key('shutterStatus',
