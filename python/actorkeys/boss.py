@@ -18,7 +18,7 @@ KeysDictionary("boss",(2,12),*(
         Float(units="mjd",strFormat="%.2f"),
         help = "Time that an exposure began."
     ),
-    Key('EndExposure',
+    Key('EndExposure'cd ..,
         UInt(),
         Float(units = "mjd", strFormat = "%.2f"),
         help = "Time that an exposure ended."
@@ -123,6 +123,17 @@ KeysDictionary("boss",(2,12),*(
         Int(),
         help = "Unix seconds at which point the ICC was declared alive"
     ),
+    Key('sp1camRawText',
+    	String(),
+    	help = "Raw text of TDS command",
+    ),
+    Key('sp2camRawText',
+    	String(),
+    	help = "Raw text of TDS command",
+   	),
+    Key('ln2stat'
+    	String()
+   	),
     # camStatus
     Key('SP1LN2Fill',
         Enum('ON','OFF'),
@@ -274,6 +285,24 @@ KeysDictionary("boss",(2,12),*(
     Key('SP2USR3',
         Int()
     ),
+    Key('SP1SecondaryDewarPress',
+    	Int()
+    ),
+    Key('SP2SecondaryDewarPress',
+    	Int()
+    ),
+    Key('SP1RedIonPump',
+    	Float(strFormat='%.2f')
+	),
+	Key('SP1BlueIonPump',
+    	Float(strFormat='%.2f')
+	),
+	Key('SP2RedIonPump',
+    	Float(strFormat='%.2f')
+	),
+	Key('SP2BlueIonPump',
+    	Float(strFormat='%.2f')
+	),	
     # Cam Check keywords
     Key('camCheckResponse',
         String()*(0,),
