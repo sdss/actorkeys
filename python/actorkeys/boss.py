@@ -131,7 +131,7 @@ KeysDictionary("boss",(2,12),*(
     	String(),
     	help = "Raw text of TDS command",
    	),
-    Key('ln2stat'
+    Key('ln2stat',
     	String()
    	),
     # camStatus
