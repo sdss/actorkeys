@@ -1,4 +1,4 @@
-KeysDictionary("boss",(2,12),*(
+KeysDictionary("boss",(2,13),*(
     # misc
     Key("text", String(), help="text for humans"),
     Key("version", String(), help="version string derived from svn info."),
