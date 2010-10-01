@@ -1,4 +1,4 @@
-KeysDictionary('guider', (0, 7),
+KeysDictionary('guider', (0, 8),
     Key("version", String(), help="svn/eups version"),
     Key("guiderVersion", String(), help="historical svn/eups version"),
     # parameters
@@ -71,6 +71,12 @@ KeysDictionary('guider', (0, 7),
         String(),
         help="path of file being processed",
         doCache=False,
+    ),
+    # the following really should be replaced by gprobeBits
+    # but that is proving to be a surprisingly hard problem and has low priority, so use gprobes
+    Key("gprobes",
+        String()*(0,),
+        help="Which guide probes are enabled? Format: (<probe number>=True/False); probe number starts at 1",
     ),
     
     # corrections
