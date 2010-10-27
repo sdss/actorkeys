@@ -1,5 +1,5 @@
 # -*- python -*-
-KeysDictionary("mcp", (3,0),
+KeysDictionary("mcp", (3,1),
     # Command-related keywords
     Key("badAxis", String(), doCache=False, help="Unknown telescope axis"),
     Key("badCharacter", Int(), doCache=False, help="ASCII code of invalid character"),
@@ -116,11 +116,11 @@ KeysDictionary("mcp", (3,0),
         Int(units="ticks", help="error since last crossing", invalid=99999),
         Int(units="ticks", help="error in reported position")), 
     Key("azBadFiducial", Int(help="fiducial index"),
-        Float(units="deg", help="fiducial position")),
+        Float(units="deg", help="fiducial position"), help="The fiducial appears to be an impossible one"),
     Key("altBadFiducial", Int(help="fiducial index"),
-        Float(units="deg", help="fiducial position")),
+        Float(units="deg", help="fiducial position"), help="The fiducial appears to be an impossible one"),
     Key("rotBadFiducial", Int(help="fiducial index"),
-        Float(units="deg", help="fiducial position")),
+        Float(units="deg", help="fiducial position"), help="The fiducial appears to be an impossible one"),
        
     # Versions
     Key("goodFiducialVersions", Bool("false", "true"), help="The fiducial table version numbers are consistent"),
@@ -137,6 +137,8 @@ KeysDictionary("mcp", (3,0),
     # Allen-Bradley words
     Key('ab_status', Int()*4, help='Allen Bradley status, azstate, altstate, rotstate'),
     Key('lavaLamp', Int(), help='Is the Lava Lamp on?'),
+
+    # Information from the imager, passed via the mcp
     Key('imCamCheck', String()*(0,), help="Imager errors reported by iop"),
     #
     # The machine-generated bitfield definitions are inserted here:
