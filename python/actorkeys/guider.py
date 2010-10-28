@@ -31,6 +31,8 @@ KeysDictionary('guider', (0, 8),
         help="plate scales relevant to guiding",
     ),
 
+    Key("seeing", Float(), help="mean seeing"),
+
     # status
 
     # files has been superseded by file, and should be removed at the next major revision.
