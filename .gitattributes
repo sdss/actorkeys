@@ -1,4 +1,5 @@
 * text=auto !eol
+bin/actorkeysTrace.py -text
 doc/describe.css -text
 doc/describe.py -text
 python/actorkeys/Makefile -text

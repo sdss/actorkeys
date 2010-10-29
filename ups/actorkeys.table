@@ -1,4 +1,4 @@
 setupOptional(plc v23p1)
 setupOptional(sdss3tools v1_4)
-
+envPrepend(PATH, ${PRODUCT_DIR}/bin)
 pathPrepend(PYTHONPATH, ${PRODUCT_DIR}/python)
