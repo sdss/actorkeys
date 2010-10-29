@@ -1,4 +1,4 @@
-KeysDictionary('guider', (0, 8),
+KeysDictionary('guider', (0, 9),
     Key("version", String(), help="svn/eups version"),
     Key("guiderVersion", String(), help="historical svn/eups version"),
     # parameters
@@ -31,7 +31,7 @@ KeysDictionary('guider', (0, 8),
         help="plate scales relevant to guiding",
     ),
 
-    Key("seeing", Float(), help="mean seeing"),
+    Key("seeing", Float(), help="predicted seeing (FWHM, arcsec), a fit to RHL's focus model"),
 
     # status
 
