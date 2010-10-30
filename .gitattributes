@@ -14,5 +14,4 @@ python/actorkeys/platedb.py -text
 python/actorkeys/sop.py -text
 python/actorkeys/sos.py -text
 python/actorkeys/tcc.py -text
-python/actorkeys/testing.py -text
 ups/actorkeys.table -text
