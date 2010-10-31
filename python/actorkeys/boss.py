@@ -121,7 +121,8 @@ KeysDictionary("boss",(2,13),*(
         ),
 	Key('camCheckAlert',
 		String(help='keyword name'),
-		String(help='keyword str(value)')
+		String(help='keyword str(value)'),
+		help = "keyword is reported out of spec by camCheck"
 	),
 	Key('aliveAt',
         Int(),
