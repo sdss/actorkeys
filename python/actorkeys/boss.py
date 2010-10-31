@@ -119,7 +119,11 @@ KeysDictionary("boss",(2,13),*(
         String()*(0,),
         help = "A list of strings of keywords that are out of spec."
         ),
-    Key('aliveAt',
+	Key('camCheckAlert',
+		String(help='keyword name'),
+		String(help='keyword str(value)')
+	),
+	Key('aliveAt',
         Int(),
         help = "Unix seconds at which point the ICC was declared alive"
     ),
