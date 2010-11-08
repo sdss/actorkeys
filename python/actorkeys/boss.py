@@ -141,7 +141,7 @@ KeysDictionary("boss",(2,14),*(
    	),
     # camStatus
     Key('SP1LN2Fill',
-        Enum('ON','OFF'),
+        Enum('ON','OFF','FAULT!!!'),
     ),
     Key('SP1CameraMonitor',
         Enum('ON','OFF')
@@ -216,7 +216,7 @@ KeysDictionary("boss",(2,14),*(
         Int()
     ),
     Key('SP2LN2Fill',
-        Enum('ON','OFF'),
+        Enum('ON','OFF','FAULT!!!'),
     ),
     Key('SP2CameraMonitor',
         Enum('ON','OFF')
