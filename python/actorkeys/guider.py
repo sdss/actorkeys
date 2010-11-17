@@ -1,4 +1,4 @@
-KeysDictionary('guider', (1, 1),
+KeysDictionary('guider', (1, 2),
     Key("version", String(), help="svn/eups version"),
     Key("guiderVersion", String(), help="historical svn/eups version"),
     # parameters
@@ -59,6 +59,7 @@ KeysDictionary('guider', (1, 1),
         Float(name="focusOffset", help="offset of probe tip from focalplane, with plus=away from sky/M2", units='um'),
         Float(name="modelFlux", units='ADU'),
         Float(name="modelMagnitude"),
+        Float(name="refMagnitude", help="known magnitude of guide star"),
         Float(name="skyFlux", help="mean sky, per-pixel", units='ADU/pixel'),
         Float(name="skyMagnitude", units="mags/square-arcsec"),
         doCache = False,
