@@ -36,14 +36,6 @@ KeysDictionary('guider', (1, 2),
 
     # status
 
-    # files has been superseded by file, and should be removed at the next major revision.
-    Key("files",
-        String(help="type; one of: guide, flat, dark..."),
-        String(help="base directory for these files (relative to image root)"),
-        String(help="name of fully processed image file"),
-        String(help="name of mask file"),
-        doCache = False,
-    ),
     Key("file",
         String(help="base directory for these files (relative to image root)"),
         String(help="name of fully processed image file"),
