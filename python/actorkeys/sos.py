@@ -1,6 +1,7 @@
-KeysDictionary('sos', (1, 2),
+KeysDictionary('sos', (1, 3),
                Key("text", String(help="text for humans")),
                Key("version", String(help="EUPS/SVN version")),
+               Key("idlspec2dVersion", String(help="idlspec2d version we will call")),
                Key("b1RingMove", Float(units="deg", help="measured error in b1 ring rotation")),
                Key("b2RingMove", Float(units="deg", help="measured error in b2 ring rotation")),
                Key("b1MeanOffset", Float(units="pixels", 
