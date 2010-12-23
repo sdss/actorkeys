@@ -1,4 +1,4 @@
-KeysDictionary('guider', (1, 2),
+KeysDictionary('guider', (1, 3),
     Key("version", String(), help="svn/eups version"),
     Key("guiderVersion", String(), help="historical svn/eups version"),
     # parameters
