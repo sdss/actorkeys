@@ -12,13 +12,13 @@ KeysDictionary("apogeetest",(0,3),*(
         Float(name="time_left", help="esimated remaining time for this state; 0 if too short to bother with a countdown timer", units="sec"),
         Int(name="UTR_counter", help="Counter of just completed UTR read; 0 for the any state other than UTR", units="read"),
         help='The current state of the exposure and associated timings.'),
-    Key('exposureWroteFile',
-        String(name="wrotefile"),
-        help="Name of FITS file just written to disk"),
     Key('exposureMode',
         Enum('fowler','sutr',),
         Float(name="nfowler", help="number of fowler samples or Up-the-Ramp frames to take"),
         help="number of fowler samples"),
+    Key('UTRfilename',
+        String(),
+        help="Name of FITS file just written to disk"),
 
 
     # Spectrograph Setup/Status Keywords
