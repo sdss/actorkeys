@@ -68,6 +68,7 @@ KeysDictionary("apogeeql",(0,1),*(
     # Exposure List for Current Plate Table Keywords
     # one for each exposure taken with the current plate
     Key('exposureList',
+        Int(name='plateId', help='Plate ID number'),
         Int(name='expNum', help='Exposure number'),
         String(name='expName', help='Exposure Name'),
         Float(name='exptime', help='Exposure Time', units='seconds'),
