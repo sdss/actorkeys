@@ -4,6 +4,11 @@ KeysDictionary("apogeeql",(0,1),*(
     # misc
     Key("text", String(), help="text for humans"),
     Key("version", String(), help="version string derived from svn info."),
+
+    # HTTP server address for URLs below
+    Key('rootURL',
+       String(),
+       help='The root address of the HTTP server'),
     
     # Current Exposure Table keywords
     Key('exposureName',
@@ -54,9 +59,6 @@ KeysDictionary("apogeeql",(0,1),*(
     Key('snrH12',
         Float()*2,
         help='Signal to Noise Ratio (at H=12.0) for this UTR read and for this exposure.'),
-    Key('snrH12Target',
-        Float(),
-        help='Targeted SNR for this exposure'),
     Key('exptimeEstimate',
         Float(),
         help='Estimated exposure time to reach the targeted SNR'),
@@ -79,12 +81,32 @@ KeysDictionary("apogeeql",(0,1),*(
         Float(name='exptime', help='Total Exposure Time for this plate', units='seconds'),
         Float(name='snrH12', help='Total SNR obtained for H=12.0 for this plate')),
 
-    # (S/N)^2 at H=12.o vs Time Data Keywords
+    # (S/N)^2 at H=12.0 vs Time Data Keywords
     Key('snrData',
-        Float(name='snr'),
-        Float(name='snrSquare'),
         Float(name='readNum'),
+        Float(name='snr'),
         help='SNR Data to update the SNR vs Time plot'),
+    Key('snrAxisRange',
+        Float()*2,
+        help='Low, High limits of the Y-Axis (SNR) plot'),
+    Key('readNumAxisRange',
+        Float()*2,
+        help='Low, High limits of the X-Axis (read number) plot'),
+    Key('snrLinFit',
+        Float(name='slope'),
+        Float(name='origin'),
+        help='SNR to readNum Linear fit to all the reads so far'),
+    Key('snrLast2LinFit',
+        Float(name='slope'),
+        Float(name='origin'),
+        help='SNR to readNum Linear fit to previous 2 reads'),
+    Key('snrH12Target',
+        Float(),
+        help='Targeted SNR for this exposure'),
+    Key('numReadsToTarget',
+        Float(),
+        help='Estimated number of UTR reads to reach targeted SNR'),
+
 
     # There will be more stuff for the other plot when this gets defined
 
