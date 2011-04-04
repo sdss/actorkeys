@@ -36,9 +36,9 @@ KeysDictionary("apogeeql",(0,1),*(
         Float(name='numReads', help='Number of UTR Reads'),
         Float(name='snrGoal', help='The target SNR for this exposure.'),
         Float(name='ditherPos', help='dither Position', units='pixels'),
-        Float(name='snrH12', help='SNR obtained for H=12.0 '),
-        Float(name='netExptime', help='Total Exposure Time for this plate', units='seconds'),
-        Float(name='netSnrH12', help='Total SNR obtained for H=12.0 for this plate')),
+        Float(name='snrH12', help='SNR obtained for H=12.0 for this exposure'),
+        Float(name='netExptime', help='Total exposure time for this plate', units='seconds'),
+        Float(name='netSnrH12', help='Cumulative SNR obtained for H=12.0 for this plate')),
 
     # (S/N)^2 at H=12.0 vs Time Data Keywords (broadcasted with status or when it changes)
     Key('snrAxisRange',
@@ -47,17 +47,18 @@ KeysDictionary("apogeeql",(0,1),*(
 
     # (S/N)^2 at H=12.0 vs Time Data Keywords (updated at every UTR read ~10sec)
     Key('utrData',
-        Int(name='expNum', help='Instrument running exposure number'),
-        Int(name='readNum', help='read number counter'),
-        Float(name='snr2', help='SNR^2 value for this read'),
-        Float(name='snrTotalLinFit', help='SNR^2 to readNum Linear fit to all the reads so far')*2,
-        Float(name='snrRecentLinFit', help='SNR^2 to readNum Linear fit of previous 2 reads')*2,
-        Bits('fitsBad', 'ditherBad', 'skyBad', 'waveBad', help='bitwise status (1=bad, 0=ok)'),
-        Float(name='ditherPos', help='measured/commanded dither position')*2,
+        Int(name='expNum', help='Exposure number'),
+        Int(name='readNum', help='Read number counter'),
+        Float(name='snrH12', help='SNR^2 value for this read'),
+        Float(name='snrTotalLinFit', help='SNR^2 to readNum Linear fit to all the reads so far: y intercept, slope')*2,
+        Float(name='snrRecentLinFit', help='SNR^2 to readNum Linear fit of most recent reads: y intercept, slope')*2,
+        Bits('fitsBad', 'ditherBad', 'skyBad', 'waveBad', help='bitwise status (1=bad, 0=OK)'),
+        Float(name='measDitherPos', help='Measured dither position'),
+        Float(name='cmdDitherPos', help='Commanded dither position'),
         Float(name='waveOffset', help='Average wavelength solution offset between measured and expected for 3 chips'),
         Float(name='exptimeEst', help='Estimated exposure time to reach snrGoal'),
         Float(name='numReadsToTarget', help='Estimated number of UTR reads to reach snrGoal'),
-        help='SNR Data to update the SNR vs Time plot - a new row for each UTR read'),
+        help='Data about the most recent up-the-ramp read'),
 
     # There will be more stuff for the other plot when this gets defined
 
