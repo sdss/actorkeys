@@ -44,7 +44,7 @@ KeysDictionary("apogee", (0,2), *(
         help='Low, high software limits for collimator actuator position'),
     Key('ttIndexer',
         Bool('Off', 'On'),
-        help='???')
+        help='???'),
 
     # Detector Dither Keywords
     Key('ditherPosition',
@@ -58,7 +58,7 @@ KeysDictionary("apogee", (0,2), *(
         help='Commanded dither actuator position'),
     Key('ditherIndexer',
         Bool('Off', 'On'),
-        help='???')
+        help='???'),
 
     # Instrument Keywords
     Key('tempNames', 
