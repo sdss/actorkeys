@@ -34,8 +34,10 @@ KeysDictionary("apogee", (0,2), *(
 
     # Collimator Tip/Tilt/Focus Keywords
     Key('ttPosition',
-        Float(units='pixels')*2,
-        help='Current collimator tip/tilt'),
+        Float(name="piston", units="microns", help="+ brings collimator towards the instrument"),
+        Float(name="pitch", units="pixels", help="+ tips the beam down"),
+        Float(name="yaw", units="pixels", help="+ tips the beam to the right as seen by the collimator")
+        help='Collimator orientation'),
     Key('ttStepPosition',
         Float(units='microns')*3,
         help='Current collimator actuator position'),
