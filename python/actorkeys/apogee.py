@@ -36,7 +36,7 @@ KeysDictionary("apogee", (0,2), *(
     Key('ttPosition',
         Float(name="piston", units="microns", help="+ brings collimator towards the instrument"),
         Float(name="pitch", units="pixels", help="+ tips the beam down"),
-        Float(name="yaw", units="pixels", help="+ tips the beam to the right as seen by the collimator")
+        Float(name="yaw", units="pixels", help="+ tips the beam to the right as seen by the collimator"),
         help='Collimator orientation'),
     Key('ttStepPosition',
         Float(units='microns')*3,
