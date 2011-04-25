@@ -98,7 +98,7 @@ KeysDictionary("apogee", (0,2), *(
         Float(units='Torr')*2,
         help='Expected Low, High Vacuum'),
     Key('ln2Level', 
-        Float(units='liters'),
+        Float(units='%'),
         help='Current level of LN2 in instrument; NaN if not available'),
     Key('ln2Interval', 
         Float(units='sec'),
@@ -107,10 +107,10 @@ KeysDictionary("apogee", (0,2), *(
         Bool("0", "1"),
         help='LN2 Level Alarm state; 0=ok, 1=alarm'),
     Key('ln2Threshold', 
-        Float(units='liters'),
+        Float(units='%'),
         help='LN2 Level below which an Alarm is triggered'),
     Key('ln2Limits', 
-        Float(units='liters')*2,
+        Float(units='%')*2,
         help='Expected Low, High LN2 level'),
 
 ))
