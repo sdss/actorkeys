@@ -20,7 +20,6 @@ KeysDictionary("apogee", (0,2), *(
         Float(name="nfowler", help="number of fowler samples or Up-the-Ramp frames to take"),
         help="number of fowler samples"),
 
-
     # Spectrograph Setup/Status Keywords
     Key('arrayPower',
         Enum('ON','OFF','?'),
@@ -33,20 +32,23 @@ KeysDictionary("apogee", (0,2), *(
         help='List of available DSP files'),
 
     # Collimator Tip/Tilt/Focus Keywords
-    Key('ttPosition',
+    Key('collOrient',
         Float(name="piston", units="microns", help="+ brings collimator towards the instrument"),
         Float(name="pitch", units="pixels", help="+ tips the beam down"),
         Float(name="yaw", units="pixels", help="+ tips the beam to the right as seen by the collimator"),
         help='Collimator orientation'),
-    Key('ttStepPosition',
+    Key('collMountPos',
         Float(units='microns')*3,
         help='Current collimator actuator position'),
-    Key('ttLimits',
+    Key('collMountLimits',
         Float(units='microns')*2,
         help='Low, high software limits for collimator actuator position'),
-    Key('ttIndexer',
+    Key("collLimitSwitch",
+        Bool("false", "true")*6,
+        help="home1, forward1, home2, forward2, home3, forward3 limit switch activated?"),
+    Key('collIndexer',
         Bool('Off', 'On'),
-        help='???'),
+        help='Is the collimator controller available (on and communicating)?'),
 
     # Detector Dither Keywords
     Key('ditherPosition',
@@ -55,12 +57,12 @@ KeysDictionary("apogee", (0,2), *(
     Key('ditherLimits',
         Float(units='pixels')*2,
         help='Low, high software limits for dither position'),
-    Key('ditherStepPosition',
-        Float(units='microns'),
-        help='Current dither actuator position'),
+    Key("ditherLimitSwitch",
+        Bool("false", "true")*2,
+        help="Home, forward dither limit switch activated?"),
     Key('ditherIndexer',
         Bool('Off', 'On'),
-        help='???'),
+        help='Is the dither controller available (on and communicating)?'),
 
     # Instrument Keywords
     Key('tempNames', 
