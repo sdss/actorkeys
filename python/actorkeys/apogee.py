@@ -37,8 +37,6 @@ KeysDictionary("apogee", (1,0), *(
         Enum("Reading", "Saving", "Done", "Failed", name="readState", help="state of UTR read"),
         Int(name="readNum", help="number of current UTR read, starting from 1"),
         Int(name="nReads", help="total number of UTR reads requested"),
-        Float(name="elapsedReadTime", units="sec", help="elapsed time for current UTR read"),
-        Float(name="totReadTime", units="sec", help="total time for a UTR read"),
     ),
     Key("utrReadTime", Float(units="sec"), help="time required for a UTR read"),
 
