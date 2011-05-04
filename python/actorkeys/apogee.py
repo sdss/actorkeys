@@ -8,7 +8,7 @@ KeysDictionary("apogee", (1,0), *(
 
     # Camera
     Key("arrayPower",
-        Enum("ON","OFF","?"),
+        Bool("off", "on", invalid="?"),
         help="Commanded array power."),
     Key("cameraState",
         Enum("Exposing", "Done", "Stopping", "Stopped", "Failed", name="expState", help="state of exposure"),
@@ -20,6 +20,10 @@ KeysDictionary("apogee", (1,0), *(
     Key("dspload",
         String(),
         help="Name of DSP file currently in use"),
+    Key("exposureTypeList",
+        String()*(4,15),
+        help="Allowed exposure types -- values for the 'object' argument to the expose command",
+    ),
     Key("exposureState",
         Enum("Exposing", "Done", "Stopping", "Stopped", "Failed", name="expState", help="state of exposure"),
         String(name="expType", help="type of exposure (object argument)"),
