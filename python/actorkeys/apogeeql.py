@@ -30,7 +30,7 @@ KeysDictionary("apogeeql",(0,1),*(
     # one for each exposure taken with the current plate
     Key('exposureData',
         Int(name='plateId', help='Plate ID number'),
-        String(name='expNum', help='Exposure number'),
+        Int(name='expNum', help='Exposure number'),
         String(name='expName', help='Exposure Name'),
         Float(name='exptime', help='Exposure Time', units='seconds'),
         Float(name='numReads', help='Number of UTR Reads'),
@@ -47,7 +47,7 @@ KeysDictionary("apogeeql",(0,1),*(
 
     # (S/N)^2 at H=12.0 vs Time Data Keywords (updated at every UTR read ~10sec)
     Key('utrData',
-        String(name='expNum', help='Exposure number'),
+        Int(name='expNum', help='Exposure number'),
         Int(name='readNum', help='Read number counter'),
         Float(name='snrH12', help='SNR^2 value for this read'),
         Float(name='snrTotalLinFit', help='SNR^2 to readNum Linear fit to all the reads so far: y intercept, slope')*2,
@@ -58,6 +58,7 @@ KeysDictionary("apogeeql",(0,1),*(
         Float(name='waveOffset', help='Average wavelength solution offset between measured and expected for 3 chips'),
         Float(name='exptimeEst', help='Estimated exposure time to reach snrGoal'),
         Float(name='numReadsToTarget', help='Estimated number of UTR reads to reach snrGoal'),
+        Int(name='NumReadsCommanded', help='Total number of UTR reads commanded'),
         help='Data about the most recent up-the-ramp read'),
 
     # There will be more stuff for the other plot when this gets defined
