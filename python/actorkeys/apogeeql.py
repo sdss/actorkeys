@@ -44,6 +44,11 @@ KeysDictionary("apogeeql",(0,1),*(
     Key('snrAxisRange',
         Float()*2,
         help='Low, High limits of the Y-Axis (SNR) plot (broadcasted once)'),
+    
+    Key('snrGoal',
+        Float(name='snrGoal', help='Target S/N for specified H magnitude'),
+        Float(name='hMag', help='Magnitude of the stars in the H-band'),
+    )
 
     # (S/N)^2 at H=12.0 vs Time Data Keywords (updated at every UTR read ~10sec)
     Key('utrData',
