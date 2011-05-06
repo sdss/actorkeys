@@ -30,7 +30,7 @@ KeysDictionary("apogeeql",(0,1),*(
     # one for each exposure taken with the current plate
     Key('exposureData',
         Int(name='plateId', help='Plate ID number'),
-        Int(name='expNum', help='Exposure number'),
+        String(name='expNum', help='Exposure number'),
         String(name='expName', help='Exposure Name'),
         Float(name='exptime', help='Exposure Time', units='seconds'),
         Float(name='numReads', help='Number of UTR Reads'),
@@ -47,7 +47,7 @@ KeysDictionary("apogeeql",(0,1),*(
 
     # (S/N)^2 at H=12.0 vs Time Data Keywords (updated at every UTR read ~10sec)
     Key('utrData',
-        Int(name='expNum', help='Exposure number'),
+        String(name='expNum', help='Exposure number'),
         Int(name='readNum', help='Read number counter'),
         Float(name='snrH12', help='SNR^2 value for this read'),
         Float(name='snrTotalLinFit', help='SNR^2 to readNum Linear fit to all the reads so far: y intercept, slope')*2,
