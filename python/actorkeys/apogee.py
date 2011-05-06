@@ -50,8 +50,8 @@ KeysDictionary("apogee", (1,0), *(
     # Collimator
     Key("collOrient",
         Float(name="piston", units="microns", help="+ brings collimator towards the instrument"),
-        Float(name="pitch", units="pixels", help="+ tips the beam down"),
         Float(name="yaw", units="pixels", help="+ tips the beam to the right as seen by the collimator"),
+        Float(name="pitch", units="pixels", help="+ tips the beam down"),
         help="Collimator orientation"),
     Key("collMountPos",
         Float(units="microns")*3,
