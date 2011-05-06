@@ -49,7 +49,7 @@ KeysDictionary("apogeeql",(0,1),*(
     Key('utrData',
         String(name='expName', help='Exposure name'),
         Int(name='readNum', help='Read number counter'),
-        Float(name='snrH12', help='SNR^2 value for this read'),
+        Float(name='snrH12', help='SNR value for this read'),
         Float(name='snrTotalLinFit', help='SNR^2 to readNum Linear fit to all the reads so far: y intercept, slope')*2,
         Float(name='snrRecentLinFit', help='SNR^2 to readNum Linear fit of most recent reads: y intercept, slope')*2,
         Bits('fitsBad', 'ditherBad', 'skyBad', 'waveBad', help='bitwise status (1=bad, 0=OK)'),
@@ -59,6 +59,7 @@ KeysDictionary("apogeeql",(0,1),*(
         Float(name='exptimeEst', help='Estimated exposure time to reach snrGoal'),
         Float(name='numReadsToTarget', help='Estimated number of UTR reads to reach snrGoal'),
         Int(name='nReads', help='Total number of UTR reads requested'),
+        Float(name='deltaSNRH12', help="Change in SNR from previous read"),
         help='Data about the most recent up-the-ramp read'),
 
 ))
