@@ -1,4 +1,4 @@
-KeysDictionary("sop", (1,12),
+KeysDictionary("sop", (1,13),
     # misc
     Key("version", String(help="EUPS/SVN version")),
     Key("text", String(), help="text for humans"),
@@ -55,6 +55,21 @@ KeysDictionary("sop", (1,12),
     
     Key("doScience_nExp", Int(help="index of the active exposure"), Int(help="number of exposures completed")),
     Key("doScience_expTime", Float(help="exposure time", units="sec"), Float(help="default", units="sec")),
+    
+    Key("doApogeeScienceStages", String()*(1,6), help="names of the doApogeeScience stages"),
+    Key("doApogeeScienceState",
+       Enum('idle',                'running','done','failed','aborted',
+            help="state of the entire command"),
+       String("text", help="perhaps useful text to be displayed"),
+       Enum('idle','off','pending','running','done','failed','aborted',
+            help="state of all the individual stages of this command, " + \
+                 "as identified by the commandStages keyword.")*(1,6)),
+    
+    Key("doApogeeScience_ditherSeq", String(help="dither positions in a sequence"), String(help="default dither sequence")),
+    Key("doApogeeScience_seqCount", Int(help="number of times to run ditherSeq"), Int(help="default")),
+    Key("doApogeeScience_expTime", Float(help="exposure time", units="sec"), Float(help="default", units="sec")),
+    Key("doApogeeScience_sequenceState", String(help="full exposure sequence. Basically ditherSeq * seqCount"),
+        Int(help="index of running exposure"))
     
     Key("gotoFieldStages", String()*(1,6), help="names of the gotoField stages"),
     Key("gotoFieldState",
