@@ -4,7 +4,7 @@ KeysDictionary("apogee", (1,0), *(
     # Misc
     Key("text", String(), help="text for humans"),
     Key("version", String(), help="version string derived from svn info."),
-    Key('dayNumber', Int(), help="APOGEE day number = SDSS MJD - 55626"),
+    Key('dayNumber', Int(), help="APOGEE day number = SDSS MJD - 55526"),
 
     # Camera
     Key("arrayPower",
