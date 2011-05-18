@@ -69,7 +69,7 @@ KeysDictionary("sop", (1,13),
     Key("doApogeeScience_seqCount", Int(help="number of times to run ditherSeq"), Int(help="default")),
     Key("doApogeeScience_expTime", Float(help="exposure time", units="sec"), Float(help="default", units="sec")),
     Key("doApogeeScience_sequenceState", String(help="full exposure sequence. Basically ditherSeq * seqCount"),
-        Int(help="index of running exposure"))
+        Int(help="index of running exposure")),
     
     Key("gotoFieldStages", String()*(1,6), help="names of the gotoField stages"),
     Key("gotoFieldState",
