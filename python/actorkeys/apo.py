@@ -1,4 +1,4 @@
-KeysDictionary('apo', (0,5),
+KeysDictionary('apo', (0,6),
     Key("version", 
         String(help="EUPS/SVN version")),
     Key('pressure',
