@@ -1,6 +1,6 @@
 # This is the initial test keys dictionary for APOGEE
 #
-KeysDictionary("apogee", (1,0), *(
+KeysDictionary("apogee", (1,1), *(
     # Misc
     Key("text", String(), help="text for humans"),
     Key("version", String(), help="version string derived from svn info."),
@@ -53,7 +53,7 @@ KeysDictionary("apogee", (1,0), *(
         Float(name="pitch", units="pixels", invalid="nan", help="+ tips the beam down"),
         Float(name="yaw", units="pixels", invalid="nan", help="+ tips the beam to the right as seen by the collimator"),
         help="Collimator orientation"),
-    Key("collMountPos",
+    Key("collMountPosition",
         Float(units="microns", invalid="nan")*3,
         help="Current collimator actuator position"),
     Key("collMountLimits",
