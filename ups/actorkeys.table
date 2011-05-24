@@ -1,3 +1,3 @@
 setupOptional(plc)
-setupOptional(sdss3tools)
+setupOptional(sdss3tools v1_7_9 [>= v1_7_9])
 pathPrepend(PYTHONPATH, ${PRODUCT_DIR}/python)

@@ -100,8 +100,8 @@ KeysDictionary('apo', (0,5),
     Key('diskspace',
     	String(help='hostname'),
     	String(help='volume'),
-        UInt(units='Bytes', strFmt='%d', reprFmt='%d',help='Max'),
-        UInt(units='Bytes', strFmt='%d', reprFmt='%d',help='Available'),
+        Long(units='Bytes', strFmt='%d', reprFmt='%d',help='Max'),
+        Long(units='Bytes', strFmt='%d', reprFmt='%d',help='Available'),
 		help='Disk space information for hostname:volume'
     ),
 )
