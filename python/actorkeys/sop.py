@@ -1,4 +1,4 @@
-KeysDictionary("sop", (1,13),
+KeysDictionary("sop", (1,14),
     # misc
     Key("version", String(help="EUPS/SVN version")),
     Key("text", String(), help="text for humans"),
@@ -93,6 +93,16 @@ KeysDictionary("sop", (1,13),
        Enum('idle','off','pending','running','done','failed','aborted',
             help="state of all the individual stages of this command, " + \
                  "as identified by the commandStages keyword.")*(1,6)),
+
+    Key("gotoStowStages", String()*(1,6), help="names of the gotoStow stages"),
+    Key("gotoStowState",
+       Enum('idle',                'running','done','failed','aborted',
+            help="state of the entire command"),
+       String("text", help="perhaps useful text to be displayed"),
+       Enum('idle','off','pending','running','done','failed','aborted',
+            help="state of all the individual stages of this command, " + \
+                 "as identified by the commandStages keyword.")*(1,6)),
+    
     
     Key("ditheredFlatChangeStages", String()*(1,6), help="names of the ditheredFlatChange stages"),
     Key("ditheredFlatChangeState",
