@@ -143,6 +143,15 @@ KeysDictionary("guider", (1, 5),
     Key("seeing", Float(), help="predicted seeing (FWHM, arcsec), a fit to RHL's focus model"),
 
     Key("refractionBalance", Float(), help="factor by which the provided refraction correction is adjusted. Nominally 0..1"),
+    Key("refractionWavelengths", Float(), Float(),
+        help="endpoints of the refractionBalance interpolation."),
+    Key("refractionOffset",
+        Int(help="frame number"),
+        Int(help="probe number"),
+        Float(help="refraction balance"),
+        Float(units="degrees", help="dHA from the design HA"),
+        Float(units="arcsec", help="dRA adjustment applied to the desired star position"),
+        Float(units="arcsec", help="dDec adjustment applied to the desired star position")),
     
     # misc
 
