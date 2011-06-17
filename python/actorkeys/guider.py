@@ -1,4 +1,4 @@
-KeysDictionary("guider", (1, 4),
+KeysDictionary("guider", (1, 5),
     Key("version", String(), help="svn/eups version"),
     Key("guiderVersion", String(), help="historical svn/eups version"),
 
@@ -141,6 +141,8 @@ KeysDictionary("guider", (1, 4),
         doCache=False,
     ),
     Key("seeing", Float(), help="predicted seeing (FWHM, arcsec), a fit to RHL's focus model"),
+
+    Key("refractionBalance", Float(), help="factor by which the provided refraction correction is adjusted. Nominally 0..1"),
     
     # misc
 
