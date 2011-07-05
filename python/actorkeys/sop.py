@@ -1,4 +1,4 @@
-KeysDictionary("sop", (1,15),
+KeysDictionary("sop", (1,16),
     # misc
     Key("version", String(help="EUPS/SVN version")),
     Key("text", String(), help="text for humans"),
@@ -11,8 +11,8 @@ KeysDictionary("sop", (1,15),
        Bool(0,1)*(1,9),
        help="Which of the bypassNamed subsystems are being ignored"),
     
-    Key("surveyCommands", String()*(1,8),
-        help="List of SOP commands which are appropriate to and required for the loaded plate's  operations"),
+    Key("surveyCommands", String()*(1,12),
+        help="List of SOP commands which are appropriate to and required for the loaded plate's operations"),
                
     Key("subStageState",
        String("subStageName", 
