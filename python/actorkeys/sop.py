@@ -1,4 +1,4 @@
-KeysDictionary("sop", (1,14),
+KeysDictionary("sop", (1,15),
     # misc
     Key("version", String(help="EUPS/SVN version")),
     Key("text", String(), help="text for humans"),
@@ -11,6 +11,9 @@ KeysDictionary("sop", (1,14),
        Bool(0,1)*(1,9),
        help="Which of the bypassNamed subsystems are being ignored"),
     
+    Key("surveyCommands", String()*(1,8),
+        help="List of SOP commands which are appropriate to and required for the loaded plate's  operations"),
+               
     Key("subStageState",
        String("subStageName", 
               help="""dotted name of a substage. The name will always 
@@ -103,6 +106,14 @@ KeysDictionary("sop", (1,14),
             help="state of all the individual stages of this command, " + \
                  "as identified by the commandStages keyword.")*(1,6)),
     
+    Key("gotoGangChangeStages", String()*(1,6), help="names of the gotoGangChange stages"),
+    Key("gotoGangChangeState",
+       Enum('idle',                'running','done','failed','aborted',
+            help="state of the entire command"),
+       String("text", help="perhaps useful text to be displayed"),
+       Enum('idle','off','pending','running','done','failed','aborted',
+            help="state of all the individual stages of this command, " + \
+                 "as identified by the commandStages keyword.")*(1,6)),
     
     Key("ditheredFlatChangeStages", String()*(1,6), help="names of the ditheredFlatChange stages"),
     Key("ditheredFlatChangeState",
