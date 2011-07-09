@@ -1,4 +1,4 @@
-KeysDictionary("sop", (1,16),
+KeysDictionary("sop", (1,17),
     # misc
     Key("version", String(help="EUPS/SVN version")),
     Key("text", String(), help="text for humans"),
@@ -73,6 +73,7 @@ KeysDictionary("sop", (1,16),
     Key("doApogeeScience_expTime", Float(help="exposure time", units="sec"), Float(help="default", units="sec")),
     Key("doApogeeScience_sequenceState", String(help="full exposure sequence. Basically ditherSeq * seqCount"),
         Int(help="index of running exposure")),
+    Key("doApogeeScience_comment", String(help="For some FITS headers"), String(help="default value")),
     
     Key("gotoFieldStages", String()*(1,6), help="names of the gotoField stages"),
     Key("gotoFieldState",
@@ -105,7 +106,7 @@ KeysDictionary("sop", (1,16),
        Enum('idle','off','pending','running','done','failed','aborted',
             help="state of all the individual stages of this command, " + \
                  "as identified by the commandStages keyword.")*(1,6)),
-    
+
     Key("gotoGangChangeStages", String()*(1,6), help="names of the gotoGangChange stages"),
     Key("gotoGangChangeState",
        Enum('idle',                'running','done','failed','aborted',
@@ -114,6 +115,9 @@ KeysDictionary("sop", (1,16),
        Enum('idle','off','pending','running','done','failed','aborted',
             help="state of all the individual stages of this command, " + \
                  "as identified by the commandStages keyword.")*(1,6)),
+    Key("gotoGangChange_alt",
+        Float(help="desired altitude to slew to", units="deg"),
+        Float(help="default", units="deg")),
     
     Key("ditheredFlatChangeStages", String()*(1,6), help="names of the ditheredFlatChange stages"),
     Key("ditheredFlatChangeState",
