@@ -8,6 +8,7 @@ python/actorkeys/apogee.py -text
 python/actorkeys/apogeecal.py -text
 python/actorkeys/apogeeql.py -text
 python/actorkeys/apogeetest.py -text
+python/actorkeys/benchboss.py -text
 python/actorkeys/boss.py -text
 python/actorkeys/cmds.py -text
 python/actorkeys/ecamera.py -text
