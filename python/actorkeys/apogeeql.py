@@ -67,4 +67,25 @@ KeysDictionary("apogeeql",(0,1),*(
         Float(name='deltaSNR', help="Change in S/N (at reference H mag) from previous read"),
         help='Data about the most recent up-the-ramp read'),
 
+    Key("icsDiskAlarm", 
+        Enum(name="alertState", "Ok", "Serious", "Critical", help="state of free space on ICS disk"),
+        Int(name='freeSpace', units="GB", invalid="nan"),
+        help="ICS data disk space low enough to trigger an Alarm"),
+
+    Key("qlDiskAlarm", 
+        Enum(name="alertState", "Ok", "Serious", "Critical", help="state of free space on apogee-ql disk"),
+        Int(name='freeSpace', units="GB", invalid="nan"),
+        help="apogee-ql data disk space low enough to trigger an Alarm"),
+
+    Key("archDiskAlarm", 
+        Enum(name="alertState", "Ok", "Serious", "Critical", help="state of free space on archive disk"),
+        Int(name='freeSpace', units="GB", invalid="nan"),
+        help="archive data disk space low enough to trigger an Alarm"),
+
+    Key("freeDiskSpace", 
+        Int(name='IcsFreeSpace', units="GB", invalid="nan"),
+        Int(name='DataFreeSpace', units="GB", invalid="nan"),
+        Int(name='ArchFreeSpace', units="GB", invalid="nan"),
+        help="returns the amount of free disk space (GB)"),
+
 ))
