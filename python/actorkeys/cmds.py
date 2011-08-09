@@ -1,5 +1,4 @@
-KeysDictionary('cmds',(1,1),
-    Key('CmdDone',UInt(),help='Hub internal command sequence number'),
+KeysDictionary('cmds',(1,2),
     Key('NewCmd',UInt(),help='Hub internal command sequence number'),
     Key('CmdTime',Double(),units='s',help='MJD UTC timestamp'),
     Key('Cmdr',String(),help='Commander name'),
@@ -17,5 +16,10 @@ KeysDictionary('cmds',(1,1),
         UInt(name='actorMID',help='The sequence number assigned to the command sent to the actor'),
         String(name='cmdText',help='The command text'),
         doCache=False,
-        help='Generated right before a new command is sent to an actor.')
+        help='Generated right before a new command is sent to an actor.'),
+    Key('CmdDone',
+        UInt(name='hubID', help='Hub internal command sequence number'),
+        String(name='completionCode', help='the flag which completed the command'),
+        doCache=False),
+
 )
