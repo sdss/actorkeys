@@ -35,10 +35,13 @@ KeysDictionary("apogeeql",(0,1),*(
         Float(name='exptime', help='Exposure time', units='seconds'),
         Float(name='numReads', help='Number of UTR Reads'),
         Float(name='snrGoal', help='The target S/N for this exposure.'),
-        Float(name='ditherPos', help='dither Position', units='pixels'),
+        Float(name='ditherPos', help='measured dither Position', units='pixels'),
         Float(name='snr', help='S/N obtained (at reference H mag) for this exposure'),
         Float(name='netExptime', help='Total exposure time for this plate', units='seconds'),
-        Float(name='netSnr', help='Cumulative S/N (at reference H mag) for this plate')),
+        Float(name='netSnr', help='Cumulative S/N (at reference H mag) for this plate'),
+        String(name='expType', help='type of the exposure'),
+        Enum("A", "B", "?", name="namedDitherPos", help="name of measured dither Position"),
+    ),
 
     # (S/N)^2 at H=12.0 vs Time Data Keywords (broadcasted with status or when it changes)
     Key('snrAxisRange',
@@ -65,7 +68,31 @@ KeysDictionary("apogeeql",(0,1),*(
         Float(name='numReadsToTarget', help='Estimated number of UTR reads to reach snrGoal'),
         Int(name='nReads', help='Total number of UTR reads requested'),
         Float(name='deltaSNR', help="Change in S/N (at reference H mag) from previous read"),
+        String(name='expType', help='type of the exposure'),
+        Enum("A", "B", "?", name="namedDitherPos", help="name of measured dither Position"),
         help='Data about the most recent up-the-ramp read'),
+
+    # Predicted exposure (calculated by apgquicklook)
+    Key('predictedExposure',
+        Int(name='plateId', help='Plate ID number'),
+        Int(name='expNum', help='Exposure number for this plate'),
+        String(name='expName', help='Exposure name'),
+        Float(name='exptime', help='Exposure time', units='seconds'),
+        Float(name='numReads', help='Number of UTR Reads'),
+        Float(name='snrGoal', help='The target S/N for this exposure.'),
+        String(name='expType', help='type of the exposure'),
+        Float(name='ditherPos', help='measured dither Position', units='pixels'),
+        Enum("A", "B", "?", name="namedDitherPos", help="name of measured dither Position"),
+    ),
+
+    # Missing fibers (determined by apgquicklook)
+    Key('missingFibers',
+        String(name='expName', help='Exposure name'),
+        Int(name='readNum', help='Read number counter'),
+        Int(name='numMissing', help='Number of missing fibers'),
+        Int(name='fiberId', help='List of missing fiber IDs, if any; note fiber IDs start at 1')*(0,),
+    ),
+
 
     Key("icsDiskAlarm", 
         Enum("Ok", "Serious", "Critical", name="alertState", help="state of free space on ICS disk"),
