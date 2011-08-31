@@ -89,7 +89,7 @@ KeysDictionary("apogeeql",(0,1),*(
     Key('missingFibers',
         String(name='expName', help='Exposure name'),
         Int(name='readNum', help='Read number counter'),
-        Int(name='numMissing', help='Number of missing fibers'),
+        Int(name='numMissing', invalid="nan", help='Number of missing fibers'),
         Int(name='fiberId', help='List of missing fiber IDs, if any; note fiber IDs start at 1')*(0,),
     ),
 
