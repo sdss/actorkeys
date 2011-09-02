@@ -5,10 +5,10 @@ KeysDictionary("sop", (1,18),
     
     # The archiver allocates enough space for the largest possible list...
     Key("bypassNames",
-       String()*(1,15),
+       String()*(1,25),
        help="names of the systems whose errors can be ignored. Matches the values in the 'bypass' keyword"),
     Key("bypassed",
-       Bool(0,1)*(1,15),
+       Bool(0,1)*(1,25),
        help="Which of the bypassNamed subsystems are being ignored"),
     
     Key("surveyCommands", String()*(1,12),
