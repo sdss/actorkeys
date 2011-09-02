@@ -1,14 +1,14 @@
-KeysDictionary("sop", (1,17),
+KeysDictionary("sop", (1,18),
     # misc
     Key("version", String(help="EUPS/SVN version")),
     Key("text", String(), help="text for humans"),
     
     # The archiver allocates enough space for the largest possible list...
     Key("bypassNames",
-       String()*(1,9),
+       String()*(1,15),
        help="names of the systems whose errors can be ignored. Matches the values in the 'bypass' keyword"),
     Key("bypassed",
-       Bool(0,1)*(1,9),
+       Bool(0,1)*(1,15),
        help="Which of the bypassNamed subsystems are being ignored"),
     
     Key("surveyCommands", String()*(1,12),
@@ -75,6 +75,20 @@ KeysDictionary("sop", (1,17),
         Int(help="index of running exposure")),
     Key("doApogeeScience_comment", String(help="For some FITS headers"), String(help="default value")),
     
+    Key("doApogeeSkyFlatsStages", String()*(1,6), help="names of the doApogeeSkyFlats stages"),
+    Key("doApogeeSkyFlatsState",
+       Enum('idle',                'running','done','failed','aborted',
+            help="state of the entire command"),
+       String("text", help="perhaps useful text to be displayed"),
+       Enum('idle','off','pending','running','done','failed','aborted',
+            help="state of all the individual stages of this command, " + \
+                 "as identified by the commandStages keyword.")*(1,6)),
+    
+    Key("doApogeeSkyFlats_ditherSeq", String(help="dither positions in a sequence"), String(help="default dither sequence")),
+    Key("doApogeeSkyFlats_expTime", Float(help="exposure time", units="sec"), Float(help="default", units="sec")),
+    Key("doApogeeSkyFlats_sequenceState", String(help="full exposure sequence. Basically ditherSeq * seqCount"),
+        Int(help="index of running exposure")),
+
     Key("gotoFieldStages", String()*(1,6), help="names of the gotoField stages"),
     Key("gotoFieldState",
        Enum('idle',                'running','done','failed','aborted',
