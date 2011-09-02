@@ -1,5 +1,5 @@
 # -*- python -*-
-KeysDictionary("mcp", (3,3),
+KeysDictionary("mcp", (3,4),
     # Command-related keywords
     Key("badAxis", String(), doCache=False, help="Unknown telescope axis"),
     Key("badCharacter", Int(), doCache=False, help="ASCII code of invalid character"),
@@ -52,7 +52,7 @@ KeysDictionary("mcp", (3,3),
     Key("altWindscreenTouched", Enum("00", "01", "10", "11", labelHelp=("None", "Down", "Up", "Both"))),
     Key("azWindscreenTouched", Enum("00", "01", "10", "11", labelHelp=("None", "CW", "CCW", "Both"))),
     Key("instrumentNum", Int(invalid="-1"),
-        help="Instrument ID; 0=no instrument; 18=engineering camera; 19=imager; -1=switches inconsistent or could not get semaphore"),
+        help="Instrument ID; 0=no instrument; 19=engineering camera; -1=switches inconsistent or could not get semaphore"),
     Key("instrumentNumConsistent", Bool("false", "true"),
         help="Do the three instrument ID switches agree? If not, instrumentNumValues is also output."),
     Key("instrumentNumValues", Int()*3, help="Reading from each instrument ID switch"),
@@ -65,8 +65,14 @@ KeysDictionary("mcp", (3,3),
         Enum("00", "01", "10", "11", labelHelp=("?", "Open", "Closed", "Invalid")),
         Bool("0", "1", help="Latch extended"),
         Bool("0", "1", help="Slithead in place")),
+    Key("apogeeGang",
+        Enum("0", "1", "2", "3", labelHelp=("Disconnected", "Podium", "Cart", "Sparse cals"))),
+    Key("marvelsGang",
+        Enum("0", "1", "2", "3", labelHelp=("Disconnected", "Podium", "Cart", "?"))),
+        
+    # Obsolete
     Key("tbarCommanded", Bool("false", "true"), doCache=False, help="Imager TBar move requested"),
-
+   
     # Axis controller, in order Az, Alt, Rot
     Key("azMaxAccLimit", Float(units="deg/s^2"), help="Maximum acceleration allowed"),
     Key("azMaxAccRequested", Float(units="deg/s^2"), doCache=False, help="Maximum acceleration requested"),
