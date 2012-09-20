@@ -44,23 +44,23 @@ KeysDictionary("boss",(2,15),*(
     Key('screenStatus',
         Bits('RightOpenSensor', 'RightClosedSensor', 'LeftOpenSensor', 'LeftClosedSensor')*2,
         help = "Status of the hartman screens, the left bit represents the closed sensor and the right bit the open sensor."
-        ),
+    ),
     Key('motorPosition',
         Int()*6,
         help = "The position of the motors in ticks of both spectographs."
-        ),
+    ),
     Key('motorStatus',
         Bits('Stopped', 'FindEdge', 'Slave', ':1', 'SlewMode', 'MotorOff', 'LimitSwitch', 'OnTarget', )*6,
         help = "Status of the motors. Six to represent sp1MotorA-sp2MotorC."
-        ),
+    ),
     Key('specMechVersion',
         String()*2,
         help = "Version string of sp1mech and sp2mech."
-        ),
+    ),
     Key('specMechProtocol',
-    	String()*2,
-    	help = "Protocol string of sp1mech and sp2mech"
-    	),
+        String()*2,
+        help = "Protocol string of sp1mech and sp2mech"
+    ),
     Key('slitIDs', 
         Int(name='sp1SlitID', help='slit ID reported by sp1 (normalized)'),
         Int(name='sp2SlitID', help='slit ID reported by sp2'),
@@ -118,43 +118,43 @@ KeysDictionary("boss",(2,15),*(
     Key('camCheck',
         String()*(0,),
         help = "A list of strings of keywords that are out of spec."
-        ),
-	Key('camCheckAlert',
-		String(help='keyword name'),
-		String(help='keyword str(value)'),
-		help = "keyword is reported out of spec by camCheck"
-	),
-	Key('aliveAt',
+    ),
+    Key('camCheckAlert',
+        String(help='keyword name'),
+        String(help='keyword str(value)'),
+        help = "keyword is reported out of spec by camCheck"
+    ),
+    Key('aliveAt',
         Int(),
         help = "Unix seconds at which point the ICC was declared alive"
     ),
     Key('sp1camRawText',
-    	String(),
-    	help = "Raw text of TDS command",
+        String(),
+        help = "Raw text of TDS command",
     ),
     Key('sp2camRawText',
-    	String(),
-    	help = "Raw text of TDS command",
-   	),
+        String(),
+        help = "Raw text of TDS command",
+    ),
     Key('SP1RedIonPumpLatched',
-    	Float(),
-    	help = "Unix seconds when error was seen",
+        Float(),
+        help = "Unix seconds when error was seen",
     ),
     Key('SP1BlueIonPumpLatched',
-    	Float(),
-    	help = "Unix seconds when error was seen",
+        Float(),
+        help = "Unix seconds when error was seen",
     ),
     Key('SP2RedIonPumpLatched',
-    	Float(),
-    	help = "Unix seconds when error was seen",
+        Float(),
+        help = "Unix seconds when error was seen",
     ),
     Key('SP2BlueIonPumpLatched',
-    	Float(),
-    	help = "Unix seconds when error was seen",
+        Float(),
+        help = "Unix seconds when error was seen",
     ),
     Key('ln2stat',
-    	String()
-   	),
+        String()
+    ),
     # camStatus
     Key('SP1LN2Fill',
         Enum('ON','OFF','FAULT!!!'),
@@ -313,17 +313,17 @@ KeysDictionary("boss",(2,15),*(
     	Int()
     ),
     Key('SP1RedIonPump',
-    	Float(strFmt='%.2f')
-	),
-	Key('SP1BlueIonPump',
-    	Float(strFmt='%.2f')
-	),
-	Key('SP2RedIonPump',
-    	Float(strFmt='%.2f')
-	),
-	Key('SP2BlueIonPump',
-    	Float(strFmt='%.2f')
-	),	
+        Float(strFmt='%.2f')
+    ),
+    Key('SP1BlueIonPump',
+        Float(strFmt='%.2f')
+    ),
+    Key('SP2RedIonPump',
+        Float(strFmt='%.2f')
+    ),
+    Key('SP2BlueIonPump',
+        Float(strFmt='%.2f')
+    ),
     # Cam Check keywords
     Key('camCheckResponse',
         String()*(0,),
@@ -333,11 +333,10 @@ KeysDictionary("boss",(2,15),*(
     Key('camForthVersion',
         String()*2,
         help = "Version strings for the cam micros."
-        ),
+    ),
     # VOLTS
     
     # Machine generated keys:
-        	
     
     Key('SP1B3HeaterVNom',
         Float(units='volts',strFmt='%.3f'),
