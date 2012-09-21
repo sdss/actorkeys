@@ -1,4 +1,4 @@
-KeysDictionary('gcamera', (0, 5),
+KeysDictionary('gcamera', (0, 6),
     Key("text", String(help="text for humans")),
     Key("version", String(help="EUPS/SVN version")),
     Key("simulating", 
@@ -17,9 +17,9 @@ KeysDictionary('gcamera', (0, 5),
         Float(name="heatsinkTemp", help="Heatsink temperature reported by the camera", units="degC"),
         Float(name="coolerLoad", help="Load on the cooler", units="percent"),
         Int(name="fanStatus", help="Fan status. Always 0 with this camera"),
-        Int(name="stack", help="Number of integrations to stack for a single exposure."),
         Enum('Off', 'RampingToSetPoint', 'Correcting', 'RampingToAmbient', 'AtAmbient', 'AtMax', 'AtMin', 'AtSetPoint', 'Invalid',
              name="coolerStatus",
              help="Cooler status. Correcting appears to be the normal state, All others should be considered bad. AtSetPoint does not appear to occur.")),
-    )
+    Key("stack", Int(help="Number of integrations to stack for a single exposure.")),
+)
 
