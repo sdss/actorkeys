@@ -46,8 +46,7 @@ KeysDictionary("boss",(2,16),*(
         help = "Status of the hartman screens, the left bit represents the closed sensor and the right bit the open sensor."
     ),
     Key('motorPosition',
-        Int()*6,
-        invalid = '-9999999',
+        Int(invalid='-9999999')*6,
         help = "The position of the motors in ticks of both spectographs."
     ),
     Key('motorStatus',
