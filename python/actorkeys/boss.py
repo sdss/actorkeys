@@ -1,4 +1,4 @@
-KeysDictionary("boss",(2,15),*(
+KeysDictionary("boss",(2,16),*(
     # misc
     Key("text", String(), help="text for humans"),
     Key("version", String(), help="version string derived from svn info."),
@@ -47,6 +47,7 @@ KeysDictionary("boss",(2,15),*(
     ),
     Key('motorPosition',
         Int()*6,
+        invalid = '-9999999',
         help = "The position of the motors in ticks of both spectographs."
     ),
     Key('motorStatus',
