@@ -1,4 +1,4 @@
-KeysDictionary('ecamera', (0, 3),
+KeysDictionary('ecamera', (0, 4),
     Key("text", String(help="text for humans")),
     Key("version", String(help="EUPS/SVN version")),
     Key("simulating", 
