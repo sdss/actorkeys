@@ -1,4 +1,4 @@
-KeysDictionary("boss",(2,16),*(
+KeysDictionary("boss",(2,17),*(
     # misc
     Key("text", String(), help="text for humans"),
     Key("version", String(), help="version string derived from svn info."),
@@ -113,6 +113,69 @@ KeysDictionary("boss",(2,16),*(
         Int(name='pixelErrorCnt', help="the number of lines with pixel count errors"),
         Int(name='frameErrorCnt', help="the number of lines with insufficient or extra pixels"),
         help='Errors noted by the DAQ during sp2 readout.'),
+
+       
+    # LN2 status keywords
+    Key('sp1camLN2Fill'
+        String()
+    ),
+    Key('sp1camFillTime',
+        Int()
+    ),
+    Key('sp1camNextFill',
+        Int()
+    ),
+    Key('sp1camSecondaryDewarPress',
+        Int()
+    ),
+    Key('sp1camNormRetrig',
+        Int()
+    ),
+    Key('sp1camWarmFillTime',
+        Int()
+    ),
+    Key('sp1camWarmFills',
+        Int()
+    ),
+    Key('sp1camWarmRetrig',
+        Int()
+    ),
+    Key('sp1camFillFault',
+        String()
+    ),
+    Key('sp1camEmptyTrigger',
+        String()
+    ),
+    Key('sp2camLN2Fill',
+        String()
+    ),
+    Key('sp2camFillTime',
+        Int()
+    ),
+    Key('sp2camNextFill',
+        Int()
+    ),
+    Key('sp2camSecondaryDewarPress',
+        Int()
+    ),
+    Key('sp2camNormRetrig',
+        Int()
+    ),
+    Key('sp2camWarmFillTime',
+        Int()
+    ),
+    Key('sp2camWarmFills',
+        Int()
+    ),
+    Key('sp2camWarmRetrig',
+        Int()
+    ),
+    Key('sp2camFillFault',
+        String()
+    ),
+    Key('sp2camEmptyTrigger',
+        String()
+    ),
 
     # Cam Micro Keywords
     Key('camCheck',
