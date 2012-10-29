@@ -116,7 +116,7 @@ KeysDictionary("boss",(2,17),*(
 
        
     # LN2 status keywords
-    Key('sp1camLN2Fill'
+    Key('sp1camLN2Fill',
         String()
     ),
     Key('sp1camFillTime',
