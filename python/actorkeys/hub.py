@@ -1,4 +1,4 @@
-KeysDictionary('hub',(1,7),
+KeysDictionary('hub',(2,0),
     Key('actors', String()*(0,), help="Current actors"),
     Key('commanders', String()*(0,), help="Current commanders"),
     Key('user', String()*(5,6), help=
