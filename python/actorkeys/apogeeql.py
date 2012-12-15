@@ -1,6 +1,6 @@
 # This is the initial test keys dictionary for APOGEEQL  (Quick Look)
 #
-KeysDictionary("apogeeql",(0,2),*(
+KeysDictionary("apogeeql",(0,1),*(
     # misc
     Key("text", String(), help="text for humans"),
     Key("version", String(), help="version string derived from svn info."),
@@ -95,17 +95,17 @@ KeysDictionary("apogeeql",(0,2),*(
 
 
     Key("icsDiskAlarm", 
-        Enum("Ok", "Serious", "Critical", name="alertState", help="state of free space on ICS disk"),
+        Enum("Ok", "Warning", "Serious", "Critical", name="alertState", help="state of free space on ICS disk"),
         Int(name='freeSpace', units="GB", invalid="nan"),
         help="ICS data disk space low enough to trigger an Alarm"),
 
     Key("qlDiskAlarm", 
-        Enum("Ok", "Serious", "Critical", name="alertState", help="state of free space on apogee-ql disk"),
+        Enum("Ok", "Warning", "Serious", "Critical", name="alertState", help="state of free space on apogee-ql disk"),
         Int(name='freeSpace', units="GB", invalid="nan"),
         help="apogee-ql data disk space low enough to trigger an Alarm"),
 
     Key("archDiskAlarm", 
-        Enum("Ok", "Serious", "Critical", name="alertState", help="state of free space on archive disk"),
+        Enum("Ok", "Warning", "Serious", "Critical", name="alertState", help="state of free space on archive disk"),
         Int(name='freeSpace', units="GB", invalid="nan"),
         help="archive data disk space low enough to trigger an Alarm"),
 
