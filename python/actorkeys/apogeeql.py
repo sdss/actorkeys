@@ -1,6 +1,6 @@
 # This is the initial test keys dictionary for APOGEEQL  (Quick Look)
 #
-KeysDictionary("apogeeql",(0,1),*(
+KeysDictionary("apogeeql",(0,3),*(
     # misc
     Key("text", String(), help="text for humans"),
     Key("version", String(), help="version string derived from svn info."),
