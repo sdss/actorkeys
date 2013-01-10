@@ -1,4 +1,4 @@
-KeysDictionary("sop", (1,18),
+KeysDictionary("sop", (1,19),
     # misc
     Key("version", String(help="EUPS/SVN version")),
     Key("text", String(), help="text for humans"),
@@ -176,5 +176,16 @@ KeysDictionary("sop", (1,18),
                  "as identified by the commandStages keyword.")*(1,6)),
     
     Key("setScale_delta", Float(name="delta", help="change scale by (1 + 0.01*delta)", units="%"), Float(help="default value", units="%")),
-    
+
+    Key("scriptState",
+        String("name",help="Name of currently active SOP script."),
+        Int("atStep",help="Currently active line number."),
+        Int("length",help="Total length of this script."),
+        Enum('idle','aborted','stopped','done','running',help="Current state of this script."),
+        String("currentLine",help="The currently active line as a string.")),
+    Key("scriptLine",
+        String("name",help="Name of currently active SOP script."),
+        Int("atStep",help="Line number."),
+        Float("maxTime",help="Maximum time allowed for this step."),
+        String("line",help="This script line as a string.")),
 )
