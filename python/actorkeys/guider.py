@@ -1,4 +1,4 @@
-KeysDictionary("guider", (1, 7),
+KeysDictionary("guider", (1, 8),
     Key("version", String(), help="svn/eups version"),
     Key("guiderVersion", String(), help="historical svn/eups version"),
 
@@ -42,11 +42,14 @@ KeysDictionary("guider", (1, 7),
         doCache = False,
         help="names and directories of processed guider images",
     ),
+    # !!!!!
+    # jkp TBD: once #433 is fixed and implemented in STUI, remove gprobes, below
+    # !!!!!
     # Warning: the disabled bit is never set (ticket #433)
     # meanwhile use the deprecated keyword gprobes to get enabled information
     # or use keyword fullGprobeBits in STUI's model (which is what gprobeBits should be)
     Key("gprobeBits",
-        Bits("broken", "unused", "disabled", help="Guide probe bits")*(0,),
+        Bits("broken", "noStar", "disabled", "aboveFocus", "belowFocus", help="Guide probe bits")*(0,),
     ),
     Key("guideState", 
         Enum("off", "starting", "on", "stopping", "failed", help="state of guider"),
@@ -56,6 +59,9 @@ KeysDictionary("guider", (1, 7),
         help="path of file being processed",
         doCache=False,
     ),
+    # !!!!!
+    # jkp TBD: once #433 is fixed and implemented in STUI, remove gprobes
+    # !!!!!
     # Superseded by gprobeBits but cannot be removed until ticket #433 is fixed; see gprobeBits for more info
     Key("gprobes",
         String()*(0,),
