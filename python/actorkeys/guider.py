@@ -1,4 +1,4 @@
-KeysDictionary("guider", (1, 8),
+KeysDictionary("guider", (1, 9),
     Key("version", String(), help="svn/eups version"),
     Key("guiderVersion", String(), help="historical svn/eups version"),
 
@@ -18,6 +18,7 @@ KeysDictionary("guider", (1, 8),
         help="Which guiding corrections are enabled",
     ),
     Key("expTime", Float(), help="exposure time"),
+    Key("stack", Int(), help="number of itime gcamera integrations to request per exposure."),
     Key("pid",
         String(help="What is being servoed"),
         Float(name="propGain",help="Proportional gain"),
