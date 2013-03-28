@@ -1,4 +1,4 @@
-KeysDictionary("guider", (1, 9),
+KeysDictionary("guider", (2, 0),
     Key("version", String(), help="svn/eups version"),
     Key("guiderVersion", String(), help="historical svn/eups version"),
 
@@ -43,14 +43,11 @@ KeysDictionary("guider", (1, 9),
         doCache = False,
         help="names and directories of processed guider images",
     ),
-    # !!!!!
-    # jkp TBD: once #433 is fixed and implemented in STUI, remove gprobes, below
-    # !!!!!
-    # Warning: the disabled bit is never set (ticket #433)
-    # meanwhile use the deprecated keyword gprobes to get enabled information
-    # or use keyword fullGprobeBits in STUI's model (which is what gprobeBits should be)
+
     Key("gprobeBits",
-        Bits("broken", "noStar", "disabled", "aboveFocus", "belowFocus", help="Guide probe bits")*(0,),
+        Bits("broken", "noStar", "disabled", "aboveFocus", "belowFocus",name="gprobebits",
+        help="broken: known broken, labeled as such in plPlugMap; noStar: no star in plPlugMap (e.g. Tritium); disabled: disabled by observers; abovefocus: fiber above the focal plane; belowfocus: fiber below the focal plane.")*(0,),
+        help="Guide probe status bits.",
     ),
     Key("guideState", 
         Enum("off", "starting", "on", "stopping", "failed", help="state of guider"),
@@ -59,14 +56,6 @@ KeysDictionary("guider", (1, 9),
         String(),
         help="path of file being processed",
         doCache=False,
-    ),
-    # !!!!!
-    # jkp TBD: once #433 is fixed and implemented in STUI, remove gprobes
-    # !!!!!
-    # Superseded by gprobeBits but cannot be removed until ticket #433 is fixed; see gprobeBits for more info
-    Key("gprobes",
-        String()*(0,),
-        help="Which guide probes are enabled? Format: (<probe number>=True/False); probe number starts at 1",
     ),
     
     # measured and derived values
@@ -134,7 +123,7 @@ KeysDictionary("guider", (1, 9),
     Key("probe",
         Int(name="exposureID", help="gcamera exposure number"),
         Int(name="probeID", help="guide probe number, starting from 1"),
-        Int(name="flags", help="What is this? Document me!"),
+        Int(name="flags", help="gprobebits: 1:BROKEN, 2:NOSTAR, 4:DISABLED, 8:ABOVEFOCUS, 16:BELOWFOCUS"),
         Float(name="raError", help="measured RA error on the sky", units="arcsec"),
         Float(name="decError", help="measured Dec error on the sky", units="arcsec"),
         Float(name="FWHM", units="arcsec"),
