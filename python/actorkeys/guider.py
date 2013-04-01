@@ -1,4 +1,4 @@
-KeysDictionary("guider", (2, 0),
+KeysDictionary("guider", (2, 1),
     Key("version", String(), help="svn/eups version"),
     Key("guiderVersion", String(), help="historical svn/eups version"),
 
@@ -46,7 +46,7 @@ KeysDictionary("guider", (2, 0),
 
     Key("gprobeBits",
         Bits("broken", "noStar", "disabled", "aboveFocus", "belowFocus",name="gprobebits",
-        help="broken: known broken, labeled as such in plPlugMap; noStar: no star in plPlugMap (e.g. Tritium); disabled: disabled by observers; abovefocus: fiber above the focal plane; belowfocus: fiber below the focal plane.")*(0,),
+        help="broken: known broken, labeled as such in plPlugMap; noStar: no star in plPlugMap (e.g. Tritium); disabled: disabled by observers; abovefocus: fiber above the focal plane; belowfocus: fiber below the focal plane.")*(0,50),
         help="Guide probe status bits.",
     ),
     Key("guideState", 
