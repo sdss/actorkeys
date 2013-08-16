@@ -1,4 +1,4 @@
-KeysDictionary("boss",(2,17),*(
+KeysDictionary("boss",(2,18),*(
     # misc
     Key("text", String(), help="text for humans"),
     Key("version", String(), help="version string derived from svn info."),
@@ -46,12 +46,14 @@ KeysDictionary("boss",(2,17),*(
         help = "Status of the hartman screens, the left bit represents the closed sensor and the right bit the open sensor."
     ),
     Key('motorPosition',
-        Int(invalid='-9999999')*6,
+        *[Int(invalid='-9999999', name="sp%d_%s" % (spNum, axis))
+            for spNum in (1, 2) for axis in ("A", "B", "C")],
         help = "The position of the motors in ticks of both spectographs."
     ),
     Key('motorStatus',
-        Bits('Stopped', 'FindEdge', 'Slave', ':1', 'SlewMode', 'MotorOff', 'LimitSwitch', 'OnTarget', )*6,
-        help = "Status of the motors. Six to represent sp1MotorA-sp2MotorC."
+        *[Bits('Stopped', 'FindEdge', 'Slave', ':1', 'SlewMode', 'MotorOff', 'LimitSwitch', 'OnTarget', name="sp%d_%s" % (spNum, axis))
+            for spNum in (1, 2) for axis in ("A", "B", "C")],
+        help = "Status of the motors."
     ),
     Key('specMechVersion',
         String()*2,
