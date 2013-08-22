@@ -1,5 +1,5 @@
 # -*- python -*-
-KeysDictionary("mcp", (4,1),
+KeysDictionary("mcp", (5,1),
     # Command-related keywords
     Key("badAxis", String(), doCache=False, help="Unknown telescope axis"),
     Key("badCharacter", Int(), doCache=False, help="ASCII code of invalid character"),
@@ -66,13 +66,10 @@ KeysDictionary("mcp", (4,1),
         Bool("0", "1", help="Latch extended"),
         Bool("0", "1", help="Slithead in place")),
     Key("apogeeGang",
-        Enum("0", "1", "2", "3", labelHelp=("Disconnected", "Podium", "Cart", "Sparse cals"))),
-    Key("marvelsGang",
-        Enum("0", "1", "2", "3", labelHelp=("Disconnected", "Podium", "Cart", "?"))),
-        
+        Enum("0", "1", "2", "4", "12", "20", "36",labelHelp=("Unknown", "Unplugged", "At Cart", "podium (any)", "dense port", "sparse port", "1m port"))),
     # Obsolete
     Key("tbarCommanded", Bool("false", "true"), doCache=False, help="Imager TBar move requested"),
-   
+    
     # Axis controller, in order Az, Alt, Rot
     Key("azMaxAccLimit", Float(units="deg/s^2"), help="Maximum acceleration allowed"),
     Key("azMaxAccRequested", Float(units="deg/s^2"), doCache=False, help="Maximum acceleration requested"),
@@ -142,7 +139,6 @@ KeysDictionary("mcp", (4,1),
 
     # Allen-Bradley words
     Key('ab_status', Int()*4, help='Allen Bradley status, azstate, altstate, rotstate'),
-    Key('lavaLamp', Int(), help='Is the Lava Lamp on?'),
 
     # Information from the imager, passed via the mcp
     Key('imCamCheck', String()*(0,), help="Imager errors reported by iop"),
@@ -157,12 +153,12 @@ KeysDictionary("mcp", (4,1),
     Key('ab_B3_L4', Bits('lh_grt_23d1', 'lh_lim_22d3_23d1', 'lh_lim_18d0_22d3', 'lh_les_18d5_2', 'lh_les_0d75', 'lf_les_500', 'lh_lim_0d75_2d0', 'lh_lim_2d0_20d0', 'lf_les_350', 'lf_les_1400', 'lf_les_350_2', 'lf_les_450', 'lf_les_200', 'lf_les_150', 'lf_les_350_3', 'lh_lim_20d0_21d89', 'altitude_at_inst_chg', 'lh_les_18d5', 'lh_lim_18d0_21d89', 'lh_lim_18d0_22d8', 'lh_lim_18d0_23d0', 'lh_lim_2d2_18d5', 'lh_lim_18d0_21d74', 'lh_lim_18d0_22d5', 'lh_lim_18d0_22d75', 'lh_lim_2d5_18d5', 'lh_lim_18d0_20d99', 'lh_lim_18d0_22d0', 'lh_lim_18d0_22d2', 'lh_les_2d0', 'lh_lim_1d95_18d0', 'lh_grt_17d5', ), help=''),
     Key('ab_B3_L5', Bits('lf_les_800', 'lh_les_0d75_2', 'lf_grt_neg_125', 'lh_lim_0d75_3d0', 'lh_lim_2d0_20d0_2', 'lf_grt_150', 'lf_grt_1100', 'lf_grt_220', 'lf_grt_310', 'lf_grt_0d0', 'lf_grt_0d0_2', 'lf_grt_125', 'lh_lim_20d0_21d89_2', 'lf_grt_150_2', 'lf_grt_220_2', 'lf_grt_310_2', 'lf_les_1650', 'lf_les_350_4', 'lf_les_500_2', 'lf_les_200_2', 'lf_les_150_2', 'lf_les_350_5', 'lh_lim_21d89_22d3', 'lf_les_1700', 'lf_les_400', 'lf_les_500_3', 'lf_les_200_3', 'lf_les_150_3', 'lf_les_400_2', 'lh_lim_22d3_23d1_2', 'lf_les_1100', 'lh_lim_23d1_23d3', ), help=''),
     Key('ab_B3_L6', Bits('lf_grt_950_1', 'lh_lim_23d04_23d24', 'lf_grt_750', 'lh_les_6d0', 'lh_les_6d0_1', 'lh_les_6d0_2', 'lh_les_6d0_3', 'lh_les_6d0_4', 'lh_les_6d0_5', 'az_bump_cw_delay', 'az_bump_ccw_delay', 'alt_bump_up_delay', 'alt_bump_dn_delay', 'im_ff_wht_on_req', 'im_ff_uv_on_req', 'spare_b3_13_15', 'lf_grt_0d0_3', 'lf_grt_0d0_4', 'lf_grt_125_2', 'lh_lim_21d89_22d3_2', 'lf_grt_150_3', 'lf_grt_220_3', 'lf_grt_310_3', 'lf_grt_0d0_5', 'lf_grt_0d0_6', 'lf_grt_125_3', 'lh_lim_22d3_24d0', 'lh_lim_21d8_22d15', 'lf_grt_1400', 'lh_lim_22d85_23d05', 'lf_grt_950', 'lh_lim_22d89_23d09', ), help=''),
-    Key('ab_B3_L7', Bits('spare_b3_15_0', 'spare_b3_15_1', 'spare_b3_15_2', 'spare_b3_15_3', 'spare_b3_15_4', 'spare_b3_15_5', 'spare_b3_15_6', 'marvels_gc_both_sw', 'apogee_gc_at_stow', 'apogee_gc_unplugged', 'marvels_gc_unplugged', 'apogee_gc_at_dense', 'apogee_gc_at_cart', 'marvels_gc_at_stow', 'marvels_gc_at_cart', 'apogee_gc_at_sparse', 'cartridge_10', 'cartridge_11', 'cartridge_12', 'cartridge_13', 'cartridge_14', 'cartridge_15', 'cartridge_16', 'cartridge_17', 'cartridge_18', 'spare_b3_14_9', 'spare_b3_14_10', 'spare_b3_14_11', 'spare_b3_14_12', 'spare_b3_14_13', 'spare_b3_14_14', 'spare_b3_14_15', ), help=''),
+    Key('ab_B3_L7', Bits('spare_b3_15_0', 'spare_b3_15_1', 'spare_b3_15_2', 'spare_b3_15_3', 'spare_b3_15_4', 'spare_b3_15_5', 'spare_b3_15_6', 'spare_b3_15_7', 'spare_b3_15_8', 'spare_b3_15_9', 'apogee_gc_at_1m', 'apogee_gc_at_sparse', 'apogee_gc_at_dense', 'apogee_gc_at_stow', 'apogee_gc_at_cart', 'apogee_gc_unplugged', 'cartridge_10', 'cartridge_11', 'cartridge_12', 'cartridge_13', 'cartridge_14', 'cartridge_15', 'cartridge_16', 'cartridge_17', 'cartridge_18', 'spare_b3_14_9', 'spare_b3_14_10', 'spare_b3_14_11', 'spare_b3_14_12', 'spare_b3_14_13', 'spare_b3_14_14', 'spare_b3_14_15', ), help=''),
     Key('ab_B3_L8', Bits('spare_b3_17_0', 'spare_b3_17_1', 'spare_b3_17_2', 'spare_b3_17_3', 'spare_b3_17_4', 'spare_b3_17_5', 'spare_b3_17_6', 'spare_b3_17_7', 'spare_b3_17_8', 'spare_b3_17_9', 'spare_b3_17_10', 'spare_b3_17_11', 'spare_b3_17_12', 'spare_b3_17_13', 'spare_b3_17_14', 'spare_b3_17_15', 'spare_b3_16_0', 'spare_b3_16_1', 'spare_b3_16_2', 'spare_b3_16_3', 'spare_b3_16_4', 'spare_b3_16_5', 'spare_b3_16_6', 'spare_b3_16_7', 'spare_b3_16_8', 'spare_b3_16_9', 'spare_b3_16_10', 'spare_b3_16_11', 'spare_b3_16_12', 'spare_b3_16_13', 'spare_b3_16_14', 'spare_b3_16_15', ), help=''),
     Key('ab_B3_L9', Bits('spare_b3_19_0', 'spare_b3_19_1', 'spare_b3_19_2', 'spare_b3_19_3', 'spare_b3_19_4', 'spare_b3_19_5', 'spare_b3_19_6', 'spare_b3_19_7', 'spare_b3_19_8', 'spare_b3_19_9', 'spare_b3_19_10', 'spare_b3_19_11', 'spare_b3_19_12', 'spare_b3_19_13', 'spare_b3_19_14', 'spare_b3_19_15', 'spare_b3_18_0', 'spare_b3_18_1', 'spare_b3_18_2', 'spare_b3_18_3', 'spare_b3_18_4', 'spare_b3_18_5', 'spare_b3_18_6', 'spare_b3_18_7', 'spare_b3_18_8', 'spare_b3_18_9', 'spare_b3_18_10', 'spare_b3_18_11', 'spare_b3_18_12', 'spare_b3_18_13', 'spare_b3_18_14', 'spare_b3_18_15', ), help=''),
     Key('ab_B10_L0', Bits('mcp_clamp_disen_cmd', 'mcp_15deg_stop_ext_c', 'mcp_15deg_stop_ret_c', 'mcp_umbilical_up_dn', 'mcp_umbilical_on_off', 'mcp_slit_dr1_opn_cmd', 'mcp_slit_dr1_cls_cmd', 'mcp_slit_latch1_cmd', 'mcp_slit_dr2_opn_cmd', 'mcp_slit_dr2_cls_cmd', 'mcp_slit_latch2_cmd', 'mcp_ff_scrn_opn_cmd', 'mcp_ff_lamp_on_cmd', 'mcp_ne_lamp_on_cmd', 'mcp_hgcd_lamp_on_cmd', 'mcp_ff_screen_enable', 'mcp_lift_high_psi', 'mcp_lift_up_4', 'mcp_lift_up_3', 'mcp_lift_up_2', 'mcp_lift_up_1', 'mcp_lift_dn_1', 'mcp_lift_dn_2', 'mcp_lift_dn_3', 'mcp_lift_dn_4', 'mcp_pump_on', 'mcp_solenoid_engage', 'mcp_az_brk_dis_cmd', 'mcp_az_brk_en_cmd', 'mcp_alt_brk_dis_cmd', 'mcp_alt_brk_en_cmd', 'mcp_clamp_engage_cmd', ), help=''),
     Key('ab_B10_L1', Bits('velocity_trp_rst_in', 'mcp_t_bar_xport', 'mcp_t_bar_tel', 'mcp_purge_cell_on', 'mcp_pri_latch_cls_cm', 'mcp_pri_latch_opn_cm', 'mcp_sec_latch_cls_cm', 'mcp_sec_latch_opn_cm', 'mcp_sad_latch_cls_cm', 'mcp_sad_latch_opn_cm', 'mcp_inst_chg_prompt', 'mcp_inst_chg_alert', 'mcp_ff_scrn2_opn_cmd', 'mcp_ff_screen2_enabl', 'mcp_umbilical_fast', 'mcp_im_ff_wht_req', 'mcp_im_ff_uv_req', ), help=''),
-    Key('ab_I1_L0', Bits('dog_house_cw_pad', 'dog_house_ccw_pad', 'dog_house_door_opn', 'dog_house_door_cls', 'ops_cart_in_house', 'optical_bench_opn', 'optical_bench_cls', 'rack_0_grp_1_bit_7', 'rack_0_grp_1_bit_8', 'rack_0_grp_1_bit_9', 'rack_0_grp_1_bit_10', 'apogee_gc_at_cart_sw', 'apogee_gc_at_stow_sw', 'marvel_gc_at_cart_sw', 'marvel_gc_at_stow_sw', 'low_lvl_light_req', 'inst_lift_pump_on', 'inst_lift_sw1', 'inst_lift_sw2', 'inst_lift_sw3', 'inst_lift_sw4', 'inst_lift_dn', 'inst_lift_man', 'inst_lift_high_force', 'inst_lift_low_force', 'fiber_cart_pos1', 'fiber_cart_pos2', 'ops_cart_in_pos', 'rack_0_grp_0_bit_12', 'az_bump_cw', 'az_bump_ccw', 'rack_0_grp_0_bit_15', ), help=''),
+    Key('ab_I1_L0', Bits('dog_house_cw_pad', 'dog_house_ccw_pad', 'dog_house_door_opn', 'dog_house_door_cls', 'ops_cart_in_house', 'optical_bench_opn', 'optical_bench_cls', 'rack_0_grp_1_bit_7', 'rack_0_grp_1_bit_8', 'rack_0_grp_1_bit_9', 'apogee_fgc_1m_sw', 'apogee_fgc_sparse_sw', 'apogee_fgc_dense_sw', 'apogee_gc_at_cart_sw', 'apogee_gc_at_stow_sw', 'low_lvl_light_req', 'inst_lift_pump_on', 'inst_lift_sw1', 'inst_lift_sw2', 'inst_lift_sw3', 'inst_lift_sw4', 'inst_lift_dn', 'inst_lift_man', 'inst_lift_high_force', 'inst_lift_low_force', 'fiber_cart_pos1', 'fiber_cart_pos2', 'ops_cart_in_pos', 'rack_0_grp_0_bit_12', 'az_bump_cw', 'az_bump_ccw', 'rack_0_grp_0_bit_15', ), help=''),
     Key('ab_I1_L1', Bits('spare_i1_l1', ), help=''),
     Key('ab_I1_L2', Bits('spare_i1_l2', ), help=''),
     Key('ab_I1_L3', Bits('spare_i1_l3', ), help=''),
