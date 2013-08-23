@@ -66,7 +66,7 @@ KeysDictionary("mcp", (5,1),
         Bool("0", "1", help="Latch extended"),
         Bool("0", "1", help="Slithead in place")),
     Key("apogeeGang",
-        Enum("0", "1", "2", "4", "12", "20", "36",labelHelp=("Unknown", "Disconnected", "At Cart", "Podium: (any)", "Podium: dense port", "Podium: sparse port", "Podium: 1m port"))),
+        Enum("0", "1", "2", "4", "12", "20", "36",labelHelp=("Unknown", "Disconnected", "At Cart", "Podium?", "Podium: dense", "Podium: sparse", "Podium: 1m"))),
     # Obsolete
     Key("tbarCommanded", Bool("false", "true"), doCache=False, help="Imager TBar move requested"),
     
