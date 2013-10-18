@@ -1,4 +1,4 @@
-KeysDictionary("guider", (2, 1),
+KeysDictionary("guider", (2, 3),
     Key("version", String(), help="svn/eups version"),
     Key("guiderVersion", String(), help="historical svn/eups version"),
 
@@ -56,6 +56,15 @@ KeysDictionary("guider", (2, 1),
         String(),
         help="path of file being processed",
         doCache=False,
+    ),
+    Key("movieFile",
+        String(name="filename",help="Filename of the last generated movie."),
+        Float(name="time",help="Time required to generate this movie (seconds)."),
+        help="Most recently generated guider movie.",
+    ),
+    Key("movieStatus",
+        Int(name="pid",help="Process ID of the current movie-generation Popen subprocess."),
+        help="Status of currently running guider movie processing.",
     ),
     
     # measured and derived values
