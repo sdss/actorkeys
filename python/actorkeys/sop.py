@@ -1,4 +1,4 @@
-KeysDictionary("sop", (1,19),
+KeysDictionary("sop", (1,20),
     # misc
     Key("version", String(help="EUPS/SVN version")),
     Key("text", String(), help="text for humans"),
@@ -28,8 +28,39 @@ KeysDictionary("sop", (1,19),
        String("text", help="perhaps useful text to be displayed"),
        doCache=False),                   
     
-    Key("doCalibsStages", String()*(1,6), help="names of the doCalibs stages"),
-    Key("doCalibsState",
+    Key("doBossCalibsStages", String()*(1,6), help="names of the doBossCalibs stages"),
+    Key("doBossCalibsState",
+        Enum('idle',                'running','done','failed','aborted',
+             help="state of the entire command"),
+        String("text", help="perhaps useful text to be displayed"),
+        Enum('idle','off','pending','running','done','failed','aborted',
+             help="state of all the individual stages of this command, " + \
+             "as identified by the commandStages keyword.")*(1,6)),
+    
+    Key("doBossCalibs_nBias", Int(help="index of the active bias"), Int(help="number of biases requested")),
+    Key("doBossCalibs_nDark", Int(help="index of the active dark"), Int(help="number of darks requested")),
+    Key("doBossCalibs_nFlat", Int(help="index of the active flat"), Int(help="number of flats requested")),
+    Key("doBossCalibs_nArc", Int(help="index of the active arc"), Int(help="number of arces requested")),
+    
+    Key("doBossCalibs_darkTime", Float(help="flat exposure time", units="sec"), Float(help="default value", units="sec")),
+    Key("doBossCalibs_arcTime", Float(help="arc exposure time", units="sec"), Float(help="default value", units="sec")),
+    Key("doBossCalibs_flatTime", Float(help="flat exposure time", units="sec"), Float(help="default value", units="sec")),
+    Key("doBossCalibs_guiderFlatTime", Float(help="guider flat exposure time", units="sec"), Float(help="default value", units="sec")),
+    
+    Key("doBossScienceStages", String()*(1,6), help="names of the doBossScience stages"),
+    Key("doBossScienceState",
+        Enum('idle',                'running','done','failed','aborted',
+             help="state of the entire command"),
+        String("text", help="perhaps useful text to be displayed"),
+        Enum('idle','off','pending','running','done','failed','aborted',
+             help="state of all the individual stages of this command, " + \
+             "as identified by the commandStages keyword.")*(1,6)),
+    
+    Key("doBossScience_nExp", Int(help="index of the active exposure"), Int(help="number of exposures completed")),
+    Key("doBossScience_expTime", Float(help="exposure time", units="sec"), Float(help="default", units="sec")),
+
+    Key("doMangaDitherStages", String()*(1,6), help="names of the doMangaDither stages"),
+    Key("doMangaDitherState",
        Enum('idle',                'running','done','failed','aborted',
             help="state of the entire command"),
        String("text", help="perhaps useful text to be displayed"),
@@ -37,28 +68,25 @@ KeysDictionary("sop", (1,19),
             help="state of all the individual stages of this command, " + \
                  "as identified by the commandStages keyword.")*(1,6)),
     
-    Key("doCalibs_nBias", Int(help="index of the active bias"), Int(help="number of biases requested")),
-    Key("doCalibs_nDark", Int(help="index of the active dark"), Int(help="number of darks requested")),
-    Key("doCalibs_nFlat", Int(help="index of the active flat"), Int(help="number of flats requested")),
-    Key("doCalibs_nArc", Int(help="index of the active arc"), Int(help="number of arces requested")),
+    Key("doMangaDither_dither", String(help="requested mangaDither position"), String(help="default mangaDither position")),
+    Key("doMangaDither_expTime", Float(help="exposure time", units="sec"), Float(help="default exposure time", units="sec")),
     
-    Key("doCalibs_darkTime", Float(help="flat exposure time", units="sec"), Float(help="default value", units="sec")),
-    Key("doCalibs_arcTime", Float(help="arc exposure time", units="sec"), Float(help="default value", units="sec")),
-    Key("doCalibs_flatTime", Float(help="flat exposure time", units="sec"), Float(help="default value", units="sec")),
-    Key("doCalibs_guiderFlatTime", Float(help="guider flat exposure time", units="sec"), Float(help="default value", units="sec")),
-    
-    Key("doScienceStages", String()*(1,6), help="names of the doScience stages"),
-    Key("doScienceState",
+    Key("doMangaSequenceStages", String()*(1,6), help="names of the doMangaSequence stages"),
+    Key("doMangaSequenceState",
        Enum('idle',                'running','done','failed','aborted',
             help="state of the entire command"),
        String("text", help="perhaps useful text to be displayed"),
        Enum('idle','off','pending','running','done','failed','aborted',
             help="state of all the individual stages of this command, " + \
                  "as identified by the commandStages keyword.")*(1,6)),
-    
-    Key("doScience_nExp", Int(help="index of the active exposure"), Int(help="number of exposures completed")),
-    Key("doScience_expTime", Float(help="exposure time", units="sec"), Float(help="default", units="sec")),
-    
+
+    Key("doMangaSequence_count", Int(help="number of dither sets requested"), Int(help="default number of dither sets")),
+    Key("doMangaSequence_dithers", String(help="manga dithers requested"), String(help="default manga dithers")),
+    Key("doMangaSequence_expTime", Float(help="exposure time", units="sec"), Float(help="default exposure time", units="sec")),
+    Key("doMangaSequence_arcTime", Float(help="mid-sequence arc exposure time", units="sec"), Float(help="default arc exposure time", units="sec")),
+
+    Key("doMangaSequence_ditherSeq", String(help="Total dither sequence"), String(help="dithers completed"), Int(help="index of currently-operating dither")),
+               
     Key("doApogeeScienceStages", String()*(1,6), help="names of the doApogeeScience stages"),
     Key("doApogeeScienceState",
        Enum('idle',                'running','done','failed','aborted',
@@ -74,6 +102,15 @@ KeysDictionary("sop", (1,19),
     Key("doApogeeScience_sequenceState", String(help="full exposure sequence. Basically ditherSeq * seqCount"),
         Int(help="index of running exposure")),
     Key("doApogeeScience_comment", String(help="For some FITS headers"), String(help="default value")),
+
+    Key("doApogeeDomeFlatStages", String()*(1,6), help="names of the doApogeeDomeFlat stages"),
+    Key("doApogeeDomeFlatState",
+       Enum('idle',                'running','done','failed','aborted',
+            help="state of the entire command"),
+       String("text", help="perhaps useful text to be displayed"),
+       Enum('idle','off','pending','running','done','failed','aborted',
+            help="state of all the individual stages of this command, " + \
+                 "as identified by the commandStages keyword.")*(1,6)),
     
     Key("doApogeeSkyFlatsStages", String()*(1,6), help="names of the doApogeeSkyFlats stages"),
     Key("doApogeeSkyFlatsState",
@@ -100,7 +137,7 @@ KeysDictionary("sop", (1,19),
     
     Key("gotoField_arcTime", Float(help="arc exposure time", units="sec"), Float(help="default value", units="sec")),
     Key("gotoField_flatTime", Float(help="flat exposure time", units="sec"), Float(help="default value", units="sec")),
-    Key("gotoField_guiderExpTime", Float(help="guider exposure time", units="sec"), Float(help="default value", units="sec")),
+    Key("gotoField_guiderTime", Float(help="guider exposure time", units="sec"), Float(help="default value", units="sec")),
     Key("gotoField_guiderFlatTime", Float(help="guider flat exposure time", units="sec"), Float(help="default value", units="sec")),
     
     Key("gotoInstrumentChangeStages", String()*(1,6), help="names of the gotoInstrumentChange stages"),

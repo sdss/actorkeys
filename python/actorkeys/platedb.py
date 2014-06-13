@@ -1,4 +1,4 @@
-KeysDictionary("platedb", (1,5),
+KeysDictionary("platedb", (1,6),
     Key("version", String(help="EUPS/SVN version")),
     Key("activePlugging",
         Int(name="cartridge", help="The cartridge in use", invalid=-1),
@@ -59,7 +59,14 @@ KeysDictionary("platedb", (1,5),
         Float(name="hour_angle", help="The hour_angle the plate was drilled for"),
         Float(name="temperature", help="The temperature the plate was drilled for"),
         Float(name="lambda", help="The wavelength the plate was designed for"),
+        String(name="survey",help="The survey type of plate", invalid="?"),
+        String(name="surveyMode",help="The mode of this survey", invalid="?"),
         help="The currently loaded plate",
     ),
+    # TBD: do I need this, or should it be part of pointingInfo?
+    #Key("mangaDither",
+    #    String("mangaDitherPattern",help="The dither pattern requested for this plate", invalid="?"),
+    #    help="Information about the requested dithers for this plate."
+    #),
     Key("text", String(), help="text for humans"),
 )

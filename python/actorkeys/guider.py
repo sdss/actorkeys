@@ -1,4 +1,4 @@
-KeysDictionary("guider", (2, 3),
+KeysDictionary("guider", (2, 5),
     Key("version", String(), help="svn/eups version"),
     Key("guiderVersion", String(), help="historical svn/eups version"),
 
@@ -34,7 +34,11 @@ KeysDictionary("guider", (2, 3),
         Float(name="dSecondary_dmm", units="mm/mm", help="Motion of secondary to move focus at plugplate"),
         help="plate scales relevant to guiding",
     ),
-
+    Key("survey",
+        String(name="plateType", invalid="?", help="The survey type of this plate"),
+        String(name="surveyMode", invalid="?", help="The instrument driving this observation, and its observing mode"),
+        help="Which surveys is this plate for",
+    ),
     # status
 
     Key("file",
@@ -95,6 +99,9 @@ KeysDictionary("guider", (2, 3),
         help="user specified offsets",
         
     ),
+    Key("mangaDither",
+        Enum('C','N','S','E', help="Named manga dither position", invalid='?')
+    ),
     Key("focusError",
         Float(help="measured focus error", units="um"),
         doCache=False,
@@ -125,6 +132,8 @@ KeysDictionary("guider", (2, 3),
         Float(name="fitRMS", help="RMS of fit to guide star offsets", units="arcsec"),
         Int(name="nFit",    help="Number of guide stars used for fit"),
         Int(name="nFitReject", help="Number of guide stars rejected from fit"),
+        Float(name="RaRMS", help="RA component of RMS", units="arcsec"),
+        Float(name="DecRMS", help="Dec component of RMS", units="arcsec"),
         doCache = False,
         help="RMS values of axis components",
     ),        
