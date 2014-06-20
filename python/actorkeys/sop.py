@@ -1,4 +1,4 @@
-KeysDictionary("sop", (1,20),
+KeysDictionary("sop", (1,21),
     # misc
     Key("version", String(help="EUPS/SVN version")),
     Key("text", String(), help="text for humans"),
@@ -26,7 +26,7 @@ KeysDictionary("sop", (1,20),
        Float("duration", units="sec", 
              help="expected duration for the substage. If short or unknown, 0.0"),
        String("text", help="perhaps useful text to be displayed"),
-       doCache=False),                   
+       doCache=False),
     
     Key("doBossCalibsStages", String()*(1,6), help="names of the doBossCalibs stages"),
     Key("doBossCalibsState",
@@ -202,17 +202,6 @@ KeysDictionary("sop", (1,20),
        Enum('idle','off','pending','running','done','failed','aborted',
             help="state of all the individual stages of this command, " + \
                  "as identified by the commandStages keyword.")*(1,6)),
-    
-    Key("setScaleStages", String()*(1,6), help="names of the setScale stages"),
-    Key("setScaleState",
-       Enum('idle',                'running','done','failed','aborted',
-            help="state of the entire command"),
-       String("text", help="perhaps useful text to be displayed"),
-       Enum('idle','off','pending','running','done','failed','aborted',
-            help="state of all the individual stages of this command, " + \
-                 "as identified by the commandStages keyword.")*(1,6)),
-    
-    Key("setScale_delta", Float(name="delta", help="change scale by (1 + 0.01*delta)", units="%"), Float(help="default value", units="%")),
 
     Key("availableScripts", String("name")*(1,),
         help="List of available SOP scripts."),
