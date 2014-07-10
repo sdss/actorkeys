@@ -1,4 +1,4 @@
-KeysDictionary("sop", (1,22),
+KeysDictionary("sop", (1,23),
     # misc
     Key("version", String(help="EUPS/SVN version")),
     Key("text", String(), help="text for humans"),
@@ -11,7 +11,7 @@ KeysDictionary("sop", (1,22),
        Bool(0,1)*(1,25),
        help="Which of the bypassNamed subsystems are being ignored (deprecated by bypasedNames)"),
     Key("bypassedNames",
-       String()*(1,25),
+       String()*(0,25),
        help="List of named systems currently being bypassed."),
 
     Key("surveyCommands", String()*(1,12),
