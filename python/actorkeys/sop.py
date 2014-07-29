@@ -208,10 +208,8 @@ KeysDictionary("sop", (1,23),
 
     Key("doApogeeMangaSequence_ditherSeq",
         String('mangaDitherSeq', help="Total MaNGA dither sequence"),
-        String('mangaDithersDone', help="MaNGA dithers completed"),
         String('apogeeDitherSeq', help="Total APOGEE dither sequence"),
-        String('apogeeDithersDone', help="APOGEE dithers completed"),
-        Int('index', help="index of currently-operating dither")),
+        Int('index', help="index of currently-operating MaNGA dither")),
     
     Key("doApogeeSkyFlatsStages", String()*(1,6), help="names of the doApogeeSkyFlats stages"),
     Key("doApogeeSkyFlatsState",
