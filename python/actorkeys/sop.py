@@ -1,4 +1,4 @@
-KeysDictionary("sop", (1,24),
+KeysDictionary("sop", (1,25),
     # misc
     Key("version", String(help="EUPS/SVN version")),
     Key("text", String(), help="text for humans"),
@@ -16,7 +16,13 @@ KeysDictionary("sop", (1,24),
 
     Key("surveyCommands", String()*(1,12),
         help="List of SOP commands which are appropriate to and required for the loaded plate's operations"),
-               
+    
+    Key("survey",
+        String(name="plateType", invalid="?", help="The survey type of this plate."),
+        String(name="surveyMode", invalid="?", help="The instrument driving this observation, and its observing mode."),
+        help="Which surveys is this plate for, as SOP knows them to be (e.g., with bypasses).",
+    ),
+
     Key("subStageState",
        String("subStageName",
               help="""dotted name of a substage. The name will always
