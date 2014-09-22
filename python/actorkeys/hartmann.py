@@ -1,25 +1,30 @@
-KeysDictionary('sos', (1, 3),
+KeysDictionary('hartmann', (1, 3),
                Key("text", String(help="text for humans")),
                Key("version", String(help="EUPS/SVN version")),
-               Key("idlspec2dVersion", String(help="idlspec2d version we will call")),
+               Key("status", String(help="status of collimation process: Idle/exposing/processing/")),
+
                Key("b1RingMove", Float(units="deg", help="measured error in b1 ring rotation")),
                Key("b2RingMove", Float(units="deg", help="measured error in b2 ring rotation")),
+
                Key("b1MeanOffset", Float(units="pixels", 
                                          help="measured distance between hartmann spots"),
                    String("explanatory comment")),
                Key("b2MeanOffset", Float(units="pixels", 
                                          help="measured distance between hartmann spots"),
                    String("explanatory comment")),
+
                Key("r1PistonMove", Int(units="steps", 
                                        help="piston move required to correct r1 error")),
                Key("r2PistonMove", Int(units="steps", 
                                        help="piston move required to correct r2 error")),
+
                Key("sp1AverageMove", 
                    Int(units="steps", 
                        help="collimator move required to best correct r1&b1 errors")),
                Key("sp2AverageMove", 
                    Int(units="steps", 
                        help="collimator move required to best correct r2&b2 errors")),
+
                Key("sp1Residuals", 
                    Int(units="steps", help="r1 residual error after sp1AverageMove"),
                    Float(units="deg", help="b1 residual error after sp1AverageMove"),
