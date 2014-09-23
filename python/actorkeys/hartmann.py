@@ -1,4 +1,4 @@
-KeysDictionary('hartmann', (1, 3),
+KeysDictionary('hartmann', (1, 0),
                Key("text", String(help="text for humans")),
                Key("version", String(help="EUPS/SVN version")),
                Key("status", String(help="status of collimation process: Idle/exposing/processing/")),
