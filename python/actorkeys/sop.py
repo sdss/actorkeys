@@ -1,4 +1,4 @@
-KeysDictionary("sop", (1,25),
+KeysDictionary("sop", (2,0),
     # misc
     Key("version", String(help="EUPS/SVN version")),
     Key("text", String(), help="text for humans"),
@@ -22,27 +22,13 @@ KeysDictionary("sop", (1,25),
         String(name="surveyMode", invalid="?", help="The instrument driving this observation, and its observing mode."),
         help="Which surveys is this plate for, as SOP knows them to be (e.g., with bypasses).",
     ),
-
-    Key("subStageState",
-       String("subStageName",
-              help="""dotted name of a substage. The name will always
-                      start with the commandName.stageName"""),
-       Enum('starting', 'prepping', 'running', 'done', 'failed', 'aborted',
-            help="the state of this substage."),
-    
-       Float("startTime", units="sec",
-             help="start of the substage, in MJD TAI seconds"),
-       Float("duration", units="sec",
-             help="expected duration for the substage. If short or unknown, 0.0"),
-       String("text", help="perhaps useful text to be displayed"),
-       doCache=False),
     
     Key("doBossCalibsStages", String()*(1,6), help="names of the doBossCalibs stages"),
     Key("doBossCalibsState",
         Enum('idle',                'running','done','failed','aborted',
              help="state of the entire command"),
         String("text", help="perhaps useful text to be displayed"),
-        Enum('idle','off','pending','running','done','failed','aborted',
+        Enum('idle','off','pending','prepping','running','done','failed','aborted',
              help="state of all the individual stages of this command, " + \
              "as identified by the commandStages keyword.")*(1,6)),
     
@@ -77,7 +63,7 @@ KeysDictionary("sop", (1,25),
         Enum('idle',                'running','done','failed','aborted',
              help="state of the entire command"),
         String("text", help="perhaps useful text to be displayed"),
-        Enum('idle','off','pending','running','done','failed','aborted',
+        Enum('idle','off','pending','prepping','running','done','failed','aborted',
              help="state of all the individual stages of this command, " + \
              "as identified by the commandStages keyword.")*(1,6)),
     
@@ -93,7 +79,7 @@ KeysDictionary("sop", (1,25),
        Enum('idle',                'running','done','failed','aborted',
             help="state of the entire command"),
        String("text", help="perhaps useful text to be displayed"),
-       Enum('idle','off','pending','running','done','failed','aborted',
+        Enum('idle','off','pending','prepping','running','done','failed','aborted',
             help="state of all the individual stages of this command, " + \
                  "as identified by the commandStages keyword.")*(1,6)),
     
@@ -109,7 +95,7 @@ KeysDictionary("sop", (1,25),
        Enum('idle',                'running','done','failed','aborted',
             help="state of the entire command"),
        String("text", help="perhaps useful text to be displayed"),
-       Enum('idle','off','pending','running','done','failed','aborted',
+        Enum('idle','off','pending','prepping','running','done','failed','aborted',
             help="state of all the individual stages of this command, " + \
                  "as identified by the commandStages keyword.")*(1,6)),
 
@@ -136,7 +122,7 @@ KeysDictionary("sop", (1,25),
        Enum('idle',                'running','done','failed','aborted',
             help="state of the entire command"),
        String("text", help="perhaps useful text to be displayed"),
-       Enum('idle','off','pending','running','done','failed','aborted',
+        Enum('idle','off','pending','prepping','running','done','failed','aborted',
             help="state of all the individual stages of this command, " + \
                  "as identified by the commandStages keyword.")*(1,6)),
     
@@ -161,7 +147,7 @@ KeysDictionary("sop", (1,25),
        Enum('idle',                'running','done','failed','aborted',
             help="state of the entire command"),
        String("text", help="perhaps useful text to be displayed"),
-       Enum('idle','off','pending','running','done','failed','aborted',
+        Enum('idle','off','pending','prepping','running','done','failed','aborted',
             help="state of all the individual stages of this command, " + \
                  "as identified by the commandStages keyword.")*(1,6)),
 
@@ -170,7 +156,7 @@ KeysDictionary("sop", (1,25),
        Enum('idle',                'running','done','failed','aborted',
             help="state of the entire command"),
        String("text", help="perhaps useful text to be displayed"),
-       Enum('idle','off','pending','running','done','failed','aborted',
+        Enum('idle','off','pending','prepping','running','done','failed','aborted',
             help="state of all the individual stages of this command, " + \
                  "as identified by the commandStages keyword.")*(1,6)),
 
@@ -189,7 +175,7 @@ KeysDictionary("sop", (1,25),
        Enum('idle',                'running','done','failed','aborted',
             help="state of the entire command"),
        String("text", help="perhaps useful text to be displayed"),
-       Enum('idle','off','pending','running','done','failed','aborted',
+        Enum('idle','off','pending','prepping','running','done','failed','aborted',
             help="state of all the individual stages of this command, " + \
                  "as identified by the commandStages keyword.")*(1,6)),
 
@@ -215,7 +201,7 @@ KeysDictionary("sop", (1,25),
        Enum('idle',                'running','done','failed','aborted',
             help="state of the entire command"),
        String("text", help="perhaps useful text to be displayed"),
-       Enum('idle','off','pending','running','done','failed','aborted',
+        Enum('idle','off','pending','prepping','running','done','failed','aborted',
             help="state of all the individual stages of this command, " + \
                  "as identified by the commandStages keyword.")*(1,6)),
     
@@ -229,7 +215,7 @@ KeysDictionary("sop", (1,25),
        Enum('idle',                'running','done','failed','aborted',
             help="state of the entire command"),
        String("text", help="perhaps useful text to be displayed"),
-       Enum('idle','off','pending','running','done','failed','aborted',
+        Enum('idle','off','pending','prepping','running','done','failed','aborted',
             help="state of all the individual stages of this command, " + \
                  "as identified by the commandStages keyword.")*(1,6)),
     
@@ -243,7 +229,7 @@ KeysDictionary("sop", (1,25),
        Enum('idle',                'running','done','failed','aborted',
             help="state of the entire command"),
        String("text", help="perhaps useful text to be displayed"),
-       Enum('idle','off','pending','running','done','failed','aborted',
+        Enum('idle','off','pending','prepping','running','done','failed','aborted',
             help="state of all the individual stages of this command, " + \
                  "as identified by the commandStages keyword.")*(1,6)),
 
@@ -252,7 +238,7 @@ KeysDictionary("sop", (1,25),
        Enum('idle',                'running','done','failed','aborted',
             help="state of the entire command"),
        String("text", help="perhaps useful text to be displayed"),
-       Enum('idle','off','pending','running','done','failed','aborted',
+        Enum('idle','off','pending','prepping','running','done','failed','aborted',
             help="state of all the individual stages of this command, " + \
                  "as identified by the commandStages keyword.")*(1,6)),
 
@@ -261,7 +247,7 @@ KeysDictionary("sop", (1,25),
        Enum('idle',                'running','done','failed','aborted',
             help="state of the entire command"),
        String("text", help="perhaps useful text to be displayed"),
-       Enum('idle','off','pending','running','done','failed','aborted',
+        Enum('idle','off','pending','prepping','running','done','failed','aborted',
             help="state of all the individual stages of this command, " + \
                  "as identified by the commandStages keyword.")*(1,6)),
     Key("gotoGangChange_alt",
@@ -273,7 +259,7 @@ KeysDictionary("sop", (1,25),
        Enum('idle',                'running','done','failed','aborted',
             help="state of the entire command"),
        String("text", help="perhaps useful text to be displayed"),
-       Enum('idle','off','pending','running','done','failed','aborted',
+        Enum('idle','off','pending','prepping','running','done','failed','aborted',
             help="state of all the individual stages of this command, " + \
                  "as identified by the commandStages keyword.")*(1,6)),
     
@@ -285,7 +271,7 @@ KeysDictionary("sop", (1,25),
        Enum('idle',                'running','done','failed','aborted',
             help="state of the entire command"),
        String("text", help="perhaps useful text to be displayed"),
-       Enum('idle','off','pending','running','done','failed','aborted',
+        Enum('idle','off','pending','prepping','running','done','failed','aborted',
             help="state of all the individual stages of this command, " + \
                  "as identified by the commandStages keyword.")*(1,6)),
     
@@ -297,7 +283,7 @@ KeysDictionary("sop", (1,25),
        Enum('idle',                'running','done','failed','aborted',
             help="state of the entire command"),
        String("text", help="perhaps useful text to be displayed"),
-       Enum('idle','off','pending','running','done','failed','aborted',
+        Enum('idle','off','pending','prepping','running','done','failed','aborted',
             help="state of all the individual stages of this command, " + \
                  "as identified by the commandStages keyword.")*(1,6)),
 
