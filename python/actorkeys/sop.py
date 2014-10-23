@@ -1,4 +1,4 @@
-KeysDictionary("sop", (2,0),
+KeysDictionary("sop", (2,1),
     # misc
     Key("version", String(help="EUPS/SVN version")),
     Key("text", String(), help="text for humans"),
@@ -114,7 +114,6 @@ KeysDictionary("sop", (2,0),
 
     Key("doMangaSequence_ditherSeq",
         String('ditherSeq', help="Total dither sequence"),
-        String('dithersDone', help="dithers completed"),
         Int('index', help="index of currently-operating dither")),
 
     Key("doApogeeScienceStages", String()*(1,6), help="names of the doApogeeScience stages"),
