@@ -98,10 +98,10 @@ KeysDictionary('apo', (1,0),
 		help='IRSC flux standard deviation'
     ),
     Key('diskspace',
-    	String(help='hostname'),
-    	String(help='volume'),
-        Long(units='Bytes', strFmt='%d', reprFmt='%d',help='Max', invalid='NaN'),
-        Long(units='Bytes', strFmt='%d', reprFmt='%d',help='Available', invalid='NaN'),
-		help='Disk space information for hostname:volume'
+    	String(name='hostname', help='name of host'),
+    	String(name='filesystem', help='name of filesystem'),
+        Long(name='used', units='bytes', strFmt='%d', reprFmt='%d', help='used space', invalid='NaN'),
+        Long(name='available', units='bytes', strFmt='%d', reprFmt='%d', help='available space', invalid='NaN'),
+		help='Disk space information for hostname:filesystem'
     ),
 )
