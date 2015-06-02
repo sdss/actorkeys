@@ -1,4 +1,4 @@
-KeysDictionary("guider", (2, 5),
+KeysDictionary("guider", (2, 6),
     Key("version", String(), help="svn/eups version"),
     Key("guiderVersion", String(), help="historical svn/eups version"),
 
@@ -177,7 +177,19 @@ KeysDictionary("guider", (2, 5),
         Float(name="dDec",units="arcsec", help="dDec adjustment applied to the desired star position"),
         help="refraction offset adjustment values",
     ),
-    
+
+    # for ecamera star finding (e.g., pointing models)
+    Key("ecam_star",
+        Int(name='expID',help="ecamera exposure number"),
+        Float(name='xpos'),
+        Float(name='ypos'),
+        Float(name='fwhm'),
+        Float(name='sky'),
+        Float(name='ampl'),
+        # Float(name='rad'),
+        help="parameters of the brightest star in an ecam image.",
+    ),
+
     # misc
 
     Key("text", String(), help="text for humans"),
