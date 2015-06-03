@@ -1,3 +1,5 @@
+# NOTE: copy any changes here to ecamera.py, since they are the same actor.
+
 KeysDictionary('gcamera', (1, 1),
     Key("text", String(help="text for humans")),
     Key("version", String(help="EUPS/SVN version")),
