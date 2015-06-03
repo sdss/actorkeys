@@ -1,4 +1,5 @@
-# NOTE: copy any changes here to ecamera.py, since they are the same actor.
+# NOTE: copy any changes here (noting the first argument to KeysDictionary)
+# to ecamera.py, since they are the same actor.
 
 KeysDictionary('gcamera', (1, 1),
     Key("text", String(help="text for humans")),
@@ -25,7 +26,7 @@ KeysDictionary('gcamera', (1, 1),
         Enum('Off', 'RampingToSetPoint', 'Correcting', 'RampingToAmbient', 'AtAmbient', 'AtMax', 'AtMin', 'AtSetPoint', 'Invalid',
              name="coolerStatus",
              help="Cooler status. Correcting appears to be the normal state, All others should be considered bad. AtSetPoint does not appear to occur."),
-        help="status of gcamera cooler.",),
+        help="status of camera cooler.",),
     Key("binning",
         Int(name="vertical",help="Binned vertical pixels.",units="pixels"),
         Int(name="horizontal",help="Binned horizontal pixels.",units="pixels"),
