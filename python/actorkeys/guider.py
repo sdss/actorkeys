@@ -11,6 +11,8 @@ KeysDictionary("guider", (2, 6),
         Int(name="fscanMJD", invalid=-1, help="MJD when the plate was mapped"),
         Int(name="fscanID", invalid=-1, help="Which of the mappings on fscanMJD we are using"),
     ),
+    Key(name="loadedNewCartridge", doCache=False, help="Output when a cartridge is explicitly loaded by the user."),
+
     Key("guideEnable",
         Bool(False, True, name="axis", help="move azimuth, altitude and rotation to correct pointing"),
         Bool(False, True, name="focus", help="move the secondary mirror to correct focus"),
