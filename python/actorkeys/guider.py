@@ -1,4 +1,4 @@
-KeysDictionary("guider", (2, 5),
+KeysDictionary("guider", (2, 6),
     Key("version", String(), help="svn/eups version"),
     Key("guiderVersion", String(), help="historical svn/eups version"),
 
@@ -11,6 +11,8 @@ KeysDictionary("guider", (2, 5),
         Int(name="fscanMJD", invalid=-1, help="MJD when the plate was mapped"),
         Int(name="fscanID", invalid=-1, help="Which of the mappings on fscanMJD we are using"),
     ),
+    Key(name="loadedNewCartridge", doCache=False, help="Output when a cartridge is explicitly loaded by the user."),
+
     Key("guideEnable",
         Bool(False, True, name="axis", help="move azimuth, altitude and rotation to correct pointing"),
         Bool(False, True, name="focus", help="move the secondary mirror to correct focus"),
@@ -177,7 +179,19 @@ KeysDictionary("guider", (2, 5),
         Float(name="dDec",units="arcsec", help="dDec adjustment applied to the desired star position"),
         help="refraction offset adjustment values",
     ),
-    
+
+    # for ecamera star finding (e.g., pointing models)
+    Key("ecam_star",
+        Int(name='expID',help="ecamera exposure number"),
+        Float(name='xpos',help="x position of star on image"),
+        Float(name='ypos',help="y position of star on image"),
+        Float(name='fwhm',help="FWHM of star in pixels"),
+        Float(name='sky',help="sky flux"),
+        Float(name='ampl',help="measured counts of star"),
+        # Float(name='rad'),
+        help="parameters of the brightest star in an ecam image as measured by PyGuide",
+    ),
+
     # misc
 
     Key("text", String(), help="text for humans"),
