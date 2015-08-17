@@ -423,14 +423,14 @@ KeysDictionary("tcc", (5, 2), *(
     ),
     Key("pressure", Float(invalid="nan", units="Pa"), help="Air pressure; used for refraction correction."),
     Key("primActMount",
-        Float(units="microsteps", invalid="nan")*(1,6),
+        Float(units="microsteps", invalid="nan")*(1,),
         help = "Actuator lengths determined from primEncMount and the mirror model. " + \
             "This may not match primCmdMount, even if the actuators move as commanded, " + \
             "due to systematic errors in the mirror model." + \
             "For an actuator without an encoder, the commanded actuator mount is used. ",
     ),
     Key("primCmdMount",
-        Float(invalid="nan")*(1,6),
+        Float(invalid="nan")*(1,),
         help = "commanded position of primary mirror actuators", units="microsteps",
     ),
     Key("primDesEncMount",
@@ -624,14 +624,14 @@ KeysDictionary("tcc", (5, 2), *(
         the minimum is computed from this as follows: minimum = 1/maximum."
     ),
     Key("secActMount",
-        Float(units="microsteps", invalid="nan")*(1,5),
+        Float(units="microsteps", invalid="nan")*(1,),
         help = "Actuator lengths determined from secEncMount and the mirror model. " + \
             "This may not match secCmdMount, even if the actuators move as commanded, " + \
             "due to systematic errors in the mirror model." + \
             "For an actuator without an encoder, the commanded actuator mount is used. ",
     ),
     Key("secCmdMount",
-        Float(invalid="nan")*(1,5),
+        Float(invalid="nan")*(1,),
         help = "commanded position of secondary mirror actuators", units="microsteps",
     ),
     Key("secDesEncMount",
@@ -744,14 +744,14 @@ KeysDictionary("tcc", (5, 2), *(
     Key("telMount", PVT(), PVT(), doCache=False,
         help="Position of the telescope azimuth and altitude axes, in mount coordinates. See also RotMount"),
     Key("tertActMount",
-        Float(units="microsteps", invalid="nan")*(1,3),
+        Float(units="microsteps", invalid="nan")*(1,),
         help = "Actuator lengths determined from tertEncMount and the mirror model. " + \
             "This may not match tertCmdMount, even if the actuators move as commanded, " + \
             "due to systematic errors in the mirror model." + \
             "For an actuator without an encoder, the commanded actuator mount is used. ",
     ),
     Key("tertCmdMount",
-        Float(invalid="nan")*(1,3),
+        Float(invalid="nan")*(1,),
         help = "commanded position of tertiary mirror actuators", units="microsteps",
     ),
     Key("tertDesEncMount",
