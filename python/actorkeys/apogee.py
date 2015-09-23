@@ -68,8 +68,8 @@ KeysDictionary("apogee", (1,2), *(
 
     # Dither
     Key("ditherPosition",
-        Float(units="pixels", invalid="NaN"),
-        Enum("A", "B", "?", help="name of current position; ? if not a named position"),
+        Float(name="pixels", units="pixels", invalid="NaN"),
+        Enum("A", "B", "?", name="name", help="name of current position; ? if not a named position"),
         help="Current dither position"),
     Key("ditherNamedPositions",
         Float(units="pixels", invalid="NaN")*2,
