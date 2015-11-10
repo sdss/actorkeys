@@ -60,7 +60,7 @@ KeysDictionary("apogeeql",(0,3),*(
         Float(name='snr', help='S/N value (at reference H mag) for this read'),
         Float(name='snrTotalLinFit', help='(S/N)^2 to readNum Linear fit to all the reads so far: y intercept, slope')*2,
         Float(name='snrRecentLinFit', help='(S/N)^2 to readNum Linear fit of most recent reads: y intercept, slope')*2,
-        Bits('fitsBad', 'ditherBad', 'skyBad', 'waveBad', help='bitwise status (1=bad, 0=OK)'),
+        Bits('fitsBad', 'ditherBad', 'skyBad', 'waveBad', name="status", help='bitwise status (1=bad, 0=OK)'),
         Float(name='measDitherPos', help='Measured dither position'),
         Float(name='cmdDitherPos', help='Commanded dither position'),
         Float(name='waveOffset', help='Average wavelength solution offset between measured and expected for 3 chips'),

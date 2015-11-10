@@ -14,13 +14,13 @@ KeysDictionary("boss",(2,18),*(
         UInt(),
         help="last exposure number"),
     Key('BeginExposure',
-        UInt(),
-        Float(units="mjd",strFmt="%.2f"),
+        UInt(name="time"),
+        Float(name="mjd", units="mjd",strFmt="%.2f"),
         help = "Time that an exposure began."
     ),
     Key('EndExposure',
-        UInt(),
-        Float(units = "mjd", strFmt = "%.2f"),
+        UInt(name="time"),
+        Float(name="mjd", units = "mjd", strFmt = "%.2f"),
         help = "Time that an exposure ended."
     ),
     Key('daqVersion',
@@ -185,8 +185,8 @@ KeysDictionary("boss",(2,18),*(
         help = "A list of strings of keywords that are out of spec."
     ),
     Key('camCheckAlert',
-        String(help='keyword name'),
-        String(help='keyword str(value)'),
+        String(name="name", help='keyword name'),
+        String(name="value", help='keyword str(value)'),
         help = "keyword is reported out of spec by camCheck"
     ),
     Key('aliveAt',
