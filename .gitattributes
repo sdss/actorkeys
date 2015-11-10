@@ -23,5 +23,4 @@ python/actorkeys/piezomirror.py -text
 python/actorkeys/platedb.py -text
 python/actorkeys/sop.py -text
 python/actorkeys/tcc.py -text
-python/actorkeys/tcc.py.old -text
 ups/actorkeys.table -text
