@@ -44,7 +44,6 @@ module-whatis "Sets up $product/$version in your environment."
 #
 module load sdss4tools
 
-module load plc
 #
 # ENVIRONMENT SECTION
 #
