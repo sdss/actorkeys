@@ -843,6 +843,8 @@ KeysDictionary("tcc", (5, 2), *(
     Key("yourUserID", UInt(), help="Your user ID (use to identify messages meant for you); new TCC only"),
     Key("yourUserNum", UInt(), help="Synonym for yourUserID; deprecated for new TCC but required for old TCC"),
 
+    Key("instrumentNum", Int(invalid="-1"), # copied from MCP, now cart ID is returned by tcc
+
     # keywords not output by the new tcc that perhaps should be added
     # Key("altMSStat", Float(invalid="nan", units="as")*2, String()),
     # Key("azMSStat", Float(invalid="nan", units="as")*2, String()),
