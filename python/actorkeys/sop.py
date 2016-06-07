@@ -1,8 +1,8 @@
-KeysDictionary("sop", (2,1),
+KeysDictionary("sop", (2,2),
     # misc
     Key("version", String(help="EUPS/SVN version")),
     Key("text", String(), help="text for humans"),
-    
+
     # The archiver allocates enough space for the largest possible list...
     Key("bypassNames",
        String()*(1,25),
@@ -13,7 +13,7 @@ KeysDictionary("sop", (2,1),
 
     Key("surveyCommands", String()*(1,12),
         help="List of SOP commands which are appropriate to and required for the loaded plate's operations"),
-    
+
     Key("survey",
         String(name="plateType", invalid="?", help="The survey type of this plate."),
         String(name="surveyMode", invalid="?", help="The instrument driving this observation, and its observing mode."),
@@ -24,7 +24,7 @@ KeysDictionary("sop", (2,1),
         String(name="ditherSet", help="The requested APOGEE dither set."),
         Int(name="index", help="The current index into ditherSet; len()+1 when the set is complete."),
         help="To keep track of sets of APOGEE exposures (usually pairs)."),
-    
+
     Key("doBossCalibsStages", String()*(1,6), help="names of the doBossCalibs stages"),
     Key("doBossCalibsState",
         Enum('idle',                'running','done','failed','aborted',
@@ -35,7 +35,7 @@ KeysDictionary("sop", (2,1),
              name="all_states",
              help="state of all the individual stages of this command, " + \
              "as identified by the commandStages keyword.")*(1,6)),
-    
+
     Key("doBossCalibs_nBias",
         Int(name='nBiasDone', help="index of the active bias"),
         Int(name='nBias', help="number of biases requested")),
@@ -48,7 +48,7 @@ KeysDictionary("sop", (2,1),
     Key("doBossCalibs_nArc",
         Int(name='nArcDone', help="index of the active arc"),
         Int(name='nArc', help="number of arcs requested")),
-    
+
     Key("doBossCalibs_darkTime",
         Float(name='darkTime', help="flat exposure time", units="sec"),
         Float(name='default', help="default value", units="sec")),
@@ -61,7 +61,7 @@ KeysDictionary("sop", (2,1),
     Key("doBossCalibs_guiderFlatTime",
         Float(name='guiderFlatTime', help="guider flat exposure time", units="sec"),
         Float(name='default', help="default value", units="sec")),
-    
+
     Key("doBossScienceStages", String()*(1,6), help="names of the doBossScience stages"),
     Key("doBossScienceState",
         Enum('idle',                'running','done','failed','aborted',
@@ -72,7 +72,7 @@ KeysDictionary("sop", (2,1),
              name="sub_stage",
              help="state of all the individual stages of this command, " + \
              "as identified by the commandStages keyword.")*(1,6)),
-    
+
     Key("doBossScience_nExp",
         Int(name='nExpDone', help="index of the active exposure"),
         Int(name='nExp', help="number of exposures completed")),
@@ -90,14 +90,14 @@ KeysDictionary("sop", (2,1),
             name="sub_state",
             help="state of all the individual stages of this command, " + \
                  "as identified by the commandStages keyword.")*(1,6)),
-    
+
     Key("doMangaDither_dither",
         String(name='mangaDither', help="requested mangaDither position"),
         String(name='default', help="default mangaDither position")),
     Key("doMangaDither_expTime",
         Float(name='expTime', help="exposure time", units="sec"),
         Float(name='default', help="default exposure time", units="sec")),
-    
+
     Key("doMangaSequenceStages", String()*(1,6), help="names of the doMangaSequence stages"),
     Key("doMangaSequenceState",
        Enum('idle',                'running','done','failed','aborted',
@@ -136,7 +136,7 @@ KeysDictionary("sop", (2,1),
             name="sub_state",
             help="state of all the individual stages of this command, " + \
                  "as identified by the commandStages keyword.")*(1,6)),
-    
+
     Key("doApogeeScience_ditherPairs",
         String(name='ditherPairs', help="the number of A/B dither pairs"),
         String(name='default', help="default number of dither pairs")),
@@ -178,6 +178,12 @@ KeysDictionary("sop", (2,1),
     Key("doApogeeMangaDither_expTime",
         Float(name='mangaExpTime', help="MaNGA exposure time", units="sec"),
         Float(name='apogeeExpTime', help="APOGEE exposure time", units="sec")),
+    Key("doApogeeMangaDither_apogeeExpTime",
+        Float(name='apogeeExpTime', help="APOGEE exposure time", units="sec"),
+        Float(name='default', help="The default APOGEE exposure time", units="sec")),
+    Key("doApogeeMangaDither_comment",
+        String(name='comment', help="APOGEE exposure comment"),
+        String(name='default', help="The default APOGEE exposure comment")),
 
     Key("doApogeeMangaSequenceStages", String()*(1,6), help="names of the doApogeeMangaSequence stages"),
     Key("doApogeeMangaSequenceState",
@@ -200,7 +206,18 @@ KeysDictionary("sop", (2,1),
     Key("doApogeeMangaSequence_ditherSeq",
         String(name='mangaDitherSeq', help="Total MaNGA dither sequence"),
         Int(name='index', help="index of currently-operating MaNGA dither")),
-    
+
+    Key("doApogeeMangaSequence_expTime",
+        Float(name='mangaExpTime', help="MaNGA exposure time", units="sec"),
+        Float(name='apogeeExpTime', help="APOGEE exposure time", units="sec")),
+    Key("doApogeeMangaSequence_apogeeExpTime",
+        Float(name='apogeeExpTime', help="APOGEE exposure time", units="sec"),
+        Float(name='default', help="The default APOGEE exposure time", units="sec")),
+    Key("doApogeeMangaSequence_comment",
+        String(name='comment', help="APOGEE exposure comment"),
+        String(name='default', help="The default APOGEE exposure comment")),
+
+
     Key("doApogeeSkyFlatsStages", String()*(1,6), help="names of the doApogeeSkyFlats stages"),
     Key("doApogeeSkyFlatsState",
        Enum('idle',                'running','done','failed','aborted',
@@ -211,7 +228,7 @@ KeysDictionary("sop", (2,1),
             name="sub_state",
             help="state of all the individual stages of this command, " + \
                  "as identified by the commandStages keyword.")*(1,6)),
-    
+
     Key("doApogeeSkyFlats_ditherPairs",
         String(name='ditherPairs', help="the number of A/B dither pairs"),
         String(name='default', help="default number of dither pairs")),
@@ -232,20 +249,20 @@ KeysDictionary("sop", (2,1),
             name="sub_state",
             help="state of all the individual stages of this command, " + \
                  "as identified by the commandStages keyword.")*(1,6)),
-    
-    Key("gotoField_arcTime", 
-        Float(name="time", help="arc exposure time", units="sec"), 
+
+    Key("gotoField_arcTime",
+        Float(name="time", help="arc exposure time", units="sec"),
         Float(name="default", help="default value", units="sec")),
-    Key("gotoField_flatTime", 
-        Float(name="time",help="flat exposure time", units="sec"), 
+    Key("gotoField_flatTime",
+        Float(name="time",help="flat exposure time", units="sec"),
         Float(name="default",help="default value", units="sec")),
-    Key("gotoField_guiderTime", 
-        Float(name="time",help="guider exposure time", units="sec"), 
+    Key("gotoField_guiderTime",
+        Float(name="time",help="guider exposure time", units="sec"),
         Float(name="default", help="default value", units="sec")),
-    Key("gotoField_guiderFlatTime", 
-        Float(name="time",help="guider flat exposure time", units="sec"), 
+    Key("gotoField_guiderFlatTime",
+        Float(name="time",help="guider flat exposure time", units="sec"),
         Float(name="default",help="default value", units="sec")),
-    
+
     Key("gotoInstrumentChangeStages", String()*(1,6), help="names of the gotoInstrumentChange stages"),
     Key("gotoInstrumentChangeState",
        Enum('idle',                'running','done','failed','aborted',
@@ -281,7 +298,7 @@ KeysDictionary("sop", (2,1),
     Key("gotoGangChange_alt",
         Float(name="alt",help="desired altitude to slew to", units="deg"),
         Float(name="default", help="default", units="deg")),
-    
+
     Key("ditheredFlatChangeStages", String()*(1,6), help="names of the ditheredFlatChange stages"),
     Key("ditheredFlatChangeState",
        Enum('idle',                'running','done','failed','aborted',
@@ -292,12 +309,12 @@ KeysDictionary("sop", (2,1),
             name="sub_state",
             help="state of all the individual stages of this command, " + \
                  "as identified by the commandStages keyword.")*(1,6)),
-    
-    Key("ditheredFlat_expTime", 
-        Float(name="time", help="exposure time", units="sec"), 
+
+    Key("ditheredFlat_expTime",
+        Float(name="time", help="exposure time", units="sec"),
         Float(name="default", help="default", units="sec")),
 # MISSING KEYS due to unknown format: nStep, nTick (these want defaults!), sp1 and sp2
-    
+
     Key("hartmannStages", String()*(1,6), help="names of the hartmann stages"),
     Key("hartmannState",
        Enum('idle',                'running','done','failed','aborted',
@@ -308,12 +325,12 @@ KeysDictionary("sop", (2,1),
             name="sub_state",
             help="state of all the individual stages of this command, " + \
                  "as identified by the commandStages keyword.")*(1,6)),
-    
-    Key("hartmann_expTime", 
-        Float(name="time",help="exposure time", units="sec"), 
+
+    Key("hartmann_expTime",
+        Float(name="time",help="exposure time", units="sec"),
         Float(name="default", help="default", units="sec")),
 # MISSING KEYS due to unknown format: sp1 and sp2
-    
+
     Key("lampsOffStages", String()*(1,6), help="names of the lampsOff stages"),
     Key("lampsOffState",
        Enum('idle',                'running','done','failed','aborted',
@@ -340,4 +357,45 @@ KeysDictionary("sop", (2,1),
         Float(name="maxTime",help="Maximum time allowed for this step."),
         String(name="line",help="This script line as a string."),
         help="lines in currently active SOP script."),
+
+    # GoToPosition Keys
+    Key('gotoPosition_alt',
+        Float(name='alt', help='The desired altitude'),
+        Float(name='default', help='The default altitude')),
+
+    Key('gotoPosition_az',
+        Float(name='az', help='The desired azimuth'),
+        Float(name='default', help='The default azimuth')),
+
+    Key('gotoPosition_rot',
+        Float(name='rot', help='The desired rotation angle'),
+        Float(name='default', help='The default rotation angle')),
+
+    Key('gotoPositionStages', String() * (1, 6),
+        help='names of the gotoPosition stages'),
+
+    Key('gotoPositionState',
+        Enum('idle', 'running','done','failed','aborted',
+             name='state', help='state of the entire command'),
+        String(name='text', help='perhaps useful text to be displayed'),
+        Enum('idle', 'off', 'pending', 'prepping', 'running', 'done',
+             'failed','aborted',
+             name='sub_state',
+             help='state of all the individual stages of this command, ' + \
+                  'as identified by the commandStages keyword.') * (1, 6)),
+
+    # collimateBoss Keys
+    Key('collimateBossStages', String() * (1, 6),
+        help='names of the collimateBoss stages'),
+
+    Key('collimateBossState',
+        Enum('idle', 'running','done','failed','aborted',
+             name='state', help='state of the entire command'),
+        String(name='text', help='perhaps useful text to be displayed'),
+        Enum('idle', 'off', 'pending', 'prepping', 'running', 'done',
+             'failed','aborted',
+             name='sub_state',
+             help='state of all the individual stages of this command, ' + \
+                  'as identified by the commandStages keyword.') * (1, 6)),
+
 )
