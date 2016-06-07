@@ -2,6 +2,7 @@
 doc/describe.css -text
 doc/describe.py -text
 etc/actorkeys.module -text
+etc/actorkeys_lco.module -text
 etc/config.ini -text
 python/actorkeys/Makefile -text
 python/actorkeys/__init__.py -text
