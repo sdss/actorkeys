@@ -17,4 +17,6 @@ endif
 mcp.py : mcp.py.skl $(SDSS_CSV)
 	read-csv -D -s mcp.py.skl $(SDSS_CSV) > mcp.py
 
+clean:
+
 
