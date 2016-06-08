@@ -39,29 +39,6 @@ SUBDIRS = python/actorkeys
 all :
 	for f in $(SUBDIRS); do $(MAKE) -C $$f all ; done
 
-# #
-# # Install things in their proper places in $(INSTALL_DIR)
-# #
-# install :
-# 	@ echo "You should be sure to have updated before doing this."
-# 	@ echo ""
-# 	@ if [ "$(INSTALL_DIR)" = "" ]; then \
-# 		echo You have not specified a destination directory >&2; \
-# 		exit 1; \
-# 	fi
-# 	@ if [ -e $(INSTALL_DIR) ]; then \
-# 		echo The destination directory already exists >&2; \
-# 		exit 1; \
-# 	fi
-# 	@ echo ""
-# 	@ echo "You will be installing in \$$INSTALL_DIR=$(INSTALL_DIR)"
-# 	@ echo "I'll give you 5 seconds to think about it"
-# 	@ sleep 5
-# 	@ echo ""
-# 	@ rm -rf $(INSTALL_DIR)
-# 	@ mkdir $(INSTALL_DIR)
-# 	@ cp -Rf . $(INSTALL_DIR)
-
 #
 # GNU make pre-defines $(RM).  The - in front of $(RM) causes make to
 # ignore any errors produced by $(RM).
