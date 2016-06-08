@@ -68,7 +68,7 @@ all :
 # 	                        if test -d $(WORKING_DIR)/$$f -a ! -d $(INSTALL_DIR)/$$f; then \
 # 	                                /bin/cp -Rvf $(WORKING_DIR)/$$f $(INSTALL_DIR); fi; fi; done
 
-install: all
+install:
 
 #
 # GNU make pre-defines $(RM).  The - in front of $(RM) causes make to
