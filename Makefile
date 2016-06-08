@@ -62,11 +62,13 @@ all :
 # 	@ mkdir $(INSTALL_DIR)
 # 	@ cp -Rf . $(INSTALL_DIR)
 
-install : all
-	        @ for f in $(INSTALLDIRS); do \
-	                if test -f $$f/Makefile; then $(MAKE) -C $$f install; else \
-	                        if test -d $(WORKING_DIR)/$$f -a ! -d $(INSTALL_DIR)/$$f; then \
-	                                /bin/cp -Rvf $(WORKING_DIR)/$$f $(INSTALL_DIR); fi; fi; done
+# install : all
+# 	        @ for f in $(INSTALLDIRS); do \
+# 	                if test -f $$f/Makefile; then $(MAKE) -C $$f install; else \
+# 	                        if test -d $(WORKING_DIR)/$$f -a ! -d $(INSTALL_DIR)/$$f; then \
+# 	                                /bin/cp -Rvf $(WORKING_DIR)/$$f $(INSTALL_DIR); fi; fi; done
+
+install:
 
 #
 # GNU make pre-defines $(RM).  The - in front of $(RM) causes make to
