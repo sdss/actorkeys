@@ -844,7 +844,14 @@ KeysDictionary("tcc", (5, 2), *(
     Key("yourUserNum", UInt(), help="Synonym for yourUserID; deprecated for new TCC but required for old TCC"),
 
     Key("instrumentNum", Int(invalid="-1")), # copied from MCP, now cart ID is returned by tcc
-
+    Key("threadringState",
+        String(help="State of galil device, one of: Moving, Done, Homing, Failed, NotHomed"),
+        UInt(help="current iteration"),
+        UInt(help="max iterations"),
+        Float(invalid="nan", units="seconds", help="remaining time on move or home"),
+        Float(invalid="nan", units="seconds", help="total time for move or home"),
+        help = "summarizes current state of secondary galil and any remaning time or move iterations",
+    ),
     # keywords not output by the new tcc that perhaps should be added
     # Key("altMSStat", Float(invalid="nan", units="as")*2, String()),
     # Key("azMSStat", Float(invalid="nan", units="as")*2, String()),
