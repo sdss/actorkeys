@@ -2,10 +2,10 @@ KeysDictionary("tcc", (5, 2), *(
     Key("airTemp", Float(invalid="nan", units="C"),
         help="Temperature of the outside air. Used for refraction correction."),
     Key("axePos",
-        Float(invalid="nan", units="deg", help="azimuth"),
-        Float(invalid="nan", units="deg", help="altitude"),
+        Float(invalid="nan", units="deg", help="ra"),
+        Float(invalid="nan", units="deg", help="dec"),
         Float(invalid="nan", units="deg", help="instrument rotator"),
-        help="Actual mount position of azimuth, altitude and instrument rotator, \
+        help="Actual mount position of ra, dec and instrument rotator, \
         as reported by the axes controllers. Not many digits past the decimal but \
         very useful for status displays. Axes that are not available are listed \
         as 'nan'. The state of the axes is given by AxisCmdState, which is always \
@@ -733,8 +733,8 @@ KeysDictionary("tcc", (5, 2), *(
         few tenths of a second else the axis controller clocks may get mis-set."
     ),
     Key("tccPos",
-        Float(invalid="nan", units="deg", strFmt="%+07.2f", help="azimuth"),
-        Float(invalid="nan", units="deg", strFmt="%+07.2f", help="altitude"),
+        Float(invalid="nan", units="deg", strFmt="%+07.2f", help="ra"),
+        Float(invalid="nan", units="deg", strFmt="%+07.2f", help="dec"),
         Float(invalid="nan", units="deg", strFmt="%+07.2f", help="rotator"),
         help="The desired mount position as computed by the TCC. Not many digits past the \
         decimal but very useful for status displays. Axes that are halted or not available \
@@ -851,6 +851,18 @@ KeysDictionary("tcc", (5, 2), *(
         Float(invalid="nan", units="seconds", help="remaining time on move or home"),
         Float(invalid="nan", units="seconds", help="total time for move or home"),
         help = "summarizes current state of secondary galil and any remaning time or move iterations",
+    ),
+    Key("tccHA", Float(invalid="nan", units="deg"), help="Hour angle."),
+    Key("tccTemps",
+        Float(invalid="nan", units="deg C", help="outside temp."),
+        Float(invalid="nan", units="deg C", help="inside temp."),
+        Float(invalid="nan", units="deg C", help="primary temp."),
+        Float(invalid="nan", units="deg C", help="cell temp."),
+        Float(invalid="nan", units="deg C", help="floor temp."),
+        Float(invalid="nan", units="deg C", help="xyztemp temp."),
+        Float(invalid="nan", units="deg C", help="truss temp."),
+        Float(invalid="nan", units="deg C", help="reserved temp."),
+
     ),
     # keywords not output by the new tcc that perhaps should be added
     # Key("altMSStat", Float(invalid="nan", units="as")*2, String()),
