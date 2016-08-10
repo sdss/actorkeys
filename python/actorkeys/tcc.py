@@ -852,6 +852,24 @@ KeysDictionary("tcc", (5, 2), *(
         Float(invalid="nan", units="seconds", help="total time for move or home"),
         help = "summarizes current state of secondary galil and any remaning time or move iterations",
     ),
+    Key("threadringPos",
+        Float()
+    ),
+    Key("desThreadringPos",
+        Float()
+    ),
+    Key("scaleZeroPos",
+        Float()
+    ),
+    Key("threadringSpeed",
+        Float()
+    ),
+    Key("cartLoaded",
+        Bool("F", "T")
+    ),
+    Key("cartLocked",
+        Bool("F", "T")
+    ),
     Key("tccHA", Float(invalid="nan", units="deg"), help="Hour angle."),
     Key("tccTemps",
         Float(invalid="nan", units="deg C", help="outside temp."),
