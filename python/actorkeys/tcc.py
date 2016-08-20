@@ -853,13 +853,16 @@ KeysDictionary("tcc", (5, 2), *(
         help = "summarizes current state of secondary galil and any remaning time or move iterations",
     ),
     Key("threadringPos",
-        Float()
+        Float(invalid="nan", units="mm",),
+        help = "Motor position of threadring mm.",
     ),
     Key("desThreadringPos",
-        Float()
+        Float(invalid="nan", units="mm",),
+        help = "Desired motor position for thread ring."
     ),
     Key("scaleZeroPos",
-        Float()
+        Float(invalid="nan", units="mm",),
+        help = "Motor zero point of thread ring, where scale = 1",
     ),
     Key("threadringSpeed",
         Float()
