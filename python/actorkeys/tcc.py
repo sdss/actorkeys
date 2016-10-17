@@ -763,15 +763,9 @@ KeysDictionary("tcc", (5, 2), *(
         few tenths of a second else the axis controller clocks may get mis-set."
     ),
     Key("tccPos",
-<<<<<<< HEAD
         Float(invalid="nan", units="deg", strFmt="%+07.2f", help="ra"),
         Float(invalid="nan", units="deg", strFmt="%+07.2f", help="dec"),
         Float(invalid="nan", units="deg", strFmt="%+07.2f", help="rotator"),
-=======
-        Float(name="az",invalid="nan", units="deg", strFmt="%+07.2f", help="azimuth"),
-        Float(name="alt", invalid="nan", units="deg", strFmt="%+07.2f", help="altitude"),
-        Float(name="rot", invalid="nan", units="deg", strFmt="%+07.2f", help="rotator"),
->>>>>>> master
         help="The desired mount position as computed by the TCC. Not many digits past the \
         decimal but very useful for status displays. Axes that are halted or not available \
         are listed as 'nan'. The state of the axes is given by AxisCmdState. See also AxePos. \
