@@ -3,10 +3,10 @@ KeysDictionary("tcc", (5, 2), *(
         Float(name="airTemp", invalid="nan", units="C"),
         help="Temperature of the outside air. Used for refraction correction."),
     Key("axePos",
-        Float(invalid="nan", units="deg", help="ra"),
-        Float(invalid="nan", units="deg", help="dec"),
+        Float(invalid="nan", units="deg", help="azimuth"),
+        Float(invalid="nan", units="deg", help="altitude"),
         Float(invalid="nan", units="deg", help="instrument rotator"),
-        help="Actual mount position of ra, dec and instrument rotator, \
+        help="Actual mount position of azimuth, altitude and instrument rotator, \
         as reported by the axes controllers. Not many digits past the decimal but \
         very useful for status displays. Axes that are not available are listed \
         as 'nan'. The state of the axes is given by AxisCmdState, which is always \
