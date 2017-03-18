@@ -923,6 +923,17 @@ KeysDictionary("tcc", (5, 2), *(
         Float(invalid="nan", units="deg C", help="reserved temp."),
 
     ),
+
+    Key("apogeeGang",
+        Enum("0", "1", "2",labelHelp=("Unknown", "At BoomBox", "At Cart"))),
+    Key("ffPower", Bool("F", "T", invalid="?", help="Detected state of flat field power supply.  Power is on if True.")),
+    Key("ffCurrent", Float(invalid="nan", units="amps", help="FF power supply current.")),
+    Key("ffVoltage", Float(invalid="nan", units="volts", help="FF power supply voltage.")),
+    Key("ffSetCurrent", Float(invalid="nan", units="amps", help="FF power supply current set point.")),
+    Key("ffSetVoltage", Float(invalid="nan", units="volts", help="FF power supply voltage set point.")),
+    Key("ffScreen", Bool("F", "T", help="Detected state of flat field screen.  In front of telescope if True.")),
+    Key("airmass", Float(invalid="nan", help="telescope airmass.")),
+    Key("collimate", Bool("F", "T", help="Collimation is enabled"))
     # keywords not output by the new tcc that perhaps should be added
     # Key("altMSStat", Float(invalid="nan", units="as")*2, String()),
     # Key("azMSStat", Float(invalid="nan", units="as")*2, String()),
