@@ -933,7 +933,8 @@ KeysDictionary("tcc", (5, 2), *(
     Key("ffSetVoltage", Float(invalid="nan", units="volts", help="FF power supply voltage set point.")),
     Key("ffScreen", Bool("F", "T", help="Detected state of flat field screen.  In front of telescope if True.")),
     Key("airmass", Float(invalid="nan", help="telescope airmass.")),
-    Key("collimate", Bool("F", "T", help="Collimation is enabled"))
+    Key("collimate", Bool("F", "T", help="Collimation is enabled")),
+    Key("pleaseSlew", Bool("F", "T", help="set to true when a slew is wanted"))
     # keywords not output by the new tcc that perhaps should be added
     # Key("altMSStat", Float(invalid="nan", units="as")*2, String()),
     # Key("azMSStat", Float(invalid="nan", units="as")*2, String()),
