@@ -222,7 +222,7 @@ KeysDictionary("sop", (2,1),
         Int(name='index', help="index of running dither pair"),
         Int(name='nPairs', help="number of requested dither pairs")),
 
-    Key("gotoFieldStages", String()*(1,6), help="names of the gotoField stages"),
+    Key("gotoFieldStages", String()*(1,7), help="names of the gotoField stages"),
     Key("gotoFieldState",
        Enum('idle',                'running','done','failed','aborted',
             name="state",
@@ -231,7 +231,7 @@ KeysDictionary("sop", (2,1),
         Enum('idle','off','pending','prepping','running','done','failed','aborted',
             name="sub_state",
             help="state of all the individual stages of this command, " + \
-                 "as identified by the commandStages keyword.")*(1,6)),
+                 "as identified by the commandStages keyword.")*(1,7)),
 
     Key("gotoField_arcTime",
         Float(name="time", help="arc exposure time", units="sec"),
