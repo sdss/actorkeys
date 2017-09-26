@@ -1,7 +1,7 @@
 
 KeysDictionary('bmo', (0, 1), *(
     Key('bmoCamera',
-        Bool(False, True, name='connected', help='Is the camera connected?') * (2, 2),
+        Bool('False', 'True', name='connected', help='Is the camera connected?') * (2, 2),
         String(name='deviceId', invalid='?', help='The device ID.') * (2, 2),
         help='Information about the cameras, including whether they are connected and their device IDs.',
         ),
@@ -18,4 +18,6 @@ KeysDictionary('bmo', (0, 1), *(
         Enum('idle', 'exposing', help='Is the camera exposing?') * (2, 2),
         help='The exposing state of each camera.',
         ),
+    Key('version',
+        String(help='EUPS/SVN version'))
 ))
