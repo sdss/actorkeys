@@ -14,7 +14,7 @@ KeysDictionary('bmo', (0, 1), *(
         Float(name='offAxisExpTime', units='sec', help='The exposure time for the off-axis camra'),
         help='The exposure time for each camera.'
         ),
-    Key('bmoExposureState',
+    Key('bmoExposeState',
         Enum('idle', 'exposing', help='Is the camera exposing?') * (2, 2),
         help='The exposing state of each camera.',
         ),
