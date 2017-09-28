@@ -6,7 +6,7 @@ KeysDictionary('bmo', (0, 1), *(
         help='Information about the cameras, including whether they are connected and their device IDs.',
         ),
     Key('bmoVimbaVersion',
-        Enum('Real', 'Fake', 'None', help='The verison of the Vimba controller.'),
+        String(help='The version of the Vimba controller.'),
         help='The version of the Vimba controller, also indicating whether it is '
              'the real thing or the fake controller for testing.',
         ),
