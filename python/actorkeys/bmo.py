@@ -5,9 +5,10 @@ KeysDictionary('bmo', (0, 1), *(
         String(name='deviceId', invalid='?', help='The device ID.') * (2, 2),
         help='Information about the cameras, including whether they are connected and their device IDs.',
         ),
-    Key('bmoVimbaState',
-        Enum('Real', 'Fake', 'None', help='The state of the Vimba controller.'),
-        help='The state of the Vimba controller, declaring whether it is the real thing or the fake controller for testing.',
+    Key('bmoVimbaVersion',
+        Enum('Real', 'Fake', 'None', help='The verison of the Vimba controller.'),
+        help='The version of the Vimba controller, also indicating whether it is '
+             'the real thing or the fake controller for testing.',
         ),
     Key('bmoExposureTime',
         Float(name='onAxisExpTime', units='sec', help='The exposure time for the on-axis camra'),
