@@ -894,6 +894,10 @@ KeysDictionary("tcc", (5, 2), *(
         Float(invalid="nan", units="mm",),
         help = "Average encoder (Mitutoyo) position of threadring mm.",
     ),
+    Key("mitutoyoRawPos",
+        Float(invalid="nan", units="mm",)*3,
+        help = "Individual encoder (Mitutoyo) positions."
+    ),
     Key("desThreadringPos",
         Float(invalid="nan", units="mm",),
         help = "Desired motor position for thread ring."
