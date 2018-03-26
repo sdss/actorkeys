@@ -1,4 +1,4 @@
-KeysDictionary("guider", (2, 6),
+KeysDictionary("guider", (2, 7),
     Key("version", String(), help="svn/eups version"),
     Key("guiderVersion", String(), help="historical svn/eups version"),
 
@@ -55,7 +55,7 @@ KeysDictionary("guider", (2, 6),
         help="broken: known broken, labeled as such in plPlugMap; noStar: no star in plPlugMap (e.g. Tritium); disabled: disabled by observers; abovefocus: fiber above the focal plane; belowfocus: fiber below the focal plane.")*(0,50),
         help="Guide probe status bits.",
     ),
-    Key("guideState", 
+    Key("guideState",
         Enum("off", "starting", "on", "stopping", "failed", help="state of guider"),
     ),
     Key("processing",
@@ -71,9 +71,9 @@ KeysDictionary("guider", (2, 6),
         Int(name="pid",help="Process ID of the current movie-generation Popen subprocess."),
         help="Status of currently running guider movie processing.",
     ),
-    
+
     # measured and derived values
-    
+
     Key("axisError",
         Float(name="RA",help="measured pointing correction in RA (distance across the sky)", units="arcsec"),
         Float(name="DEC",help="measured pointing correction in Dec (distance across on the sky)", units="arcsec"),
@@ -99,7 +99,7 @@ KeysDictionary("guider", (2, 6),
         Float(name="Scale", help="User specified scale offset from guider scale ", units="um"),
         doCache = False,
         help="user specified offsets",
-        
+
     ),
     Key("mangaDither",
         Enum('C','N','S','E', help="Named manga dither position", invalid='?')
@@ -138,7 +138,7 @@ KeysDictionary("guider", (2, 6),
         Float(name="DecRMS", help="Dec component of RMS", units="arcsec"),
         doCache = False,
         help="RMS values of axis components",
-    ),        
+    ),
     Key("probe",
         Int(name="exposureID", help="gcamera exposure number"),
         Int(name="probeID", help="guide probe number, starting from 1"),
@@ -168,8 +168,8 @@ KeysDictionary("guider", (2, 6),
     Key("seeing", Float(), help="predicted seeing (FWHM, arcsec), a fit to RHL's focus model"),
 
     Key("refractionBalance", Float(), help="factor by which the provided refraction correction is adjusted; approximately 0 for BOSS and 1 for APOGEE"),
-    Key("refractionWavelengths", 
-        Float(name="none"), 
+    Key("refractionWavelengths",
+        Float(name="none"),
         Float(name="none"),
         help="endpoints of the refractionBalance interpolation. Obsolete; never output!"),
     Key("refractionOffset",
@@ -193,6 +193,9 @@ KeysDictionary("guider", (2, 6),
         # Float(name='rad'),
         help="parameters of the brightest star in an ecam image as measured by PyGuide",
     ),
+
+    Key('fittingAlgorithm', Enum('standard', 'umeyama'),
+        help='the algorithm used for fitting the data.'),
 
     # misc
 
