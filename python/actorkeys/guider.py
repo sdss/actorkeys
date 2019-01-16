@@ -1,4 +1,4 @@
-KeysDictionary("guider", (2, 7),
+KeysDictionary("guider", (2, 8),
     Key("version", String(), help="svn/eups version"),
     Key("guiderVersion", String(), help="historical svn/eups version"),
 
@@ -67,9 +67,14 @@ KeysDictionary("guider", (2, 7),
         String(name="filename",help="Filename of the last generated movie."),
         help="Most recently generated guider movie.",
     ),
+    # movieStatus can probably be deleted. It's not used in the guider code.
     Key("movieStatus",
         Int(name="pid",help="Process ID of the current movie-generation Popen subprocess."),
         help="Status of currently running guider movie processing.",
+    ),
+    Key('moviePID',
+        Int(),
+        help='Process ID of the current movie-generation Popen subprocess.'),
     ),
 
     # measured and derived values
