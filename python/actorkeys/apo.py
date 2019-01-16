@@ -1,5 +1,5 @@
 KeysDictionary('apo', (1,0),
-    Key('version', 
+    Key('version',
         String(help='EUPS/SVN version')),
     Key('pressure',
         Float(units='inches Hg', strFmt='%.3f', reprFmt='%.3f', invalid='NaN'),
@@ -104,4 +104,6 @@ KeysDictionary('apo', (1,0),
         Long(name='available', units='bytes', strFmt='%d', reprFmt='%d', help='available space', invalid='NaN'),
 		help='Disk space information for hostname:filesystem'
     ),
+    Key("text", String(), help="text for humans"),
+
 )
