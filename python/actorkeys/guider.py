@@ -74,7 +74,7 @@ KeysDictionary("guider", (2, 7),
     ),
     Key('moviePID',
         Int(),
-        help='Process ID of the current movie-generation Popen subprocess.'),
+        help='Process ID of the current movie-generation Popen subprocess.',
     ),
 
     # measured and derived values
