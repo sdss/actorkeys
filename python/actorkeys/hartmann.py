@@ -3,6 +3,7 @@ KeysDictionary('hartmann', (1, 0),
                Key("version", String(help="EUPS/SVN version")),
                Key("status", String(help="status of collimation process: Idle/exposing/processing/")),
                Key("specs", String(help="what spectrographs are being processed.") * (0, 2)),
+               Key("cameras", String(help="what cameras are being processed.") * (0, 4)),
 
                Key("b1RingMove", Float(units="deg", help="measured error in b1 ring rotation")),
                Key("b2RingMove", Float(units="deg", help="measured error in b2 ring rotation")),
