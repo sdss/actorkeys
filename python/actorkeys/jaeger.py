@@ -6,8 +6,8 @@
 # @Filename: jaeger.py
 # @License: BSD 3-clause (http://www.opensource.org/licenses/BSD-3-Clause)
 #
-# @Last modified by: José Sánchez-Gallego (gallegoj@uw.edu)
-# @Last modified time: 2019-05-23 08:34:40
+# @Last modified by: José Sánchez-Gallego
+# @Last modified time: 2019-11-11 14:00:48
 
 # flake8: noqa
 
@@ -21,5 +21,6 @@ KeysDictionary(
         Float(name='beta', help='the angle of the beta arm', units='degrees'),
         Int(name='status_bits', help='the status maskbit'),
         Bool(name='initialised', help='is the positioner initialised?')
+        Bool(name='bootloader', help='is the position in bootloader mode?')
     )
 )
