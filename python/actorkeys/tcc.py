@@ -7,10 +7,8 @@
 # @License: BSD 3-clause (http://www.opensource.org/licenses/BSD-3-Clause)
 
 from opscore.protocols.keys import Key, KeysDictionary
-from opscore.protocols.pvt import PVT
-from opscore.protocols.types import (Bool, Double, Enum, Float, Int, String,
-                                     UInt)
-
+from opscore.protocols.types import (PVT, Bool, Double, Enum, Float, Int,
+                                     String, UInt)
 
 tcc = KeysDictionary(
     'tcc', (5, 2),
