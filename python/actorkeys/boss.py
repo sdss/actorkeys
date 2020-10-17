@@ -2,7 +2,7 @@ KeysDictionary("boss",(2,18),*(
     # misc
     Key("text", String(), help="text for humans"),
     Key("version", String(), help="version string derived from svn info."),
-    
+
     # ICC Keywords
     Key('exposureState',
         Enum('IDLE','FLUSHING','INTEGRATING','PAUSED','PREREADING','READING','LEGIBLE','ABORTED', name="state"),
@@ -28,7 +28,7 @@ KeysDictionary("boss",(2,18),*(
            help='DAQ Interface python code version.'
     ),
     Key('hardwareStatus',
-        Bits('sp1cam','sp2cam','sp1mech','sp2mech','sp1daq','sp2daq'),
+        Bits('sp1cam','sp1mech','sp1daq'),
         help='Connection status of each current piece of hardware.'
     ),
     Key('lastFlush',
@@ -38,52 +38,52 @@ KeysDictionary("boss",(2,18),*(
 
     # specMech Keywords
     Key('shutterStatus',
-        Bits('OpenSwitch', 'ClosedSwitch')*2,
+        Bits('OpenSwitch', 'ClosedSwitch'),
         help = "Status of the two shutter switches"
     ),
     Key('screenStatus',
-        Bits('RightOpenSensor', 'RightClosedSensor', 'LeftOpenSensor', 'LeftClosedSensor')*2,
+        Bits('RightOpenSensor', 'RightClosedSensor', 'LeftOpenSensor', 'LeftClosedSensor'),
         help = "Status of the hartman screens, the left bit represents the closed sensor and the right bit the open sensor."
     ),
     Key('motorPosition',
         *[Int(invalid='-9999999', name="sp%d_%s" % (spNum, axis))
-            for spNum in (1, 2) for axis in ("A", "B", "C")],
+            for spNum in (1,) for axis in ("A", "B", "C")],
         help = "The position of the motors in ticks of both spectographs."
     ),
     Key('motorStatus',
         *[Bits('Stopped', 'FindEdge', 'Slave', ':1', 'SlewMode', 'MotorOff', 'LimitSwitch', 'OnTarget', name="sp%d_%s" % (spNum, axis))
-            for spNum in (1, 2) for axis in ("A", "B", "C")],
+            for spNum in (1,) for axis in ("A", "B", "C")],
         help = "Status of the motors."
     ),
     Key('specMechVersion',
-        String()*2,
-        help = "Version string of sp1mech and sp2mech."
+        String(),
+        help = "Version string of sp1mech."
     ),
     Key('specMechProtocol',
-        String()*2,
-        help = "Protocol string of sp1mech and sp2mech"
+        String(),
+        help = "Protocol string of sp1mech"
     ),
-    Key('slitIDs', 
+    Key('slitIDs',
         Int(name='sp1SlitID', help='slit ID reported by sp1 (normalized)'),
-        Int(name='sp2SlitID', help='slit ID reported by sp2'),
+        # Int(name='sp2SlitID', help='slit ID reported by sp2'),
         help='slitIDs reported at the two slitheads. Should match each other and the mcp cartridge ID'),
-    Key('sp1LastShutterTime', 
+    Key('sp1LastShutterTime',
         Float(name='openTime', help='last measured open transit time', units='sec'),
         Float(name='closeTime', help='last measured open transit time', units='sec'),
         help='last measured open and close transit times for sp1 shutter'),
-    Key('sp2LastShutterTime', 
+    Key('sp2LastShutterTime',
         Float(name='openTime', help='last measured open transit time', units='sec'),
         Float(name='closeTime', help='last measured open transit time', units='sec'),
         help='last measured open and close transit times for sp2 shutter'),
-    Key('sp1Humidity', 
+    Key('sp1Humidity',
         Float(name='hartmann', help='humidity at hartmann doors', units='percent'),
         Float(name='centralOptics', help='humidity at central optics', units='percent'),
         help='humidity inside sp1'),
-    Key('sp2Humidity', 
+    Key('sp2Humidity',
         Float(name='hartmann', help='humidity at hartmann doors', units='percent'),
         Float(name='centralOptics', help='humidity at central optics', units='percent'),
         help='humidity inside sp2'),
-    Key('sp1Temp', 
+    Key('sp1Temp',
         Float(name='median', help='median of temp measurements', units='degreesC'),
         Float(name='hartmannTop', help='temp at top of hartmann doors', units='degreesC'),
         Float(name='redCamTop', help='temp at top of red camera', units='degreesC'),
@@ -91,7 +91,7 @@ KeysDictionary("boss",(2,18),*(
         Float(name='redCamBottom', help='temp at bottom of red camera', units='degreesC'),
         Float(name='blueCamBottom', help='temp at bottom of blue camera', units='degreesC'),
         help='temperatures inside sp1'),
-    Key('sp2Temp', 
+    Key('sp2Temp',
         Float(name='median', help='median of temp measurements', units='degreesC'),
         Float(name='hartmannTop', help='temp at top of hartmann doors', units='degreesC'),
         Float(name='redCamTop', help='temp at top of red camera', units='degreesC'),
@@ -99,7 +99,7 @@ KeysDictionary("boss",(2,18),*(
         Float(name='redCamBottom', help='temp at bottom of red camera', units='degreesC'),
         Float(name='blueCamBottom', help='temp at bottom of blue camera', units='degreesC'),
         help='temperatures inside sp2'),
-  
+
     # DAQ Keywords
     Key('sp1ReadoutErrors',
         Int(name='exposureID', help="the exposure ID for the errors"),
@@ -116,7 +116,7 @@ KeysDictionary("boss",(2,18),*(
         Int(name='frameErrorCnt', help="the number of lines with insufficient or extra pixels"),
         help='Errors noted by the DAQ during sp2 readout.'),
 
-       
+
     # LN2 status keywords
     Key('sp1camLN2Fill',
         String()
@@ -396,13 +396,13 @@ KeysDictionary("boss",(2,18),*(
     ),
     # Version String
     Key('camForthVersion',
-        String()*2,
+        String()*(0,),
         help = "Version strings for the cam micros."
     ),
     # VOLTS
-    
+
     # Machine generated keys:
-    
+
     Key('SP1B3HeaterVNom',
         Float(units='volts',strFmt='%.3f'),
         help = "Translated value of B3_HEATERV on SP1 B3"
