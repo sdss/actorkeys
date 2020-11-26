@@ -1,4 +1,4 @@
-KeysDictionary("sop", (2,1),
+KeysDictionary("sop", (3,1),
     # misc
     Key("version", String(help="EUPS/SVN version")),
     Key("text", String(), help="text for humans"),
@@ -92,9 +92,9 @@ KeysDictionary("sop", (2,1),
              name="sub_stage",
              help="state of all the individual stages of this command, " + \
              "as identified by the commandStages keyword.")*(1,6)),
-    Key("doApogeeBossScience_nDither",
-        Int(name='nDitherDone', help="index of the active exposure"),
-        Int(name='nDither', help="number of exposures completed")),
+    Key("doApogeeBossScience_nExposures",
+        Int(name='nExposuresDone', help="index of the active exposure"),
+        Int(name='nExposures', help="number of exposures completed")),
     Key("doApogeeBossScience_expTime",
         Float(name='bossExpTime', help="exposure time", units="sec"),
         Float(name='apogeeExpTime', help="exposure time", units="sec")),
