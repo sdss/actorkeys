@@ -27,5 +27,10 @@ jaeger = KeysDictionary(
         Int(name='status_bits', help='the status maskbit'),
         Bool(name='initialised', help='is the positioner initialised?'),
         Bool(name='bootloader', help='is the position in bootloader mode?'),
-        String(name='firmware', help='the version of the firmware loaded'))
+        String(name='firmware', help='the version of the firmware loaded'),
+        Int(name='interface', help='the interface index'),
+        Int(name='bus', help='the interface index')),
+    Key('current',
+        Int(name='alpha', help='alpha current'),
+        Int(name='beta', help='alpha current'))
 )
