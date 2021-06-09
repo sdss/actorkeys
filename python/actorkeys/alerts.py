@@ -6,11 +6,11 @@
 # @Filename: alerts.py
 # @License: BSD 3-clause (http://www.opensource.org/licenses/BSD-3-Clause)
 
-from opscore.protocols.keys import Key, KeysDictionary
-from opscore.protocols.types import Bool, Enum, String
+# flake8:noqa
+# type: ignore
 
 
-alerts = KeysDictionary(
+KeysDictionary(
     'alerts', (1, 7),
     Key('version',
         String(help='product version')),

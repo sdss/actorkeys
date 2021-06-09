@@ -6,11 +6,11 @@
 # @Filename: apo.py
 # @License: BSD 3-clause (http://www.opensource.org/licenses/BSD-3-Clause)
 
-from opscore.protocols.keys import Key, KeysDictionary
-from opscore.protocols.types import Float, Int, Long, String
+# flake8:noqa
+# type: ignore
 
 
-apo = KeysDictionary(
+KeysDictionary(
     'apo', (1, 0),
     Key('version',
         String(help='product version')),

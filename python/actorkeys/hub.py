@@ -6,11 +6,11 @@
 # @Filename: hub.py
 # @License: BSD 3-clause (http://www.opensource.org/licenses/BSD-3-Clause)
 
-from opscore.protocols.keys import Key, KeysDictionary
-from opscore.protocols.types import String
+# flake8:noqa
+# type: ignore
 
 
-hub = KeysDictionary(
+KeysDictionary(
     'hub', (2, 0),
     Key('actors', String() * (0,), help='Current actors'),
     Key('commanders', String() * (0,), help='Current commanders'),

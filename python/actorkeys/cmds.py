@@ -6,11 +6,11 @@
 # @Filename: cmds.py
 # @License: BSD 3-clause (http://www.opensource.org/licenses/BSD-3-Clause)
 
-from opscore.protocols.keys import Key, KeysDictionary
-from opscore.protocols.types import Double, String, UInt
+# flake8:noqa
+# type: ignore
 
 
-cmds = KeysDictionary(
+KeysDictionary(
     'cmds', (1, 2),
     Key('NewCmd', UInt(), help='Hub internal command sequence number'),
     Key('CmdTime', Double(), units='s', help='MJD UTC timestamp'),

@@ -9,11 +9,11 @@
 # @Last modified by: José Sánchez-Gallego
 # @Last modified time: 2019-11-22 15:14:15
 
-from opscore.protocols.keys import Key, KeysDictionary
-from opscore.protocols.types import Bool, Float, Int, String
+# flake8:noqa
+# type: ignore
 
 
-jaeger = KeysDictionary(
+KeysDictionary(
     'jaeger', (0, 1),
     Key('version', String(help='actor version')),
     Key('text', String(), help='text for humans'),

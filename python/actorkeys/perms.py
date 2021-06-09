@@ -7,11 +7,11 @@
 # @License: BSD 3-clause (http://www.opensource.org/licenses/BSD-3-Clause)
 # Based on what the TCC knows about the perms widget
 
-from opscore.protocols.keys import Key, KeysDictionary
-from opscore.protocols.types import String
+# flake8:noqa
+# type: ignore
 
 
-perms = KeysDictionary(
+KeysDictionary(
     'perms', (1, 2),
     Key('actors', String() * (0,),
         help='Actors controlled by perms'),

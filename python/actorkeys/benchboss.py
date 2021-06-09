@@ -6,11 +6,11 @@
 # @Filename: benchboss.py
 # @License: BSD 3-clause (http://www.opensource.org/licenses/BSD-3-Clause)
 
-from opscore.protocols.keys import Key, KeysDictionary
-from opscore.protocols.types import Bits, Enum, Float, Int, String, UInt
+# flake8:noqa
+# type: ignore
 
 
-benchboss = KeysDictionary(
+KeysDictionary(
     'benchboss', (2, 15),
 
     Key('text',

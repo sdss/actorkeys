@@ -6,11 +6,11 @@
 # @Filename: boss.py
 # @License: BSD 3-clause (http://www.opensource.org/licenses/BSD-3-Clause)
 
-from opscore.protocols.keys import Key, KeysDictionary
-from opscore.protocols.types import Bits, Enum, Float, Int, String, UInt
+# flake8:noqa
+# type: ignore
 
 
-boss = KeysDictionary(
+KeysDictionary(
     'boss', (2, 18),
 
     Key('text', String(), help='text for humans'),

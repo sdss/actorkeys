@@ -6,11 +6,11 @@
 # @Filename: tcc.py
 # @License: BSD 3-clause (http://www.opensource.org/licenses/BSD-3-Clause)
 
-from opscore.protocols.keys import Key, KeysDictionary
-from opscore.protocols.types import (PVT, Bool, Double, Enum, Float, Int,
-                                     String, UInt)
+# flake8:noqa
+# type: ignore
 
-tcc = KeysDictionary(
+
+KeysDictionary(
     'tcc', (5, 2),
     Key('airTemp',
         Float(name='airTemp', invalid='nan', units='C'),

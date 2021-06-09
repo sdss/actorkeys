@@ -6,11 +6,11 @@
 # @Filename: apogee.py
 # @License: BSD 3-clause (http://www.opensource.org/licenses/BSD-3-Clause)
 
-from opscore.protocols.keys import Key, KeysDictionary
-from opscore.protocols.types import Bool, Enum, Float, Int, String
+# flake8:noqa
+# type: ignore
 
 
-apogee = KeysDictionary(
+KeysDictionary(
     'apogee', (1, 2),
 
     Key('text',

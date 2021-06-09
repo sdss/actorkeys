@@ -6,11 +6,11 @@
 # @Filename: hartmann.py
 # @License: BSD 3-clause (http://www.opensource.org/licenses/BSD-3-Clause)
 
-from opscore.protocols.keys import Key, KeysDictionary
-from opscore.protocols.types import Float, Int, String
+# flake8:noqa
+# type: ignore
 
 
-hartmann = KeysDictionary(
+KeysDictionary(
     'hartmann', (1, 0),
     Key('text', String(help='text for humans')),
     Key('version', String(help='product version')),

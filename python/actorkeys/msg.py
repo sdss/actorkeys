@@ -6,11 +6,11 @@
 # @Filename: msg.py
 # @License: BSD 3-clause (http://www.opensource.org/licenses/BSD-3-Clause)
 
-from opscore.protocols.keys import Key, KeysDictionary
-from opscore.protocols.types import String
+# flake8:noqa
+# type: ignore
 
 
-msg = KeysDictionary(
+KeysDictionary(
     'msg', (1, 1),
     Key('msg',
         String() * (2),

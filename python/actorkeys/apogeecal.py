@@ -6,13 +6,13 @@
 # @Filename: apogeecal.py
 # @License: BSD 3-clause (http://www.opensource.org/licenses/BSD-3-Clause)
 
-from opscore.protocols.keys import Key, KeysDictionary
-from opscore.protocols.types import Bool, String
-
-
 # This is the initial test keys dictionary for APOGEE Calibration Box
 
-apogeecal = KeysDictionary(
+# flake8:noqa
+# type: ignore
+
+
+KeysDictionary(
     'apogeecal', (1, 0),
 
     # Misc
