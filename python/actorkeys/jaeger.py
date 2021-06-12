@@ -9,7 +9,6 @@
 # @Last modified by: José Sánchez-Gallego
 # @Last modified time: 2019-11-22 15:14:15
 
-# flake8:noqa
 # type: ignore
 
 

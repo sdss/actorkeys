@@ -6,7 +6,6 @@
 # @Filename: hub.py
 # @License: BSD 3-clause (http://www.opensource.org/licenses/BSD-3-Clause)
 
-# flake8:noqa
 # type: ignore
 
 

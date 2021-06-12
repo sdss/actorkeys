@@ -8,7 +8,6 @@
 
 # This is the initial test keys dictionary for APOGEE Calibration Box
 
-# flake8:noqa
 # type: ignore
 
 

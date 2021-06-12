@@ -7,7 +7,6 @@
 # @License: BSD 3-clause (http://www.opensource.org/licenses/BSD-3-Clause)
 # Based on what the TCC knows about the perms widget
 
-# flake8:noqa
 # type: ignore
 
 

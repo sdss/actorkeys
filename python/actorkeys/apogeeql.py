@@ -8,7 +8,6 @@
 
 # This is the initial test keys dictionary for APOGEEQL  (Quick Look)
 
-# flake8:noqa
 # type: ignore
 
 
