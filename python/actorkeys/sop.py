@@ -15,4 +15,6 @@ KeysDictionary(
     Key("version", String(help="Actor version")),
     Key("text", String(), help="Text for humans"),
     Key("error", String(), help="Error message"),
+    Key("available_scripts", String() * (0,), help="Available scripts"),
+    Key("running_scripts", String() * (0,), help="Running scripts")
 )
