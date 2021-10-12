@@ -23,4 +23,9 @@ KeysDictionary(
         Int(name="current_step"),
         Int(name="total_steps"),
     ),
+    Key("macros", String() * (0,), help="Available macros"),
+    Key("running_macros", String() * (0,), help="Currently running macros"),
+    Key("stages", String() * (2,), help="Macro stages"),
+    Key("all_stages", String() * (2,), help="All possible macro stages"),
+    Key("stage_status", String() * (3,), help="Status of macro stages"),
 )
