@@ -9,7 +9,7 @@
 # type: ignore
 
 KeysDictionary(
-    "hal",
+    "sop",
     (4, 0),
     Key("version", String(help="Actor version")),
     Key("text", String(), help="Text for humans"),
