@@ -54,9 +54,11 @@ KeysDictionary(
     Key('configuration_loaded',
         Int('configuration_id', help='Configuration ID'),
         Int('design_id', help='Design ID'),
+        Int('field_id', help='Field ID'),
         Float('ra_boresight', help='RA of the boresight pointing'),
         Float('dec_boresight', help='Dec of the boresight pointing'),
         Float('position_angle', help='Position angle of the pointing'),
         Float('alt_boresight', help='Altitude of the boresight pointing'),
-        Float('az_boresight', help='Azimuth of the boresight pointing'))
+        Float('az_boresight', help='Azimuth of the boresight pointing'),
+        String('summary_file', help='Summary file path'))
 )
