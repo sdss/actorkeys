@@ -21,7 +21,8 @@ KeysDictionary(
     Key("status", String() * (0,), help="Status of the camera"),
     Key("exposure_state", String() * (0,), help="Status of the exposure"),
     Key("filename",
-        String(name="camera", help='camera name'),
+        String(name="camera"),
+        String(name="node"),
         String(name="filename", help='the file path')),
     Key("filename_bundle",
         String() * (0,),
@@ -32,12 +33,12 @@ KeysDictionary(
     Key("volume",
         String(name="camera", help='camera name'),
         String(name="volume"),
-        Bool(False, True, help="Whether the volume has been created.").
+        Bool(False, True, help="Whether the volume has been created."),
         String(name="path")),
     Key("node",
         String(name="camera", help='camera name'),
         String(name="host"),
-        String(name="daemon")
+        String(name="daemon"),
         Bool(False, True),
         Bool(False, True)),
     Key("enabledNodes", String() * (0,))
