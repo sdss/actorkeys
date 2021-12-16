@@ -24,6 +24,7 @@ KeysDictionary(
         Float(),
         Float()),
     Key("acquisition_valid", Bool(False, True)),
+    Key("correction_applied", Bool(False, True)),
     Key("guider_status", String()),
     Key("fwhm_camera",
         String(),
