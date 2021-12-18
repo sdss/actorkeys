@@ -92,10 +92,17 @@ KeysDictionary(
         Enum('00', '01', '10', '11', name='status', labelHelp=('?', 'Open', 'Closed', 'Invalid')),
         Bool('0', '1', name='extended', help='Latch extended'),
         Bool('0', '1', name='inplace', help='Slithead in place')),
+
+    # Temporary values
     Key('apogeeGang',
-        Enum('0', '1', '2', '4', '12', '20', '36',
+        Enum('0', '1', '17', '4', '12', '20', '28',
              labelHelp=('Unknown', 'Disconnected', 'At Cart', 'Podium?',
-                        'Podium: dense', 'Podium: sparse', 'Podium: 1m'))),
+                        'Podium: dense', 'Podium + FPI', 'Podium dense + FPI'))),
+    # Previous values.
+    # Key('apogeeGang',
+    #     Enum('0', '1', '2', '4', '12', '20', '36',
+    #          labelHelp=('Unknown', 'Disconnected', 'At Cart', 'Podium?',
+    #                     'Podium: dense', 'Podium: sparse', 'Podium: 1m'))),
 
     # Obsolete
     Key('tbarCommanded', Bool('false', 'true'), doCache=False, help='Imager TBar move requested'),
