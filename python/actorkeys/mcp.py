@@ -95,14 +95,11 @@ KeysDictionary(
 
     # Temporary values
     Key('apogeeGang',
-        Enum('0', '1', '17', '4', '12', '20', '28',
-             labelHelp=('Unknown', 'Disconnected', 'At Cart', 'Podium?',
-                        'Podium: dense', 'Podium + FPI', 'Podium dense + FPI'))),
-    # Previous values.
-    # Key('apogeeGang',
-    #     Enum('0', '1', '2', '4', '12', '20', '36',
-    #          labelHelp=('Unknown', 'Disconnected', 'At Cart', 'Podium?',
-    #                     'Podium: dense', 'Podium: sparse', 'Podium: 1m'))),
+        Enum('0', '1', '2', '4', '12', '17', '18', '20', '28', '36', '52',
+             labelHelp=('Unknown', 'Disconnected', 'At Cart', 'Podium: ?',
+                        'Podium: Dense', 'Disconnected w FPI', 'FPS w FPI',
+                        'Podium: Sparse', 'Podium: Dense FPI', 'Podium: 1M',
+                        'Podium: 1M FPI',))),
 
     # Obsolete
     Key('tbarCommanded', Bool('false', 'true'), doCache=False, help='Imager TBar move requested'),
