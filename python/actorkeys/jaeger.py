@@ -19,6 +19,7 @@ KeysDictionary(
     Key('coordio_version', String(help='coordIO version')),
     Key('fps_calibrations_version', String(help='calibrations version')),
     Key('text', String(), help='text for humans'),
+    Key('folded', Bool("F", "T"), help='is the FPS folded?'),
     Key('locked', Bool("F", "T"), help='is the FPS locked?'),
     Key('engineering_mode', Bool("F", "T"), help='is the FPS in engineering mode?'),
     Key('move_time', Float(), help='time the FPS will be moving'),
