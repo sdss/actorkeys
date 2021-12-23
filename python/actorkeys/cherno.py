@@ -24,7 +24,7 @@ KeysDictionary(
         Float(),
         Float()),
     Key("acquisition_valid", Bool("F", "T")),
-    Key("correction_applied", Bool("F", "T")),
+    Key("did_correct", Bool("F", "T")),
     Key("guider_status", String()),
     Key("fwhm_camera",
         String(),
@@ -50,5 +50,11 @@ KeysDictionary(
         Int(),
         Float(),
         Float(),
-        Float())
+        Float()),
+    Key("correction_applied",
+        Float(),
+        Float(),
+        Float(),
+        Float()),
+
 )
