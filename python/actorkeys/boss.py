@@ -61,10 +61,10 @@ KeysDictionary(
 
         # specMech Keywords
         Key('shutterStatus',
-            Bits('OpenSwitch', 'ClosedSwitch') * 2,
+            Bits('OpenSwitch', 'ClosedSwitch'),
             help='Status of the two shutter switches'),
         Key('screenStatus',
-            Bits('RightOpenSensor', 'RightClosedSensor', 'LeftOpenSensor', 'LeftClosedSensor') * 2,
+            Bits('RightOpenSensor', 'RightClosedSensor', 'LeftOpenSensor', 'LeftClosedSensor'),
             help='Status of the hartman screens, the left bit represents '
                  'the closed sensor and the right bit the open sensor.'),
         Key('motorPosition',
@@ -77,10 +77,10 @@ KeysDictionary(
               for spNum in (1,) for axis in ('A', 'B', 'C')],
             help='Status of the motors.'),
         Key('specMechVersion',
-            String() * 2,
+            String(),
             help='Version string of sp1mech and sp2mech.'),
         Key('specMechProtocol',
-            String() * 2,
+            String(),
             help='Protocol string of sp1mech and sp2mech'),
         Key('slitIDs',
             Int(name='sp1SlitID', help='slit ID reported by sp1 (normalized)'),
@@ -331,7 +331,7 @@ KeysDictionary(
 
         # Version String
         Key('camForthVersion',
-            String() * 2,
+            String() * (0,),
             help='Version strings for the cam micros.'),
 
         # VOLTS
