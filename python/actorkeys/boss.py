@@ -78,10 +78,10 @@ KeysDictionary(
             help='Status of the motors.'),
         Key('specMechVersion',
             String(),
-            help='Version string of sp1mech and sp2mech.'),
+            help='Version string of sp1mech.'),
         Key('specMechProtocol',
             String(),
-            help='Protocol string of sp1mech and sp2mech'),
+            help='Protocol string of sp1mech'),
         Key('slitIDs',
             Int(name='sp1SlitID', help='slit ID reported by sp1 (normalized)'),
             help='slitIDs reported at the two slitheads. '
