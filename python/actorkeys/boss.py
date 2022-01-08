@@ -84,7 +84,6 @@ KeysDictionary(
             help='Protocol string of sp1mech and sp2mech'),
         Key('slitIDs',
             Int(name='sp1SlitID', help='slit ID reported by sp1 (normalized)'),
-            Int(name='sp2SlitID', help='slit ID reported by sp2'),
             help='slitIDs reported at the two slitheads. '
                  'Should match each other and the mcp cartridge ID'),
         Key('sp1LastShutterTime',
