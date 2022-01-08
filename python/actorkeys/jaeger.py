@@ -37,7 +37,7 @@ KeysDictionary(
         Int(name="positioner_id", help="the ID of the positioner"),
         Float(name="alpha", help="the angle of the alpha arm", units="degrees"),
         Float(name="beta", help="the angle of the beta arm", units="degrees"),
-        Int(name="status_bits", help="the status maskbit"),
+        String(name="status_bits", help="the status maskbit"),
         Bool("F", "T", name="initialised", help="is the positioner initialised?"),
         Bool("F", "T", name="disabled", help="is the positioner disabled?"),
         Bool("F", "T", name="offline", help="is the positioner offline?"),
