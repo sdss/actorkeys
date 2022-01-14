@@ -28,4 +28,19 @@ KeysDictionary(
     Key("stages", String() * (2,), help="Macro stages"),
     Key("all_stages", String() * (2,), help="All possible macro stages"),
     Key("stage_status", String() * (3,), help="Status of macro stages"),
+    Key("bypasses", String() * (0,), help="Enabled bypasses"),
+    Key(
+        "exposure_state_apogee",
+        Int(name="current_apogee", help="Current APOGEE exposure/dither"),
+        Int(name="n_apogee", help="Total number of APOGEE exposures/dithers"),
+        Bool("F", "T", name="pair", help="Are we dithering?"),
+        String(name="dither_position", help="APOGEE dither position"),
+        Float(name="etr_apogee", help="Remaining APOGEE exposure time"),
+    ),
+    Key(
+        "exposure_state_boss",
+        Int(name="current_boss", help="Current BOSS exposure"),
+        Int(name="n_boss", help="Total number of BOSS exposures"),
+        Float(name="etr_boss", help="Remaining BOSS exposure time"),
+    ),
 )
