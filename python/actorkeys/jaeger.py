@@ -86,6 +86,7 @@ KeysDictionary(
     Key("fvc_deltarms", Float(), help="FVC fit delta RMS"),
     Key("fps_status", String(), help="FPS status bits."),
     Key("snapshot", String()),
+    Key("trajectory_dump_file", String()),
     Key("configuration_snapshot", String()),
     Key("chiller_temperature_value", Float(units="celsius")),
     Key("chiller_temperature_setpoint", Float(units="celsius")),
