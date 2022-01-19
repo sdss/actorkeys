@@ -56,5 +56,5 @@ KeysDictionary(
         Float(),
         Float(),
         Float()),
-
+    Key("enabled_axes", String() * (0,), help="Enabled axes"),
 )
