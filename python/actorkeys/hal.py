@@ -25,9 +25,9 @@ KeysDictionary(
     ),
     Key("macros", String() * (0,), help="Available macros"),
     Key("running_macros", String() * (0,), help="Currently running macros"),
-    Key("stages", String() * (2,), help="Macro stages"),
-    Key("all_stages", String() * (2,), help="All possible macro stages"),
-    Key("stage_status", String() * (3,), help="Status of macro stages"),
+    Key("stages", String() * (0,), help="Macro stages"),
+    Key("all_stages", String() * (0,), help="All possible macro stages"),
+    Key("stage_status", String() * (0,), help="Status of macro stages"),
     Key("bypasses", String() * (0,), help="Enabled bypasses"),
     Key(
         "exposure_state_apogee",
