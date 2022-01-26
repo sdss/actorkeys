@@ -36,11 +36,13 @@ KeysDictionary(
         Bool("F", "T", name="pair", help="Are we dithering?"),
         String(name="dither_position", help="APOGEE dither position"),
         Float(name="etr_apogee", help="Remaining APOGEE exposure time"),
+        Float(name="timestamp", help="Timestamp when the keyword was output"),
     ),
     Key(
         "exposure_state_boss",
         Int(name="current_boss", help="Current BOSS exposure"),
         Int(name="n_boss", help="Total number of BOSS exposures"),
         Float(name="etr_boss", help="Remaining BOSS exposure time"),
+        Float(name="timestamp", help="Timestamp when the keyword was output"),
     ),
 )
