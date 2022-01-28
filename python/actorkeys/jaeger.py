@@ -91,4 +91,12 @@ KeysDictionary(
     Key("chiller_temperature_setpoint", Float(units="celsius")),
     Key("chiller_flow_value", Float(units="gpm")),
     Key("chiller_flow_setpoint", Float(units="gpm")),
+    Key("alert_gfa_temp_critical", Int(), help="GFA temperature is critical"),
+    Key("alert_gfa_temp_warning", Int(), help="GFA temperature is serious"),
+    Key("alert_ieb_temp_critical", Int(), help="IEB temperature is critical"),
+    Key("alert_ieb_temp_warning", Int(), help="IEB temperature is critical"),
+    Key("alert_robot_temp_critical", Int(), help="FPS robot temperature is critical"),
+    Key("alert_robot_temp_warning", Int(), help="FPS robot temperature is serious"),
+    Key("alert_fps_flow", Int(), help="FPS coolant flow rate is low"),
+    Key("alert_dew_point", Int(), help="Outside temperature within dew point range"),
 )
