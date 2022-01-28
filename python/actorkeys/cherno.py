@@ -59,4 +59,5 @@ KeysDictionary(
     Key("enabled_axes", String() * (0,), help="Enabled axes"),
     Key("pid_radec", Float(name="kp", help="Proportional term in RA/Dec")),
     Key("pid_rot", Float(name="kp", help="Proportional term in rotation")),
+    Key("scale_mean", Float(), help="Median scale over the last exposures"),
 )
