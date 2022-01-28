@@ -56,5 +56,7 @@ KeysDictionary(
         Float(),
         Float(),
         Float()),
-
+    Key("enabled_axes", String() * (0,), help="Enabled axes"),
+    Key("pid_radec", Float(name="kp", help="Proportional term in RA/Dec")),
+    Key("pid_rot", Float(name="kp", help="Proportional term in rotation")),
 )
