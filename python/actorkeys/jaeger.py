@@ -81,6 +81,7 @@ KeysDictionary(
         Float("alt_boresight", help="Altitude of the boresight pointing"),
         Float("az_boresight", help="Azimuth of the boresight pointing"),
         String("summary_file", help="Summary file path"),
+        Bool("F", "T", name="cloned", help="Is the configuration cloned?"),
     ),
     Key("fvc_filename", String()),
     Key("fvc_rms", Float(), help="FVC fit RMS"),
