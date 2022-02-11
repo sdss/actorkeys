@@ -102,6 +102,7 @@ KeysDictionary(
     Key("alert_robot_temp_warning", Int(), help="FPS robot temperature is serious"),
     Key("alert_fps_flow", Int(), help="FPS coolant flow rate is low"),
     Key("alert_dew_point", Int(), help="Outside temperature within dew point range"),
+    Key("alert_chiller_fault", Int(), help="Fault reported by the chiller PLC"),
     Key(
         "alert_chiller_dew_point",
         Int(),
