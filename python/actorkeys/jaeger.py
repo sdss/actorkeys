@@ -86,7 +86,7 @@ KeysDictionary(
     Key("fvc_filename", String()),
     Key("fvc_rms", Float(), help="FVC fit RMS"),
     Key("fvc_deltarms", Float(), help="FVC fit delta RMS"),
-    Key("fvc_perc_95", Float(), help="FVC 95% percentile distance"),
+    Key("fvc_perc_90", Float(), help="FVC 90% percentile distance"),
     Key("fvc_percent_reached", Float(), help="% fibres that have reached their goal"),
     Key("fps_status", String(), help="FPS status bits."),
     Key("snapshot", String()),
