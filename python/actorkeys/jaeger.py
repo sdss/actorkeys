@@ -84,6 +84,7 @@ KeysDictionary(
         Bool("F", "T", name="cloned", help="Is the configuration cloned?"),
     ),
     Key("fvc_filename", String()),
+    Key("fvc_centroid_method", String(), help="Algorithm used for FVC centroiding"),
     Key("fvc_rms", Float(), help="FVC fit RMS"),
     Key("fvc_deltarms", Float(), help="FVC fit delta RMS"),
     Key("fvc_perc_90", Float(), help="FVC 90% percentile distance"),
