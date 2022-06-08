@@ -117,5 +117,14 @@ KeysDictionary(
         help="Mismatch between chiller set point and FPS supply fluid temperature",
     ),
     Key("design_preloaded.", Int(), help="Design ID preloaded"),
-    Key("disabled", Int() * (0,), help="List of disabled or offline positioners"),
+    Key(
+        "permanently_disabled",
+        Int() * (0,),
+        help="List of permanently disabled or offline positioners",
+    ),
+    Key(
+        "manually_disabled",
+        Int() * (0,),
+        help="List of temporarily disabled or offline positioners",
+    ),
 )
