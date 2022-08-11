@@ -77,4 +77,3 @@ KeysDictionary(
     Key("scale_mean", Float(), help="Median scale over the last exposures"),
     Key("focus_data", Float() * (0,), help="Compilation of focus data for each GFA"),
 )
-)
