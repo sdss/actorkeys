@@ -9,7 +9,7 @@
 # type: ignore
 
 KeysDictionary(
-    "tcc",  # This is actually tcc because we use the same name at LCO. See OVERRIDES.
+    "lcotcc",
     (5, 2),
     *(
         Key(
