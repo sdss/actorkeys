@@ -72,8 +72,29 @@ KeysDictionary(
     ),
     Key("offset", String() * (3,), help="Telescope offset"),
     Key("enabled_axes", String() * (0,), help="Enabled axes"),
-    Key("pid_radec", Float(name="kp", help="Proportional term in RA/Dec")),
-    Key("pid_rot", Float(name="kp", help="Proportional term in rotation")),
-    Key("scale_mean", Float(), help="Median scale over the last exposures"),
+    Key(
+        "pid_ra",
+        Float(name="kp", help="Proportional term in RA"),
+        Float(name="ki", help="Integral term in RA"),
+        Float(name="kd", help="Derivative term in RA"),
+    ),
+    Key(
+        "pid_dec",
+        Float(name="kp", help="Proportional term in Dec"),
+        Float(name="ki", help="Integral term in Dec"),
+        Float(name="kd", help="Derivative term in Dec"),
+    ),
+    Key(
+        "pid_rot",
+        Float(name="kp", help="Proportional term in Rot"),
+        Float(name="ki", help="Integral term in Rot"),
+        Float(name="kd", help="Derivative term in Rot"),
+    ),
+    Key(
+        "pid_focus",
+        Float(name="kp", help="Proportional term in focus"),
+        Float(name="ki", help="Integral term in focus"),
+        Float(name="kd", help="Derivative term in focus"),
+    ),
     Key("focus_data", Float() * (0,), help="Compilation of focus data for each GFA"),
 )
