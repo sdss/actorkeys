@@ -70,7 +70,8 @@ KeysDictionary(
         Float("scale"),
         Float("focus"),
     ),
-    Key("offset", String() * (3,), help="Telescope offset"),
+    Key("default_offset", String() * (3,), help="Default guider offset"),
+    Key("offset", String() * (3,), help="Manual guider offset"),
     Key("enabled_axes", String() * (0,), help="Enabled axes"),
     Key(
         "pid_ra",
