@@ -72,6 +72,11 @@ KeysDictionary(
         String(name="container"),
     ),
     Key(
+        "camera",
+        String(name="id", help="camera identifier"),
+        String(name="name", help="camera full name"),
+    ),
+    Key(
         "volume",
         String(name="camera", help="camera name"),
         String(name="volume"),
