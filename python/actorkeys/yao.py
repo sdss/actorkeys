@@ -402,4 +402,5 @@ KeysDictionary(
     Key("blue_dewar_thermistor_status", Enum("cold", "warm", "?")),
     Key("fan", Enum("on", "off", "?")),
     Key("power_supply_volts", Float()),
+    Key("filename", String()),
 )
