@@ -25,6 +25,7 @@ KeysDictionary(
         Float("x_rotation"),
         Float("y_rotation"),
         Float("rotation"),
+        String("solve_mode"),
     ),
     Key("acquisition_valid", Bool("F", "T")),
     Key("did_correct", Bool("F", "T")),
