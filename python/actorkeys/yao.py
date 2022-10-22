@@ -403,4 +403,9 @@ KeysDictionary(
     Key("fan", Enum("on", "off", "?")),
     Key("power_supply_volts", Float()),
     Key("filename", String()),
+    Key("alive_at", Float(), help="UNIX time of the last time the actor was alive"),
+    Key("b2_ccd_temp_alert", Bool("F", "T"), help="Alert on b2 CCD temperature"),
+    Key("r2_ccd_temp_alert", Bool("F", "T"), help="Alert on r2 CCD temperature"),
+    Key("b2_ln2_temp_alert", Bool("F", "T"), help="Alert on b2 LN2 temperature"),
+    Key("r2_ln2_temp_alert", Bool("F", "T"), help="Alert on r2 LN2 temperature"),
 )
