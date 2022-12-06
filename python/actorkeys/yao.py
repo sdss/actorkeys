@@ -402,7 +402,7 @@ KeysDictionary(
     Key("blue_dewar_thermistor_status", Enum("cold", "warm", "?")),
     Key("fan", Enum("on", "off", "?")),
     Key("power_supply_volts", Float()),
-    Key("filename", String()),
+    Key("filenames", String() * (0,)),
     Key("alive_at", Float(), help="UNIX time of the last time the actor was alive"),
     Key("b2_ccd_temp_alert", Int(), help="Alert on b2 CCD temperature"),
     Key("r2_ccd_temp_alert", Int(), help="Alert on r2 CCD temperature"),
