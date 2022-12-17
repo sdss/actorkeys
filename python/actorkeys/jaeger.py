@@ -117,6 +117,7 @@ KeysDictionary(
         help="Mismatch between chiller set point and FPS supply fluid temperature",
     ),
     Key("design_preloaded.", Int(), help="Design ID preloaded"),
+    Key("preloaded_is_cloned.", Bool("F", "T"), help="Is the preloaded design cloned?"),
     Key(
         "permanently_disabled",
         Int() * (0,),
