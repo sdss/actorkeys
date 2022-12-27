@@ -99,6 +99,7 @@ KeysDictionary(
         Float(name="kd", help="Derivative term in focus"),
     ),
     Key("focus_data", Float() * (0,), help="Compilation of focus data for each GFA"),
+    Key("scale_median", Float(), help="Median guider scale"),
     Key("coordio_version", String(help="coordIO version")),
     Key("fps_calibrations_version", String(help="calibrations version")),
     Key("astrometrynet_version", String(help="astrometry.net version")),
