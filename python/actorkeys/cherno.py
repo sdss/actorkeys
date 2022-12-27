@@ -19,7 +19,7 @@ KeysDictionary(
         "camera_solution",
         String("camera"),
         Int("exposure_no"),
-        Bool("F", "T", name="solved"),
+        Bool("F", "T"),
         Float("racen"),
         Float("deccen"),
         Float("x_rotation"),
