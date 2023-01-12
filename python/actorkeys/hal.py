@@ -10,10 +10,15 @@
 
 KeysDictionary(
     "hal",
-    (4, 0),
+    (5, 0),
     Key("version", String(help="Actor version")),
-    Key("text", String(), help="Text for humans"),
-    Key("error", String(), help="Error message"),
+    Key("text", String(help="Text for humans")),
+    Key("schema", String(help="Schema definition")),
+    Key("help", String(help="Help string")),
+    Key("error", String(help="Error message")),
+    Key("yourUserID", Int(help="User ID")),
+    Key("UserInfo", Int(name="userID"), String(name="IP")),
+    Key("num_users", Int(help="Number of users connected")),
     Key("available_scripts", String() * (0,), help="Available scripts"),
     Key("running_scripts", String() * (0,), help="Running scripts"),
     Key(
@@ -47,4 +52,6 @@ KeysDictionary(
         Float(name="total_boss", help="Total BOSS time"),
         Float(name="timestamp", help="Timestamp when the keyword was output"),
     ),
+    Key("auto_mode_message", String(), help="Message from the auto mode"),
+    Key("expose_is_paused", Bool("F", "T"), help="Is the expose macro paused?"),
 )
