@@ -29,6 +29,8 @@ KeysDictionary(
     Key("folded", Bool("F", "T"), help="is the FPS folded?"),
     Key("locked", Bool("F", "T"), help="is the FPS locked?"),
     Key("locked_by", Int() * (0,), help="Which positioners locked the FPS?"),
+    Key("locked_alpha", Float(), help="Alpha position of the collided robot"),
+    Key("locked_beta", Float(), help="Beta position of the collided robot"),
     Key("engineering_mode", Bool("F", "T"), help="is the FPS in engineering mode?"),
     Key("alive_at", Float(), help="UNIX time of the last time the actor was alive"),
     Key("move_time", Float(), help="time the FPS will be moving"),
