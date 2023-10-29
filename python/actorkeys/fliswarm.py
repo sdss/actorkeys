@@ -28,8 +28,8 @@ KeysDictionary(
     ),
     Key(
         "status",
-        String(name="camera"),
         String(name="node"),
+        String(name="camera"),
         String(name="model"),
         String(name="serial"),
         Int(name="fwrev"),
