@@ -33,6 +33,17 @@ KeysDictionary(
     Key("stages", String() * (0,), help="Macro stages"),
     Key("all_stages", String() * (0,), help="All possible macro stages"),
     Key("stage_status", String() * (0,), help="Status of macro stages"),
+    Key(
+        "stage_duration",
+        String(name="macro_name", help="The name of the macro"),
+        String(
+            name="stage_name",
+            help="The name of the stage. Names with colons indicate multiple "
+            "stages running concurrently. Empty name refers to the duration "
+            "for the entire macro.",
+        ),
+        Float(name="duration", help="The duration of the stage in seconds."),
+    ),
     Key("bypasses", String() * (0,), help="Enabled bypasses"),
     Key(
         "exposure_state_apogee",
