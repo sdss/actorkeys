@@ -1712,7 +1712,7 @@ KeysDictionary(
         ),
         Key("airmass", Float(invalid="nan", help="telescope airmass.")),
         Key("collimate", Bool("F", "T", help="Collimation is enabled")),
-        Key("pleaseSlew", Bool("F", "T", help="set to true when a slew is wanted"))
+        Key("pleaseSlew", Bool("F", "T", help="set to true when a slew is wanted")),
         Key(
             "ffLamp",
             Bool(
