@@ -1722,6 +1722,10 @@ KeysDictionary(
                 help="State of the TCS-controlled FF lamp.",
             ),
         ),
+        Key(
+            "screenPos",
+            Float(invalid="nan", units="deg", help="Altitude of the FF screen."),
+        ),
         # keywords not output by the new tcc that perhaps should be added
         # Key("altMSStat", Float(invalid="nan", units="as")*2, String()),
         # Key("azMSStat", Float(invalid="nan", units="as")*2, String()),
