@@ -40,4 +40,8 @@ KeysDictionary(
         "SQM",
         Enum("ON", "OFF", "WARMING", "UNKNOWN", name="lamp_state", help="Lamp status"),
     ),
+    Key(
+        "TCS_FF",
+        Enum("ON", "OFF", "WARMING", "UNKNOWN", name="lamp_state", help="Lamp status"),
+    ),
 )
