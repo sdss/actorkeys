@@ -63,6 +63,6 @@ KeysDictionary(
         Float(name="total_boss", help="Total BOSS time"),
         Float(name="timestamp", help="Timestamp when the keyword was output"),
     ),
-    Key("auto_mode_message", String(), help="Message from the auto mode"),
+    Key("auto_pilot_message", String(), help="Message from the auto mode"),
     Key("expose_is_paused", Bool("F", "T"), help="Is the expose macro paused?"),
 )
