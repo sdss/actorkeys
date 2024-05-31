@@ -64,5 +64,10 @@ KeysDictionary(
         Float(name="timestamp", help="Timestamp when the keyword was output"),
     ),
     Key("auto_pilot_message", String(), help="Message from the auto mode"),
+    Key(
+        "auto_pilot_hartmann",
+        Bool("F", "T"),
+        help="A Hartmann is scheduled for the next goto-field",
+    ),
     Key("expose_is_paused", Bool("F", "T"), help="Is the expose macro paused?"),
 )
