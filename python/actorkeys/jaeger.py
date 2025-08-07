@@ -20,6 +20,7 @@ KeysDictionary(
     Key("schema", String(help="Schema definition")),
     Key("help", String(help="Help string")),
     Key("error", String(help="Error message")),
+    Key("exception_info", String() * (0,), help="Exception information"),
     Key("yourUserID", Int(help="User ID")),
     Key("UserInfo", Int(name="userID"), String(name="IP")),
     Key("num_users", Int(help="Number of users connected")),
