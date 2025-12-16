@@ -424,4 +424,5 @@ KeysDictionary(
     Key("overscanlines", Int()),
     Key("hbin", Int()),
     Key("vbin", Int()),
+    Key("sp2_last_exposure_no", Int(), help="Exposure number for the last exposure")
 )
